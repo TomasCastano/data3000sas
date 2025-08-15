@@ -1,16 +1,14 @@
 nav {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 25px;
+    padding: 25px;
 }
 nav .nav-container {
+    width: 100%;
     background: #fff;
-    padding: 10px 25px;
+    padding: 10px 35px;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 100px;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -47,16 +45,85 @@ nav .nav-container ul li a {
     color: #333;
     font-weight: 600;
     transition: all .3s ease;
+    font-size: 14px;
 }
-nav .nav-container button {
-    background: #3b38c6;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all .3s ease;
+nav .nav-container .burger-menu {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav .hamburger {
     cursor: pointer;
-    border: none;
-    &:hover {
-        background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .hamburger input {
+    display: none;
+}
+
+nav .hamburger svg {
+    height: 3em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: #333;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+nav .hamburger input:checked+svg {
+    transform: rotate(-45deg);
+}
+
+nav .hamburger input:checked+svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+@media (max-width: 810px) {
+    nav {
+        padding: 15px;
+    }
+    nav .nav-container {
+        padding: 8px 15px;
+    }
+    nav .nav-container .logo-container img {
+        width: 80px;
+    }
+    nav .nav-container ul {
+        display: none;
+    }
+    nav .nav-container .burger-menu {
+        display: flex;
+    }
+    nav .hamburger svg {
+        height: 2em;
+    }
+    nav .hamburger input:checked+svg .line-top-bottom {
+        stroke-dasharray: 20 300;
+        stroke-dashoffset: -32.42;
+    }
+    nav .hamburger input:checked+svg .line {
+        stroke-dasharray: 20 300;
+        stroke-dashoffset: -32.42;
+    }
+}
+@media (max-width: 450px) {
+    nav .nav-container .logo-container img {
+        width: 60px;
+    }
+    nav .hamburger svg {
+        height: 1.8em;
     }
 }

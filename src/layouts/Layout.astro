@@ -2,7 +2,7 @@
 import "../assets/css/reset.css"
 const { title } = Astro.props
 
-import Navbar from "../components/Navbar/Navbar.astro"
+import Navbar from "../components/Navbar/Navbar.jsx"
 ---
 
 <!doctype html>
@@ -15,7 +15,7 @@ import Navbar from "../components/Navbar/Navbar.astro"
 		<title>{title} | Data 3000 S.A.S</title>
 	</head>
 	<body>
-		<Navbar />
+		<Navbar client:only="react" />
 		<slot />
 	</body>
 </html>
