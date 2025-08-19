@@ -1,0 +1,17 @@
+---
+const { title, description } = Astro.props
+
+import './ServiceCard.css'
+---
+<div class="service-card">
+    <div class="service-card-content">
+        <div class="service-card-header">
+            <span>SERVICIO</span>
+            <h4>{title}</h4>
+        </div>
+        <div class="service-card-body">
+            <p>{description}</p>
+            <button>Ver más</button>
+        </div>
+    </div>
+</div>

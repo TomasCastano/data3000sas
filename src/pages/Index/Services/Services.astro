@@ -1,0 +1,19 @@
+---
+import ServiceCard from './ServiceCard/ServiceCard.astro'
+
+import './Services.css'
+---
+<section class="services-section">
+    <div class="services-container">
+        <div class="services-header">
+            <h2>Servicios que brindamos</h2>
+            <p>Despreocúpate de toda la documentación</p>
+        </div>
+        <div class="services-content">
+            <ServiceCard title="Diagnóstico" description="Un análisis consciente permite conservar información relevante a pesar del deterioro del material en que está contenida." />
+            <ServiceCard title="Organización" description="Siguiendo el procedimiento sugerido, se asigna un orden a la documentación siguiendo la normativa establecida." />
+            <ServiceCard title="Digitalización" description="Convertir sus documentos de un formato físico a uno digital aumentará la productividad en su ambiente de trabajo." />
+            <ServiceCard title="Almacenamiento" description="La documentación ya organizada, es empacada en folios o cajas rotuladas que facilitan su ubicación dentro de los almacenes y registros digitales." />
+        </div>
+    </div>
+</section>

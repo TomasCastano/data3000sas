@@ -20,6 +20,7 @@ nav .nav-container {
 }
 nav .nav-container.scroll {
     background: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 nav .nav-container .logo-container {
     display: flex;
