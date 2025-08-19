@@ -1,0 +1,29 @@
+.client-rating {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgb(255, 255, 255, .1);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.client-rating .rating-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.client-rating .rating-stars .star {
+    width: 20px;
+    height: auto;
+}
+.client-rating .rating-stars span {
+    color: #fff;
+    font-weight: 500;
+    margin-left: 5px;
+}
+.client-rating span {
+    color: rgb(255, 255, 255, .5);
+}
+.client-rating p {
+    color: #eee;
+    font-size: 14px;
+}

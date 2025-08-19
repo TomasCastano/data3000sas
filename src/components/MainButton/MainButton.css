@@ -1,0 +1,9 @@
+.main-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Navbar.css'
-import logo from '../../assets/images/logo2.png'
+import logoColor from '../../assets/images/logos/logo2.webp'
+import logoBW from '../../assets/images/logos/logo.webp'
 import MobileDrawer from './MobileDrawer/MobileDrawer'
 
 const Navbar = () => {
@@ -31,7 +32,7 @@ const Navbar = () => {
             <div className={scrollNav ? "nav-container scroll" : "nav-container"}>
                 <div className="logo-container">
                     <a href="/">
-                        <img src={logo.src} alt="Logo a color de Data 3000 S.A.S" />
+                        <img src={scrollNav ? logoColor.src : logoBW.src} alt="Logo de Data 3000 S.A.S" />
                     </a>
                 </div>
                 <ul>

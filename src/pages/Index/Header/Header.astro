@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets'
+
+import ClientRating from './ClientRating/ClientRating.astro'
+import CTAButton from '../../../components/CTAButton/CTAButton.astro'
+
+import boxImage from '../../../assets/images/image-title.png'
+import arrowRightIcon from '../../../assets/images/icons/arrow-right.svg'
+
+import './Header.css'
+---
+
+<header>
+    <div class="header-container">
+        <div class="header-content header-info">
+            <ClientRating />
+            <div class="header-text">
+                <h1>Su información en las mejores manos</h1>
+                <p>Más de 26 años ofreciendo soluciones seguras y eficientes para la gestión de documentos físicos y digitales.</p>
+            </div>
+          <div class="header-cta">
+                <CTAButton href="/servicios" className="services-button" theme="primary">
+                    Conocer servicios
+                    <img src={arrowRightIcon.src} alt="Flecha hacía la derecha" width={20} height={20}>
+                </CTAButton>
+                <CTAButton href="/contactanos" theme="secondary">Contáctanos</CTAButton>
+          </div>
+        </div>
+        <div class="header-content header-image">
+            <Image
+                src={boxImage}
+                alt="Caja de archivos con el logo de Data 3000 S.A.S"
+                width={700}
+                fetchpriority="high"
+                loading="eager"
+            />
+        </div>
+    </div>
+</header>

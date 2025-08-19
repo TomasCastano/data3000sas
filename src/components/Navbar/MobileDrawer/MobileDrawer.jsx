@@ -1,5 +1,5 @@
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
-import logo from '../../../assets/images/logo2.png'
+import logo from '../../../assets/images/logos/logo2.webp'
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
 
 import './MobileDrawer.css'

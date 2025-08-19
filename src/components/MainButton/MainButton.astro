@@ -1,0 +1,13 @@
+---
+const { className, onClick, theme } = Astro.props
+
+import './MainButton.css'
+---
+
+<button 
+    class={`main-button ${className || ''} ${theme || ''}`}
+    type="button"
+    onclick={onClick}
+>
+    <slot/>
+</button>

@@ -1,0 +1,14 @@
+---
+const { className, onClick, theme, href } = Astro.props
+
+import './CTAButton.css'
+---
+
+<a 
+    class={`cta-button ${className || ''} ${theme || ''}`}
+    type="button"
+    onclick={onClick}
+    href={href}
+>
+    <slot/>
+</a>
