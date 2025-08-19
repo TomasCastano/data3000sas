@@ -1,5 +1,5 @@
 header {
-    padding: 100px 0;
+    padding: 100px 50px;
     background-image: url('../../../assets/images/fondo.webp');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -58,5 +58,62 @@ header .header-container .header-cta .services-button img {
     transition: all .3s ease;
 }
 header .header-container .header-image {
-    align-items: center;
+    align-items: flex-end;
+}
+header .header-container .header-image img {
+    width: 700px;
+    height: auto;
+}
+
+@media (max-width: 1300px) {
+    header .header-container .header-image img {
+        width: 500px;
+    }
+}
+@media (max-width: 1000px) {
+    header .header-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .header-container .header-info {
+        align-items: center;
+        gap: 35px;
+    }
+    header .header-container .header-info .header-text {
+        align-items: center;
+        text-align: center;
+    }
+}
+@media (max-width: 810px) {
+    header {
+        padding: 50px 25px;
+    }
+}
+@media (max-width: 545px) {
+    header .header-container .header-info .header-text h1 {
+        font-size: 50px;
+    }
+    header .header-container .header-info .header-text p {
+        font-size: 16px;
+    }
+    header .header-container .header-image img {
+        width: 400px;
+    }
+}
+@media (max-width: 480px) {
+    header .header-container .header-cta {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    header .header-container .header-image img {
+        width: 95%;
+    }
+}
+@media (max-width: 400px) {
+    header .header-container .header-info .header-text h1 {
+        font-size: 45px;
+    }
 }

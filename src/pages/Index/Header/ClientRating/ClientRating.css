@@ -1,6 +1,7 @@
 .client-rating {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     background: rgb(255, 255, 255, .1);
     padding: 10px 15px;
@@ -26,4 +27,32 @@
 .client-rating p {
     color: #eee;
     font-size: 14px;
+}
+
+@media (max-width: 545px) {
+    .client-rating .rating-stars .star {
+        width: 15px;
+        height: auto;
+    }
+    .client-rating .rating-stars span {
+        font-size: 12px;
+    }
+    .client-rating p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 400px) {
+    .client-rating {
+        padding: 5px 10px;
+    }
+    .client-rating .rating-stars .star {
+        width: 15px;
+        height: auto;
+    }
+    .client-rating .rating-stars span {
+        font-size: 10px;
+    }
+    .client-rating p {
+        font-size: 10px;
+    }
 }
