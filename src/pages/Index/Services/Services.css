@@ -20,25 +20,66 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 15px;
+    gap: 20px;
     max-width: 550px;
     width: 100%;
 }
-.services-section .services-container .services-header h2 {
-    font-size: 24px;
-    font-weight: 600;
+.services-section .services-container .services-header .services-description {
+    font-size: 16px;
+    background: rgb(58, 56, 199, .1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
     color: #3a38c7;
 }
-.services-section .services-container .services-header p {
-    font-size: 50px;
+.services-section .services-container .services-header h2 {
+    font-size: 48px;
     font-weight: 600;
     line-height: 1.05;
     color: #222;
 }
+.services-section .services-container .services-header .services-header-line {
+    width: 100%;
+    height: 3px;
+    background: #3A38C7;
+    background: -webkit-linear-gradient(90deg, rgba(58, 56, 199, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(58, 56, 199, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(58, 56, 199, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3A38C7",
+            endColorstr="#FFFFFF",
+            GradientType=1);
+}
+.services-section .services-container .mobile-notice {
+    font-size: 10px;
+    color: rgb(0, 0, 0, .3);
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: none;
+    transition: opacity .3s ease;
+    margin-top: 15px;
+}
+.services-section .services-container .mobile-notice.active {
+    display: block;
+}
 .services-section .services-container .services-content {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 25px;
+}
+
+@media (max-width: 545px) {
+    .services-section .services-container .services-header h2 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 400px) {
+    .services-section .services-container .services-header h2 {
+        font-size: 34px;
+    }
+    .services-section .services-container .services-header .services-description {
+        font-size: 14px;
+    }
 }

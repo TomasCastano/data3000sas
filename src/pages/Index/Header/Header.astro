@@ -21,7 +21,7 @@ import './Header.css'
           <div class="header-cta">
                 <CTAButton href="/servicios" className="services-button" theme="primary">
                     Conocer servicios
-                    <img src={arrowRightIcon.src} alt="Flecha hacía la derecha" width={20} height={20}>
+                    <img src={arrowRightIcon.src} alt="Flecha hacía la derecha" width={20} height={20} decoding="async" loading="eager" fetchpriority="high">
                 </CTAButton>
                 <CTAButton href="/contactanos" theme="secondary">Contáctanos</CTAButton>
           </div>
@@ -30,7 +30,6 @@ import './Header.css'
             <Image
                 src={boxImage}
                 alt="Caja de archivos con el logo de Data 3000 S.A.S"
-                
                 fetchpriority="high"
                 loading="eager"
             />

@@ -6,6 +6,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 25px;
+    z-index: 100;
 }
 nav .nav-container {
     width: 100%;

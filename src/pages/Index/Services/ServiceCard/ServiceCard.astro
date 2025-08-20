@@ -1,17 +1,39 @@
 ---
-const { title, description } = Astro.props
+import { Image } from 'astro:assets'
+const { title, description, image } = Astro.props
+
+import CTAButton from '../../../../components/CTAButton/CTAButton.astro'
+
+import arrowRightIcon from '../../../../assets/images/icons/arrow-right.svg'
 
 import './ServiceCard.css'
 ---
 <div class="service-card">
+    <img
+        class="service-card-image"
+        src={image}
+        alt={'Imagen del servicio ' + title}
+        decoding="async"
+        loading="lazy"
+        fetchpriority="auto"
+    />
+    <div class="service-card-overlay"/>
     <div class="service-card-content">
         <div class="service-card-header">
             <span>SERVICIO</span>
-            <h4>{title}</h4>
+            <h3>{title}</h3>
         </div>
         <div class="service-card-body">
             <p>{description}</p>
-            <button>Ver más</button>
+            <CTAButton className="service-card-btn" href="/servicios" theme="primary">
+                Ver más
+                <Image
+                    src={arrowRightIcon}
+                    alt="Flecha hacía la derecha"
+                    width={20}
+                    height={20}
+                />
+            </CTAButton>
         </div>
     </div>
 </div>

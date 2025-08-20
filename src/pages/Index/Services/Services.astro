@@ -1,19 +1,50 @@
 ---
 import ServiceCard from './ServiceCard/ServiceCard.astro'
 
+import diagnosticImage from '../../../assets/images/diagnostico2.webp'
+import organizationImage from '../../../assets/images/organizacion1.webp'
+import digitalizationImage from '../../../assets/images/digitalizacion3.webp'
+import storageImage from '../../../assets/images/almacenamiento4.webp'
+
 import './Services.css'
 ---
 <section class="services-section">
     <div class="services-container">
         <div class="services-header">
-            <h2>Servicios que brindamos</h2>
-            <p>Despreocúpate de toda la documentación</p>
+            <p class="services-description">Servicios que brindamos</p>
+            <h2>Despreocúpate de toda la documentación</h2>
+            <div class="services-header-line" />
+            <p class="mobile-notice">*Toca las tarjetas para descubrir más</p>
         </div>
         <div class="services-content">
-            <ServiceCard title="Diagnóstico" description="Un análisis consciente permite conservar información relevante a pesar del deterioro del material en que está contenida." />
-            <ServiceCard title="Organización" description="Siguiendo el procedimiento sugerido, se asigna un orden a la documentación siguiendo la normativa establecida." />
-            <ServiceCard title="Digitalización" description="Convertir sus documentos de un formato físico a uno digital aumentará la productividad en su ambiente de trabajo." />
-            <ServiceCard title="Almacenamiento" description="La documentación ya organizada, es empacada en folios o cajas rotuladas que facilitan su ubicación dentro de los almacenes y registros digitales." />
+            <ServiceCard
+                image={diagnosticImage.src}
+                title="Diagnóstico"
+                description="Un análisis consciente permite conservar información relevante a pesar del deterioro del material en que está contenida."
+            />
+            <ServiceCard
+                image={organizationImage.src}
+                title="Organización"
+                description="Siguiendo el procedimiento sugerido, se asigna un orden a la documentación siguiendo la normativa establecida."
+            />
+            <ServiceCard
+                image={digitalizationImage.src}
+                title="Digitalización"
+                description="Convertir sus documentos de un formato físico a uno digital aumentará la productividad en su ambiente de trabajo."
+            />
+            <ServiceCard
+                image={storageImage.src}
+                title="Almacenamiento"
+                description="La documentación ya organizada, es empacada en folios o cajas rotuladas que facilitan su ubicación dentro de los almacenes y registros digitales."
+            />
         </div>
     </div>
 </section>
+
+<script>
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+    const mobileNotice = document.querySelector('.mobile-notice')
+    if (isTouch) {
+        mobileNotice?.classList.add('active')
+    }
+</script>
