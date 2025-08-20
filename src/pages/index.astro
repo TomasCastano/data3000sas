@@ -2,12 +2,26 @@
 import Layout from '../layouts/Layout.astro'
 import Header from './Index/Header/Header.astro'
 import ServicesSection from './Index/ServicesSection/ServicesSection.astro'
+import StatsSection from './Index/StatsSection/StatsSection.astro'
 import ClientsSection from './Index/ClientsSection/ClientsSection.astro'
 
 ---
 
+<style>
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+    }
+</style>
+
 <Layout title="Inicio">
     <Header />
-    <ServicesSection />
-    <ClientsSection />
+    <div class="content">
+        <ServicesSection />
+        <StatsSection />
+        <ClientsSection />
+    </div>
 </Layout>
