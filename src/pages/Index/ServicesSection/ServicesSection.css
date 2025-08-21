@@ -64,14 +64,14 @@
 }
 
 @media (max-width: 545px) {
+    .services-section .services-container .services-header .services-badge {
+        font-size: 12px;
+    }
     .services-section .services-container .services-header h2 {
         font-size: 40px;
     }
 }
 @media (max-width: 400px) {
-    .services-section .services-container .services-header .services-badge {
-        font-size: 12px;
-    }
     .services-section .services-container .services-header h2 {
         font-size: 34px;
     }
