@@ -1,0 +1,8 @@
+---
+const { title, className } = Astro.props
+
+import './Badge.css'
+---
+<div class={"badge " + className}>
+    <p>{title}</p>
+</div>

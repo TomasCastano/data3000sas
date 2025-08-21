@@ -1,12 +1,42 @@
 ---
+import { Image } from 'astro:assets'
+
+import Badge from '../../../components/Badge/Badge.astro'
+
+import archiveImage from '../../../assets/images/almacenamiento2.webp'
+
 import './StatsSection.css'
 ---
 <section class="stats-section">
     <div class="stats-container">
-        <div class="stats-header">
-            <p class="stats-tagline">Nuestra experiencia en números</p>
-            <h2>Más de dos décadas construyendo confianza y excelencia en el servicio</h2>
-            <p class="stats-description">Desde 1998 combinamos lo mejor de los métodos tradicionales con las tecnologías más avanzadas. Hoy, con la experiencia de más de dos décadas y el respaldo de cientos de clientes, seguimos liderando el camino para que la información de su empresa esté siempre organizada y segura.</p>
+        <div class="stats-info">
+            <div class="stats-header">
+                <Badge title="Nuestra experiencia en números" />
+                <h2>Más de dos décadas construyendo confianza y excelencia en el servicio</h2>
+                <p class="stats-description">Desde 1998, hemos combinado toda nuestra experiencia con la tecnología más avanzada para liderar la gestión documental en Colombia.</p>
+            </div>
+            <div class="stats-content">
+                <div class="stat-card">
+                    <p>26</p>
+                    <p>Años de experiencia</p>
+                </div>
+                <div class="stat-card">
+                    <p>+500</p>
+                    <p>Clientes satisfechos</p>
+                </div>
+                <div class="stat-card">
+                    <p>+40</p>
+                    <p>Profesionales en todas las áreas</p>
+                </div>
+            </div>
+        </div>
+        <div class="stats-image">
+            <Image
+                src={archiveImage}
+                alt="Caja de archivos con el logo de Data 3000 S.A.S"
+                fetchpriority="auto"
+                loading="lazy"
+            />
         </div>
     </div>
 

@@ -10,12 +10,12 @@ import Navbar from "../components/Navbar/Navbar.jsx"
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title} | Data 3000 S.A.S</title>
 	</head>
 	<body>
-		<Navbar client:only="react" />
+		<Navbar client:load />
 		<slot />
 	</body>
 </html>
