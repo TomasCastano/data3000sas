@@ -62,7 +62,11 @@
     gap: 25px;
     width: 100%;
 }
-
+@media (max-width: 615px) {
+    .services-section .services-container .services-content {
+        padding: 0 15px;
+    }
+}
 @media (max-width: 545px) {
     .services-section .services-container .services-header .services-badge {
         font-size: 12px;

@@ -10,10 +10,10 @@
     border-radius: 10px;
     border-left: 3px solid rgba(0, 0, 0, 0.1);
 }
-.stat-card p {
+.stat-card .experience-number {
     font-size: 40px;
     font-weight: 700;
-    color: #222;
+    color: #3A38C7;
 }
 .stats-section .stats-container .stats-info .stats-content .stat-card p:last-child {
     font-size: 14px;
@@ -27,19 +27,18 @@
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
-        gap: 25px;
-        background: #fff;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-        border: none;
+        background: rgba(255, 255, 255, .3);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+        border-left: none;
     }
     .stats-section .stats-container .stats-info .stats-content .stat-card p:last-child {
-        width: 100%;
+        width: 75%;
         text-align: right;
         font-size: 16px;
     }
 }
 @media (max-width: 400px) {
-    .stat-card p {
+    .stat-card .experience-number {
         font-size: 30px;
     }
     .stats-section .stats-container .stats-info .stats-content .stat-card p:last-child {

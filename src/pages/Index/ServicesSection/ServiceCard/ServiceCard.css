@@ -93,6 +93,11 @@
     height: auto;
 }
 
+@media (max-width: 615px) {
+    .service-card {
+        width: 100%;
+    }
+}
 @media (max-width: 545px) {
     .service-card .service-card-content .service-card-body p {
         font-size: 14px;
