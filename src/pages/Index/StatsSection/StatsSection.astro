@@ -1,43 +1,131 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 
-import Badge from '../../../components/Badge/Badge.astro'
+import Badge from "../../../components/Badge/Badge.astro";
+import StatsCard from "./StatsCard/StatsCard.astro";
 
-import archiveImage from '../../../assets/images/almacenamiento2.webp'
+import archiveImage from "../../../assets/images/almacenamiento2.webp";
 
-import './StatsSection.css'
+import "./StatsSection.css";
 ---
-<section class="stats-section">
-    <div class="stats-container">
-        <div class="stats-info">
-            <div class="stats-header">
-                <Badge title="Nuestra experiencia en números" />
-                <h2>Más de dos décadas construyendo confianza y excelencia en el servicio</h2>
-                <p class="stats-description">Desde 1998, hemos combinado toda nuestra experiencia con la tecnología más avanzada para liderar la gestión documental en Colombia.</p>
-            </div>
-            <div class="stats-content">
-                <div class="stat-card">
-                    <p>26</p>
-                    <p>Años de experiencia</p>
-                </div>
-                <div class="stat-card">
-                    <p>+500</p>
-                    <p>Clientes satisfechos</p>
-                </div>
-                <div class="stat-card">
-                    <p>+40</p>
-                    <p>Profesionales en todas las áreas</p>
-                </div>
-            </div>
-        </div>
-        <div class="stats-image">
-            <Image
-                src={archiveImage}
-                alt="Caja de archivos con el logo de Data 3000 S.A.S"
-                fetchpriority="auto"
-                loading="lazy"
-            />
-        </div>
-    </div>
 
+<section class="stats-section">
+	<div class="stats-container">
+		<div class="stats-info">
+			<div class="stats-header">
+				<Badge title="Nuestra experiencia en números" />
+				<h2>
+					Más de dos décadas construyendo confianza y excelencia en el servicio
+				</h2>
+				<p class="stats-description">
+					Desde 1998, hemos combinado toda nuestra experiencia con la tecnología más avanzada para liderar la gestión documental en Colombia.
+				</p>
+			</div>
+			<div class="stats-content">
+				<StatsCard
+					id="experience-stat"
+					title="0"
+					description="Años de experiencia"
+				/>
+				<StatsCard
+					id="customers-stat"
+					title="+500"
+					description="Clientes satisfechos"
+				/>
+				<StatsCard
+					id="professionals-stat"
+					title="+40"
+					description="Profesionales en todas las áreas"
+				/>
+			</div>
+		</div>
+		<div class="stats-image">
+			<Image
+				src={archiveImage}
+				alt="Caja de archivos con el logo de Data 3000 S.A.S"
+				fetchpriority="auto"
+				loading="lazy"
+			/>
+		</div>
+	</div>
 </section>
+
+<script is:inline>
+  function animateCounter(element, target, duration = 3000) {
+    const startTime = performance.now()
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime
+      const progress = Math.min(elapsed / duration, 1)
+      const currentValue = Math.floor(progress * target)
+      element.textContent = currentValue
+
+      if (progress < 1) {
+        requestAnimationFrame(update)
+      } else {
+        element.textContent = target
+      }
+    }
+
+    requestAnimationFrame(update)
+  }
+
+  const counters = [
+    { selector: "#experience-stat", target: 26 },
+    { selector: "#customers-stat", target: 500 },
+    { selector: "#professionals-stat", target: 40 },
+  ];
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target
+          const config = counters.find((c) => c.selector === `#${el.id}`)
+          if (config) {
+            animateCounter(el, config.target, 3000)
+            obs.unobserve(el)
+          }
+        }
+      })
+    },
+    { threshold: 1 }
+  )
+
+  counters.forEach((c) => {
+    const el = document.querySelector(c.selector)
+    if (el) observer.observe(el)
+  })
+
+  function animateCounter(element, target, duration = 3000) {
+    const startTime = performance.now()
+
+    function update(currentTime) {
+      const elapsed = currentTime - startTime
+      const progress = Math.min(elapsed / duration, 1)
+
+      let easedProgress
+      if (progress < 2 / 3) {
+        easedProgress = (progress * (2 / 3)) / (2 / 3)
+      } else {
+        const localT = (progress - 2 / 3) / (1 / 3)
+        easedProgress = 2 / 3 + easeOutCubic(localT) * (1 / 3)
+      }
+
+      const currentValue = Math.floor(easedProgress * target)
+      element.textContent = currentValue
+
+      if (progress < 1) {
+        requestAnimationFrame(update)
+      } else {
+        element.textContent = target
+      }
+    }
+
+    requestAnimationFrame(update)
+  }
+
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3)
+  }
+</script>

@@ -1,0 +1,10 @@
+---
+const { id, title, description } = Astro.props;
+
+import "./StatsCard.css";
+---
+
+<div class="stat-card">
+	<p id={id} class="experience-number">{title}</p>
+	<p>{description}</p>
+</div>
