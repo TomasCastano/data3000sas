@@ -1,4 +1,18 @@
 ---
-import './ClientsSection.css'
+import Badge from "../../../components/Badge/Badge.astro"
+import ClientsSlider from "./ClientsSlider/ClientsSlider.astro"
+
+import "./ClientsSection.css"
 ---
-asdasdqw
+<div class="clients-section">
+    <div class="clients-container">
+        <div class="clients-header">
+            <Badge className="clients-badge" title="Alguno de Nuestros Clientes" />
+            <h2>Transformamos la gestión de estas empresas</h2>
+            <div class="clients-header-line" />
+        </div>
+        <div class="clients-content">
+            <ClientsSlider />
+        </div>
+    </div>
+</div>
