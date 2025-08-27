@@ -1,7 +1,12 @@
 ---
 import { Image } from 'astro:assets'
 
+import FooterInfo from './FooterInfo/FooterInfo.astro'
+
 import logo from '../../assets/images/logos/logo.webp'
+import facebookIcon from '../../assets/images/icons/facebook.svg'
+import instagramIcon from '../../assets/images/icons/instagram.svg'
+import emailIcon from '../../assets/images/icons/email.svg'
 
 import './Footer.css'
 ---
@@ -15,44 +20,24 @@ import './Footer.css'
                 fetchpriority="high"
             />
             <p>Más de 26 años ofreciendo soluciones seguras y eficientes para la gestión de documentos físicos y digitales.</p>
-        </div>
-        <div class="footer-info-content">
-            <div class="footer-info-content-item">
-                <h3>Información</h3>
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/servicios">Servicios</a></li>
-                    <li><a href="/nosotros">Nosotros</a></li>
-                    <li><a href="/contactanos">Contáctanos</a></li>
-                </ul>
-            </div>
-            <div class="footer-info-content-item">
-                <h3>Información</h3>
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/servicios">Servicios</a></li>
-                    <li><a href="/nosotros">Nosotros</a></li>
-                    <li><a href="/contactanos">Contáctanos</a></li>
-                </ul>
-            </div>
-            <div class="footer-info-content-item">
-                <h3>Información</h3>
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/servicios">Servicios</a></li>
-                    <li><a href="/nosotros">Nosotros</a></li>
-                    <li><a href="/contactanos">Contáctanos</a></li>
-                </ul>
-            </div>
-            <div class="footer-info-content-item">
-                <h3>Información</h3>
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/servicios">Servicios</a></li>
-                    <li><a href="/nosotros">Nosotros</a></li>
-                    <li><a href="/contactanos">Contáctanos</a></li>
-                </ul>
+            <div class="social-links">
+                <a href="https://www.instagram.com/data3000sas/" target="_blank" rel="noopener noreferrer" aria-label="Enlace a Instagram">
+                    <Image src={facebookIcon} alt="Facebook Icon" />
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100063638196947&locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Enlace a Facebook">
+                    <Image src={instagramIcon} alt="Instagram Icon" />
+                </a>
+                <a href="mailto:data3000sas@gmail.com" target="_blank" rel="noopener noreferrer" class="email-link" aria-label="Enlace a correo electrónico">
+                    <Image src={emailIcon} alt="Email Icon" />
+                    <span>data3000sas@gmail.com</span>
+                </a>
             </div>
         </div>
+        <FooterInfo />
+    </div>
+    <div class="divider" />
+    <div class="footer-bottom">
+        <p>© 2025 | Data 3000 S.A.S.</p>
+        <p>Developed with ❤️ by <a aria-label="Revisa el perfil de LinkedIn de Andrés Villada" href="https://www.linkedin.com/in/camilo-andres-villada-torres-843977248/" target="_blank" rel="noopener noreferrer">Andrés Villada</a> & <a aria-label="Revisa el perfil de LinkedIn de Tomás Castaño" href="https://www.linkedin.com/in/tomascastanochica/" target="_blank" rel="noopener noreferrer">Tomás Castaño</a></p>
     </div>
 </footer>
