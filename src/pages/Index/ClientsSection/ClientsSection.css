@@ -7,7 +7,7 @@
 .clients-section .clients-container {
     max-width: 1350px;
     width: 100%;
-    padding: 0 25px;
+    padding: 0 25px 100px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,12 +42,30 @@
             GradientType=1);
 }
 
+.clients-section .clients-container .clients-content {
+    width: 100%;
+    height: 150px;
+}
+
+@media (max-width: 850px) {
+    .clients-section .clients-container {
+        gap: 50px;
+    }
+}
 @media (max-width: 545px) {
     .clients-section .clients-container .clients-header .clients-badge {
         font-size: 12px;
     }
     .clients-section .clients-container .clients-header h2 {
         font-size: 40px;
+    }
+}
+@media (max-width: 450px) {
+    .clients-section .clients-container {
+        gap: 30px;
+    }
+    .clients-section .clients-container {
+        padding: 0 25px 50px 25px;
     }
 }
 @media (max-width: 400px) {

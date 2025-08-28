@@ -1,18 +1,18 @@
 ---
 import Badge from "../../../components/Badge/Badge.astro"
-import ClientsSlider from "./ClientsSlider/ClientsSlider.astro"
+import ClientsSlider from "./ClientsSlider/ClientsSlider.jsx"
 
 import "./ClientsSection.css"
 ---
 <div class="clients-section">
     <div class="clients-container">
         <div class="clients-header">
-            <Badge className="clients-badge" title="Alguno de Nuestros Clientes" />
+            <Badge className="clients-badge" title="Algunos de Nuestros Clientes" />
             <h2>Transformamos la gestión de estas empresas</h2>
             <div class="clients-header-line" />
         </div>
         <div class="clients-content">
-            <ClientsSlider />
+            <ClientsSlider client:visible />
         </div>
     </div>
 </div>
