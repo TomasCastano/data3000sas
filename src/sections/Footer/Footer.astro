@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets'
+
+import FooterInfo from './FooterInfo/FooterInfo.astro'
+
+import logo from '../../assets/images/logos/logo.webp'
+import facebookIcon from '../../assets/images/icons/facebook.svg'
+import instagramIcon from '../../assets/images/icons/instagram.svg'
+import emailIcon from '../../assets/images/icons/email.svg'
+
+import './Footer.css'
+---
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo-content">
+            <Image
+                src={logo}
+                alt="Logo de Data 3000 S.A.S"
+                width={120}
+                fetchpriority="high"
+                loading='eager'
+            />
+            <p>Más de 26 años ofreciendo soluciones seguras y eficientes para la gestión de documentos físicos y digitales.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100063638196947&locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Enlace a Facebook">
+                    <Image src={facebookIcon} alt="Facebook Icon" loading='eager' />
+                </a>
+                <a href="https://www.instagram.com/data3000sas/" target="_blank" rel="noopener noreferrer" aria-label="Enlace a Instagram">
+                    <Image src={instagramIcon} alt="Instagram Icon" loading='eager' />
+                </a>
+                <a href="mailto:data3000sas@gmail.com" target="_blank" rel="noopener noreferrer" class="email-link" aria-label="Enlace a correo electrónico">
+                    <Image src={emailIcon} alt="Email Icon" loading='eager' />
+                    <span>data3000sas@gmail.com</span>
+                </a>
+            </div>
+        </div>
+        <FooterInfo />
+    </div>
+    <div class="divider" />
+    <div class="footer-bottom">
+        <p>© 2025 | Data 3000 S.A.S.</p>
+        <p>Developed with ❤️ by <a aria-label="Revisa el perfil de LinkedIn de Andrés Villada" href="https://www.linkedin.com/in/camilo-andres-villada-torres-843977248/" target="_blank" rel="noopener noreferrer">Andrés Villada</a> & <a aria-label="Revisa el perfil de LinkedIn de Tomás Castaño" href="https://www.linkedin.com/in/tomascastanochica/" target="_blank" rel="noopener noreferrer">Tomás Castaño</a></p>
+    </div>
+</footer>

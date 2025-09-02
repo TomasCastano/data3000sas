@@ -1,0 +1,5 @@
+.service-tab {
+    position: sticky;
+    top: 120px;
+    background: #ccc;  
+}

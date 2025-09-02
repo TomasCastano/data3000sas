@@ -1,0 +1,57 @@
+header {
+    position: relative;
+    padding: 100px 50px;
+    background-image: url('../../../assets/images/services.webp');
+    background-position: center;
+    background-size: cover;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+header .header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    gap: 25px;
+    z-index: 2;
+    max-width: 1150px;
+    width: 100%;
+}
+header .header-content h1 {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 1.05;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .7);
+}
+header .header-content p {
+    font-size: 24px;
+    line-height: 1.3;
+    color: #ccc;
+}
+
+@media (max-width: 810px) {
+    header {
+        height: 90dvh;
+        background-position: -300px;
+    }
+}
+@media (max-width: 545px) {
+    header .header-content h1 {
+        font-size: 60px;
+    }
+    header .header-content p {
+        font-size: 18px;
+    }
+}
