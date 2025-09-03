@@ -1,11 +1,18 @@
 ---
 import './Header.css'
 import Badge from '../../../components/Badge/Badge.astro'
+import { Image } from 'astro:assets'
+import boxImage from '../../../assets/images/icons/box.svg'
 ---
 <header>
     <div class="header-content">
         <Badge className="header-badge" title="Servicios" />
         <h1>Lleva el control de toda tu información con <b>seguridad y eficiencia.</b></h1>
-        <!-- <p>Nuestros servicios te permiten gestionar tus documentos de manera segura y eficiente</p> -->
     </div>
+    <Image
+        src={boxImage}
+        alt="Caja de archivos con el logo de Data 3000 S.A.S"
+        fetchpriority="high"
+        loading="eager"
+    />
 </header>
