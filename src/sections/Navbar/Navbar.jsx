@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
-import './Navbar.css'
+
 import logoColor from '../../assets/images/logos/logo2.webp'
 import logoBW from '../../assets/images/logos/logo.webp'
+
 import MobileDrawer from './MobileDrawer/MobileDrawer'
 
-const Navbar = () => {
+import './Navbar.css'
+
+const Navbar = ({ navTheme = 'light' }) => {
     const [open, setOpen] = useState(false)
     const [scrollNav, setScrollNav] = useState(false)
 
@@ -16,6 +19,8 @@ const Navbar = () => {
         }
     }
 
+    console.log(navTheme)
+
     useEffect(() => {
         window.addEventListener('scroll', changeBackground)
         return () => {
@@ -26,13 +31,16 @@ const Navbar = () => {
     const toggleDrawer = (newOpen) => () => {
         setOpen(newOpen)
     }
+
+    let logo = (scrollNav || navTheme === 'dark') ? logoColor : logoBW;
+
     return (
         <>
-        <nav>
+        <nav className={navTheme}>
             <div className={scrollNav ? "nav-container scroll" : "nav-container"}>
                 <div className="logo-container">
                     <a href="/">
-                        <img src={scrollNav ? logoColor.src : logoBW.src} alt="Logo de Data 3000 S.A.S" />
+                        <img src={logo.src} alt="Logo de Data 3000 S.A.S" />
                     </a>
                 </div>
                 <ul>

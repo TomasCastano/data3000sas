@@ -1,14 +1,11 @@
 ---
 import './Header.css'
+import Badge from '../../../components/Badge/Badge.astro'
 ---
 <header>
-    <div class="background-overlay" />
     <div class="header-content">
-        <h1>Nuestros Servicios</h1>
-        <p>Lleva el control de toda tu información con seguridad y eficiencia</p>
+        <Badge className="header-badge" title="Servicios" />
+        <h1>Lleva el control de toda tu información con <b>seguridad y eficiencia.</b></h1>
+        <!-- <p>Nuestros servicios te permiten gestionar tus documentos de manera segura y eficiente</p> -->
     </div>
 </header>
-
-<div class="services-content">
-    
-</div>

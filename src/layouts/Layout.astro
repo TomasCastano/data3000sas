@@ -1,6 +1,6 @@
 ---
 import "../assets/css/reset.css"
-const { title } = Astro.props
+const { title, navTheme } = Astro.props
 
 import Navbar from "../sections/Navbar/Navbar.jsx"
 import Footer from "../sections/Footer/Footer.astro"
@@ -16,7 +16,7 @@ import Footer from "../sections/Footer/Footer.astro"
 		<title>{title} | Data 3000 S.A.S</title>
 	</head>
 	<body>
-		<Navbar client:load />
+		<Navbar client:load navTheme={navTheme} />
 		<slot />
 		<Footer />
 	</body>

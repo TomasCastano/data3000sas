@@ -1,0 +1,105 @@
+.service-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+.service-card .service-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 25px;
+    width: 50%;
+}
+.service-card .service-info .service-card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.service-card .service-info .service-card-header .icon-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #3A38C7;
+    color: #fff;
+    font-size: 20px;
+}
+.service-card .service-info .service-card-header h3 {
+    font-size: 34px;
+    font-weight: 600;
+    color: #222;
+}
+.service-card .service-info .service-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    color: #333;
+}
+.service-card .service-info .service-card-body p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+.service-card .service-info .service-card-body ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+}
+.service-card .service-info .service-card-body ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.service-card .service-info .service-card-body ul li .icon {
+    color: #3A38C7;
+    font-size: 15px;
+}
+.service-card .service-info .service-card-body .service-card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: #3A38C7;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all .2s ease;
+    &:hover {
+        background: #302ea5;
+        .icon {
+            transform: translateX(3px);
+        }
+    }
+}
+.service-card .service-info .service-card-body .service-card-btn .icon {
+    transition: all .2s ease;
+}
+
+.service-card .service-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.service-card .service-img img {
+    width: 100%;
+    border-radius: 5px;
+}

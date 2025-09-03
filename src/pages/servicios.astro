@@ -1,14 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from './Servicios/Header/Header.astro';
-import ServiceTab from './Servicios/ServiceTab/ServiceTab.astro';
+import Layout from '../layouts/Layout.astro'
+import Header from './Servicios/Header/Header.astro'
+import Content from './Servicios/Content/Content.astro'
 ---
 
-<Layout title="Servicios">
+<Layout title="Servicios" navTheme="dark">
 	<Header />
-	<div class="services-content">
-		
-	</div>
-	<!-- <ServiceTab /> -->
-	<div style="height: 100vh;"></div>
+	<Content />
 </Layout>

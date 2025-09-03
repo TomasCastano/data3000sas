@@ -1,0 +1,15 @@
+.service-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 50px;
+}
+.service-content .service-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    max-width: 1250px;
+    width: 100%;
+}

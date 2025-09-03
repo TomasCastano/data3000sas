@@ -10,7 +10,7 @@ footer {
     gap: 25px;
 }
 footer .footer-container {
-    max-width: 1350px;
+    max-width: 1250px;
     width: 100%;
     display: flex;
     gap: 100px;
