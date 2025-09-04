@@ -106,7 +106,7 @@ nav .hamburger svg {
 }
 nav .nav-container.scroll .line {
     fill: none;
-    stroke: #333;
+    /* stroke: #333; */
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
@@ -115,7 +115,7 @@ nav .nav-container.scroll .line {
 }
 nav .nav-container .line {
     fill: none;
-    stroke: #fff;
+    /* stroke: #fff; */
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;

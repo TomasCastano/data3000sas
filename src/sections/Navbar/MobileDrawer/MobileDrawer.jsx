@@ -6,8 +6,7 @@ import './MobileDrawer.css'
 
 const MobileDrawer = ({ children, open, toggleDrawer }) => {
 
-    const iOS =
-        typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const iOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent)
 
     return (
         <SwipeableDrawer
