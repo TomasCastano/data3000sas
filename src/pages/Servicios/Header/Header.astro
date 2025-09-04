@@ -1,8 +1,11 @@
 ---
-import './Header.css'
-import Badge from '../../../components/Badge/Badge.astro'
 import { Image } from 'astro:assets'
+
+import Badge from '../../../components/Badge/Badge.astro'
 import boxImage from '../../../assets/images/icons/box.svg'
+import openBoxImage from '../../../assets/images/icons/open-box.svg'
+
+import './Header.css'
 ---
 <header>
     <div class="header-content">
@@ -10,7 +13,8 @@ import boxImage from '../../../assets/images/icons/box.svg'
         <h1>Lleva el control de toda tu información con <b>seguridad y eficiencia.</b></h1>
     </div>
     <Image
-        src={boxImage}
+        src={openBoxImage}
+        class="box-image"
         alt="Caja de archivos con el logo de Data 3000 S.A.S"
         fetchpriority="high"
         loading="eager"
