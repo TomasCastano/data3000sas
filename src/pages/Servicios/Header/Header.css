@@ -1,10 +1,9 @@
 header {
     position: relative;
-    padding: 100px 50px;
+    padding: 230px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100dvh;
     overflow: hidden;
 }
 header .header-content {
@@ -18,10 +17,10 @@ header .header-content {
     max-width: 1250px;
     width: 100%;
 }
-header .header-badge {
+header .header-content .header-badge {
     background: rgba(58, 56, 199, .1);
 }
-header .header-badge p {
+header .header-content .header-badge p {
     color: #3a38c7 !important;
     font-size: 16px !important;
 }
@@ -58,4 +57,20 @@ header .box-image {
     0% {transform: translateY(0px)}
     50% {transform: translateY(20px)}
     100% {transform: translateY(0px)}
+}
+
+@media (max-width: 810px) {
+    header {
+        padding: 150px 25px;
+    }
+}
+@media (max-width: 545px) {
+    header .header-content h1 {
+        font-size: 50px;
+    }
+}
+@media (max-width: 400px) {
+    header .header-content h1 {
+        font-size: 45px;
+    }
 }
