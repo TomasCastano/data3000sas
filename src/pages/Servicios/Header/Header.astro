@@ -2,8 +2,8 @@
 import { Image } from 'astro:assets'
 
 import Badge from '../../../components/Badge/Badge.astro'
-import boxImage from '../../../assets/images/icons/box.svg'
 import openBoxImage from '../../../assets/images/icons/open-box.svg'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 
 import './Header.css'
 ---
@@ -11,6 +11,10 @@ import './Header.css'
     <div class="header-content">
         <Badge className="header-badge" title="Servicios" />
         <h1>Lleva el control de toda tu información con <b>seguridad y eficiencia.</b></h1>
+        <a>
+            Descubre nuestros servicios
+            <KeyboardArrowDownIcon className="icon" />
+        </a>
     </div>
     <Image
         src={openBoxImage}
