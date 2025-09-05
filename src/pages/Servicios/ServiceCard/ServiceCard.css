@@ -5,6 +5,8 @@
     justify-content: space-between;
     width: 100%;
     gap: 50px;
+    border-bottom: 1px solid rgb(58, 56, 199, .2);
+    padding: 50px 0;
 }
 .service-card .service-info {
     display: flex;
@@ -13,6 +15,11 @@
     justify-content: center;
     gap: 25px;
     width: 50%;
+}
+.service-card .service-info .line-decoration {
+    width: 50%;
+    height: 2px;
+    background: #3A38C7;
 }
 .service-card .service-info .service-card-header {
     display: flex;
