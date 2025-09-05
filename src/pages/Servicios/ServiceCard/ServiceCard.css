@@ -5,9 +5,13 @@
     justify-content: space-between;
     width: 100%;
     gap: 50px;
-    border-bottom: 1px solid rgb(58, 56, 199, .2);
+    border-bottom: 1px dashed rgb(58, 56, 199, .2);
     padding: 50px 0;
 }
+/* .service-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+} */
 .service-card .service-info {
     display: flex;
     flex-direction: column;
@@ -68,6 +72,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    color: #666;
 }
 .service-card .service-info .service-card-body ul li .icon {
     color: #3A38C7;
@@ -109,4 +114,5 @@
 .service-card .service-img img {
     width: 100%;
     border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
