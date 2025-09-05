@@ -103,3 +103,9 @@ header .box-image {
         font-size: 45px;
     }
 }
+
+@media (max-height: 900px) {
+    header {
+        height: 100lvh;
+    }
+}
