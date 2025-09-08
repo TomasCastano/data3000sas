@@ -1,4 +1,6 @@
-import image from '../../../assets/images/almacenamiento4.webp'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
+
 import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded'
 import TaskAltRoundedIcon from '@mui/icons-material/TaskAltRounded'
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded'
