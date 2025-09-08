@@ -1,12 +1,25 @@
 ---
 import ServiceCard from '../ServiceCard/ServiceCard.jsx'
+import diagnostic1Image from '../../../assets/images/diagnostico1.webp'
+import diagnostic2Image from '../../../assets/images/diagnostico2.webp'
+import diagnostic3Image from '../../../assets/images/diagnostico3.webp'
+import organization1Image from '../../../assets/images/organizacion1.webp'
+import organization2Image from '../../../assets/images/organizacion2.webp'
+import organization3Image from '../../../assets/images/organizacion3.webp'
+import digitalizacion1Image from '../../../assets/images/digitalizacion1.webp'
+import digitalizacion2Image from '../../../assets/images/digitalizacion2.webp'
+import digitalizacion3Image from '../../../assets/images/digitalizacion3.webp'
+import almacenamiento1Image from '../../../assets/images/almacenamiento1.webp'
+import almacenamiento2Image from '../../../assets/images/almacenamiento2.webp'
+import almacenamiento3Image from '../../../assets/images/almacenamiento3.webp'
+import almacenamiento4Image from '../../../assets/images/almacenamiento4.webp'
 
 import './Content.css'
 
 const servicesData = [
     {
         title: 'Diagnóstico',
-        description: 'Un análisis consciente permite conservar información relevante a pesar del deterioro del material en que está contenida. Una vez concluye la revisión, se procede al diseño de un informe en el que se evidencia el estado del material recibido y de las acciones que deben llevarse a cabo para su preservación.',
+        description: 'Realizamos un análisis detallado para identificar el estado de sus documentos y conservar la información relevante incluso en materiales deteriorados. Al finalizar, elaboramos un informe que describe las condiciones encontradas y las acciones necesarias para garantizar su preservación.',
         list: [
             'Evaluación completa del estado documental',
             'Detección de riesgos y vulnerabilidades',
@@ -14,11 +27,11 @@ const servicesData = [
             'Propuestas de soluciones personalizadas',
             'Informes detallados de diagnóstico'
         ],
-        image: ''
+        images: [diagnostic1Image.src, diagnostic2Image.src, diagnostic3Image.src]
     },
     {
         title: 'Organización',
-        description: 'Siguiendo el procedimiento sugerido, se asigna un orden a la documentación siguiendo la normativa establecida. Los documentos son ordenados y registrados en un inventario según su contenido, luego se procede a una restauración si se presenta deterioro y son empacados para su protección.',
+        description: 'Asignamos un orden a la documentación siguiendo la normativa vigente. Cada documento es clasificado, registrado en un inventario y, en caso de deterioro, sometido a un proceso de restauración. Finalmente, se empaca adecuadamente para asegurar su protección.',
         list: [
             'Clasificación según normativa vigente',
             'Inventariado completo de documentos',
@@ -26,11 +39,11 @@ const servicesData = [
             'Sistemas de codificación eficientes',
             'Procesos de archivo optimizados'
         ],
-        image: ''
+        images: [organization1Image.src, organization2Image.src, organization3Image.src]
     },
     {
         title: 'Digitalización',
-        description: 'Convertir sus documentos de un formato físico a uno digital aumentará la productividad en su ambiente de trabajo, ya que le permite compartir su información con facilidad y reduce el tiempo de consulta. Teniendo así un muy fácil acceso a la información, facilitando el trabajo y minimizando costos y de más.',
+        description: 'Transformamos documentos físicos en formato digital para mejorar la productividad en su entorno laboral. Esto facilita la consulta, reduce tiempos de búsqueda, permite compartir la información con mayor facilidad y contribuye a la optimización de recursos.',
         list: [
             'Conversión de alta calidad a formato digital',
             'Optimización para acceso rápido',
@@ -38,11 +51,11 @@ const servicesData = [
             'Formatos compatibles con software de oficina',
             'Respaldo seguro en la nube'
         ],
-        image: ''
+        images: [digitalizacion1Image.src, digitalizacion2Image.src, digitalizacion3Image.src]
     },
     {
         title: 'Almacenamiento',
-        description: 'La documentación ya organizada, es empacada en folios o cajas rotuladas que facilitan su ubicación dentro de los almacenes o si es del caso en su respectivo repertorio digital. El almacenamiento de documentos puede significar más que asignar espacio para guardar archivo contra desastres y un sistema de seguridad protegiendo sus documentos, representa su tranquilidad sabiendo que están seguros y listos para ser consultados cuando lo necesite.',
+        description: 'La documentación organizada se guarda en folios o cajas rotuladas que facilitan su ubicación en los almacenes, o en su respectivo repositorio digital. Este proceso asegura protección frente a desastres y brinda tranquilidad al saber que los archivos están seguros y disponibles cuando los necesite.',
         list: [
             'Entornos seguros físicos y digitales',
             'Protección contra desastres naturales',
@@ -50,7 +63,7 @@ const servicesData = [
             'Procesos de archivo optimizados',
             'Cumplimiento de normativas de seguridad'
         ],
-        image: ''
+        images: [almacenamiento1Image.src, almacenamiento2Image.src, almacenamiento3Image.src, almacenamiento4Image.src]
     }
 ]
 ---

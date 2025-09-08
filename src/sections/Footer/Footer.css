@@ -24,6 +24,7 @@ footer .footer-container .footer-logo-content {
 footer .footer-container .footer-logo-content p {
     color: rgb(255, 255, 255, .6);
     font-size: 14px;
+    line-height: 1.5;
 }
 footer .footer-container .footer-logo-content .social-links {
     display: flex;

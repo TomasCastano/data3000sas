@@ -31,7 +31,7 @@ const ServiceCard = ({ id, service }) => {
                 </div>
             </div>
             <div className="service-img">
-                <img src={image.src} alt="" />
+                <img src={service.images[0]} alt="" />
             </div>
         </div>
     )
