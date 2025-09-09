@@ -113,3 +113,47 @@
     object-fit: cover;
     border-radius: 5px;
 }
+
+@media (max-width: 1050px) {
+    .service-card {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .service-card .service-info {
+        width: 100%;
+    }
+    .service-card .service-img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 545px) {
+    .service-card .service-info .service-card-header h3 {
+        font-size: 28px;
+    }
+    .service-card .service-info .service-card-body .service-card-btn {
+        font-size: 12px;
+    }
+    .service-card .service-img img {
+        height: 400px;
+    }
+}
+@media (max-width: 450px) {
+    .service-card .service-img img {
+        height: 320px;
+    }
+    .service-card .service-info .service-card-body .service-card-btn {
+        width: 100%;
+    }
+}
+@media (max-width: 400px) {
+    .service-card .service-info .service-card-header h3 {
+        font-size: 24px;
+    }
+    .service-card .service-info .service-card-body p {
+        font-size: 16px;
+    }
+    .service-card .service-info .service-card-body ul li {
+        font-size: 12px;
+    }
+}

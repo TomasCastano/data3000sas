@@ -14,7 +14,7 @@ const ImagesSlider = ({ images }) => {
             className="service-swiper"
             modules={[Autoplay, Pagination]}
             pagination
-            // autoplay={{ delay: 2500 }}
+            autoplay={{ delay: 2500 }}
             loop={true}
             bulletclass="swiper-pagination"
         >
