@@ -1,5 +1,4 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper/modules'
+import ImagesSlider from './ImagesSlider/ImagesSlider'
 
 import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded'
 import TaskAltRoundedIcon from '@mui/icons-material/TaskAltRounded'
@@ -9,10 +8,8 @@ import './ServiceCard.css'
 
 const ServiceCard = ({ id, service }) => {
 
-    console.log(service)
-
     return (
-        <div id={id} className="service-card">
+        <div id={id} className={"service-card"}>
             <div className="service-info">
                 <div className="service-card-header">
                     <div className="icon-container">
@@ -33,7 +30,7 @@ const ServiceCard = ({ id, service }) => {
                 </div>
             </div>
             <div className="service-img">
-                <img src={service.images[0]} alt="" />
+                <ImagesSlider client:visible images={service.images} />
             </div>
         </div>
     )
