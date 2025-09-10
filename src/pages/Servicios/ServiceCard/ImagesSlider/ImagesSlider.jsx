@@ -20,7 +20,7 @@ const ImagesSlider = ({ images }) => {
         >
             {images.map((image, index) => (
                 <SwiperSlide key={index}>
-                    <img src={image} alt="Imagen del servicio" />
+                    <img src={image} alt="Imagen del servicio" loading="lazy" />
                 </SwiperSlide>
             ))}
         </Swiper>

@@ -17,19 +17,19 @@ import './Footer.css'
                 src={logo}
                 alt="Logo de Data 3000 S.A.S"
                 width={120}
-                fetchpriority="high"
-                loading='eager'
+                fetchpriority="low"
+                loading='lazy'
             />
             <p>Más de 26 años ofreciendo soluciones seguras y eficientes para la gestión de documentos físicos y digitales.</p>
             <div class="social-links">
                 <a href="https://www.facebook.com/profile.php?id=100063638196947&locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Enlace a Facebook">
-                    <Image src={facebookIcon} alt="Facebook Icon" loading='eager' />
+                    <Image src={facebookIcon} alt="Facebook Icon" loading='lazy' />
                 </a>
                 <a href="https://www.instagram.com/data3000sas/" target="_blank" rel="noopener noreferrer" aria-label="Enlace a Instagram">
-                    <Image src={instagramIcon} alt="Instagram Icon" loading='eager' />
+                    <Image src={instagramIcon} alt="Instagram Icon" loading='lazy' />
                 </a>
                 <a href="mailto:data3000sas@gmail.com" target="_blank" rel="noopener noreferrer" class="email-link" aria-label="Enlace a correo electrónico">
-                    <Image src={emailIcon} alt="Email Icon" loading='eager' />
+                    <Image src={emailIcon} alt="Email Icon" loading='lazy' />
                     <span>data3000sas@gmail.com</span>
                 </a>
             </div>

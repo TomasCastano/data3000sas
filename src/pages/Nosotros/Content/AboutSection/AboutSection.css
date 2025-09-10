@@ -1,0 +1,112 @@
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+.about-section .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.about-section .about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.about-section .about-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
+}
+.about-section .about-info .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+}
+.about-section .about-info h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.05;
+    color: #000000;
+}
+.about-section .about-info .about-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+.about-section .about-info .about-text-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+.about-section .about-info .about-buttons {
+    display: flex;
+    gap: 15px;
+}
+.about-section .about-info .about-buttons button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.about-section .about-info .about-buttons button.primary {
+    background: #3a38c7;
+    color: #fff;
+    &:hover {
+        background: #2c2a9c;
+        .icon {
+            transform: translateX(3px);
+        }
+    }
+}
+.about-section .about-info .about-buttons button.secondary {
+    background: #fff;
+    color: #3a38c7;
+    border: 1px solid #3a38c7;
+    &:hover {
+        background: #eee;
+    }
+}
+.about-section .about-info .about-buttons button .icon {
+    transition: all .2s ease;
+}
+
+@media (max-width: 1000px) {
+    .about-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-section .about-image {
+        order: 2;
+    }
+}
+@media (max-width: 545px) {
+    .about-section .about-info h2 {
+        font-size: 30px;
+    }
+    .about-section .about-info .about-text-content p {
+        font-size: 14px;
+    }
+    .about-section .about-info .about-buttons button {
+        font-size: 12px;
+    }
+}
+@media (max-width: 400px) {
+    .about-section .about-info h2 {
+        font-size: 28px;
+    }
+}

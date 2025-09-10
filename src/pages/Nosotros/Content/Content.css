@@ -1,3 +1,9 @@
 .us-content {
     padding: 100px 50px;
 }
+
+@media (max-width: 810px) {
+    .us-content {
+        padding: 100px 25px;
+    }
+}
