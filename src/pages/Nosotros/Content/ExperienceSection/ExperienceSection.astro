@@ -13,16 +13,69 @@ import './ExperienceSection.css'
     </div>
     <div class="stats-container">
         <div class="stat">
-            <h3>26</h3>
+            <h3 data-target="26">0</h3>
             <p>Años de experiencia</p>
         </div>
         <div class="stat">
-            <h3>+500</h3>
+            <h3 data-target="500" data-prefix="+">0</h3>
             <p>Clientes satisfechos</p>
         </div>
         <div class="stat">
-            <h3>+40</h3>
+            <h3 data-target="40" data-prefix="+">0</h3>
             <p>Profesionales en todas la áreas</p>
         </div>
     </div>
 </div>
+
+<script is:inline>
+    function animateCounter(element, target, duration = 3000, prefix = "") {
+        const startTime = performance.now();
+
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            let easedProgress;
+            if (progress < 2 / 3) {
+                easedProgress = (progress * (2 / 3)) / (2 / 3);
+            } else {
+                const localT = (progress - 2 / 3) / (1 / 3);
+                easedProgress = 2 / 3 + easeOutCubic(localT) * (1 / 3);
+            }
+
+            const currentValue = Math.floor(easedProgress * target);
+            element.textContent = prefix + currentValue;
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                element.textContent = prefix + target;
+            }
+        }
+
+        requestAnimationFrame(update);
+    }
+
+    function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
+    }
+
+    const stats = document.querySelectorAll(".stat h3");
+
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.target, 10);
+                    const prefix = el.dataset.prefix || "";
+                    animateCounter(el, target, 3000, prefix);
+                    obs.unobserve(el);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    stats.forEach((el) => observer.observe(el));
+</script>
