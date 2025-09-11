@@ -96,6 +96,9 @@
     }
 }
 @media (max-width: 545px) {
+    .about-section .about-info {
+        gap: 25px;
+    }
     .about-section .about-info h2 {
         font-size: 30px;
     }

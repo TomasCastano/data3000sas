@@ -45,9 +45,10 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    text-align: center;
 }
 .experience-section .stat h3 {
-    font-size: 50px;
+    font-size: 46px;
     font-weight: 600;
     line-height: 1.05;
     color: #fff;
@@ -55,6 +56,56 @@
 .experience-section .stat p {
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.2;
     color: #ccc;
+}
+
+@media (max-width: 1000px) {
+    .experience-section {
+        flex-direction: column;
+        gap: 50px;
+        padding: 50px;
+    }
+    .experience-section .stack-icon {
+        top: -50px;
+    }
+    .experience-section .stats-text h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+    .experience-section .stats-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+}
+@media (max-width: 640px) {
+    .experience-section {
+        padding: 50px 25px;
+    }
+    .experience-section .stats-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 545px) {
+    .experience-section .stats-text h2 {
+        font-size: 34px;
+    }
+    .experience-section .stat h3 {
+        font-size: 40px;
+    }
+    .experience-section .stat p {
+        font-size: 14px;
+    }
+}
+@media (max-width: 400px) {
+    .experience-section .stats-text h2 {
+        font-size: 30px;
+    }
+    .experience-section .stat h3 {
+        font-size: 36px;
+    }
 }
