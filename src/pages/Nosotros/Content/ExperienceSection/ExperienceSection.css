@@ -6,6 +6,7 @@
     gap: 50px;
     background: linear-gradient(90deg, #3a38c7 50%, #4730c7 100%);
     padding: 50px;
+    max-width: 1250px;
     width: 100%;
     border-radius: 5px;
     overflow: hidden;

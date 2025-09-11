@@ -7,6 +7,8 @@ header {
     border-radius: 0 0 25% 0;
 }
 header .header-text {
+    max-width: 1250px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
