@@ -1,4 +1,4 @@
-header {
+.us-header {
     padding: 100px 50px;
     background: #3a38c7;
     display: flex;
@@ -6,7 +6,7 @@ header {
     align-items: center;
     border-radius: 0 0 25% 0;
 }
-header .header-text {
+.us-header .header-text {
     max-width: 1250px;
     width: 100%;
     display: flex;
@@ -16,12 +16,12 @@ header .header-text {
     gap: 25px;
     margin-top: 100px;
 }
-header .header-badge {
+.us-header .header-badge {
     font-size: 16px;
     color: #fff;
     background: rgb(255, 255, 255, .1);
 }
-header .header-text h1 {
+.us-header .header-text h1 {
     font-size: 60px;
     font-weight: 600;
     line-height: 1.05;
@@ -29,17 +29,17 @@ header .header-text h1 {
 }
 
 @media (max-width: 810px) {
-    header {
+    .us-header {
         padding: 100px 25px;
     }
 }
 @media (max-width: 545px) {
-    header .header-text h1 {
+    .us-header .header-text h1 {
         font-size: 50px;
     }
 }
 @media (max-width: 400px) {
-    header .header-text h1 {
+    .us-header .header-text h1 {
         font-size: 45px;
     }
 }
