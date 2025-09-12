@@ -12,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 15px;
 }
 .team-section .team-header h2 {
@@ -24,4 +25,18 @@
     font-size: 16px;
     line-height: 1.5;
     color: #666;
+}
+
+@media (max-width: 545px) {
+    .team-section .team-header h2 {
+        font-size: 30px;
+    }
+    .team-section .team-header p {
+        font-size: 14px;
+    }
+}
+@media (max-width: 400px) {
+    .team-section .team-header h2 {
+        font-size: 28px;
+    }
 }
