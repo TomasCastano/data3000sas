@@ -36,32 +36,36 @@
     align-items: center;
     gap: 10px;
     padding: 30px 15px;
-    background: linear-gradient(90deg, #3a38c7 50%, #4730c7 100%);
+    background: linear-gradient(45deg, #eee 50%, #dadada 100%);
     overflow: hidden;
 }
 .team-container .team-card .team-card-info .team-info-header .icon-bg {
     position: absolute;
     right: -15px;
     font-size: 80px;
-    color: #fff;
+    color: #000000;
     opacity: .1;
 }
 .team-container .team-card .team-card-info .team-info-header .icon {
-    font-size: 30px;
+    font-size: 35px;
     padding: 8px;
     color: #fff;
-    background: rgba(255, 255, 255, .2);
+    background: linear-gradient(90deg, #3a38c7 50%, #4730c7 100%);
     border-radius: 50%;
 }
 .team-container .team-card .team-card-info .team-info-header h3 {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.05;
-    color: #fff;
+    color: #222;
 }
 .team-container .team-card .team-card-info p {
     font-size: 16px;
     line-height: 1.5;
     color: #666;
-    padding: 10px 15px 20px 15px;
+    padding: 0px 15px 20px 15px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
