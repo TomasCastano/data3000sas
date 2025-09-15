@@ -31,14 +31,14 @@ const TeamInfo = () => {
     ]
 
     return (
-        <div class="team-container">
+        <div className="team-container">
             {teamData.map((item, index) => (
-                <div class="team-card" key={index}>
-                    <div class="team-card-image">
+                <div className="team-card" key={index}>
+                    <div className="team-card-image">
                         <img src={item.image.src} alt="Personal de DATA 3000 S.A.S" />
                     </div>
-                    <div class="team-card-info">
-                        <div class="team-info-header">
+                    <div className="team-card-info">
+                        <div className="team-info-header">
                             <item.icon className='icon-bg' />
                             <item.icon className='icon' />
                             <h3>{item.title}</h3>
