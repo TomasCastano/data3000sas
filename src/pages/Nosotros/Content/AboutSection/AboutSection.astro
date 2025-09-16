@@ -4,6 +4,8 @@ import { Image } from 'astro:assets'
 import personalImage from '../../../../assets/images/personal.webp'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 
+import Badge from '../../../../components/Badge/Badge.astro'
+
 import './AboutSection.css'
 ---
 <section class="about-section">
@@ -12,6 +14,7 @@ import './AboutSection.css'
     </div>
     <div class="about-info">
         <div class="about-text">
+            <Badge className="header-badge" title="Quiénes Somos" />
             <h2>Expertos en Gestión Documental</h2>
             <div class="about-text-content">
                 <p>En Data 3000 S.A.S unimos más de 26 años de experiencia con métodos eficientes de búsqueda, clasificación y custodia junto con la innovación tecnológica para ofrecer soluciones de almacenamiento, digitalización, organización y consulta de información. Nuestro propósito es proteger y optimizar la gestión documental de empresas en todo el país.</p>

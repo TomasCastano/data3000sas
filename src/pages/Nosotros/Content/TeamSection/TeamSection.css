@@ -15,23 +15,29 @@
     text-align: center;
     gap: 15px;
 }
+.team-section .team-header .team-badge {
+    margin-bottom: 10px;
+}
 .team-section .team-header h2 {
     font-size: 36px;
     font-weight: 600;
     line-height: 1.05;
     color: #222;
 }
-.team-section .team-header p {
+.team-section .team-header .team-text {
     font-size: 16px;
     line-height: 1.5;
     color: #666;
 }
 
 @media (max-width: 545px) {
+    .team-section .team-header .team-badge {
+        font-size: 12px;
+    }
     .team-section .team-header h2 {
         font-size: 30px;
     }
-    .team-section .team-header p {
+    .team-section .team-header .team-text {
         font-size: 14px;
     }
 }

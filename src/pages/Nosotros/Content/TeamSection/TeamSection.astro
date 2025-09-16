@@ -1,12 +1,14 @@
 ---
 import TeamInfo from './TeamInfo/TeamInfo.jsx'
+import Badge from '../../../../components/Badge/Badge.astro'
 
 import './TeamSection.css'
 ---
 <section class="team-section">
     <header class="team-header">
-        <h2>Nuestras Áreas Operativas</h2>
-        <p>Contamos con equipos especializados en cada área para brindar un servicio integral y de alta calidad.</p>
+        <Badge className="team-badge" title="Nuestro Equipo" />
+        <h2>Nuestras áreas Operativas</h2>
+        <p class="team-text">Contamos con equipos especializados en cada área para brindar un servicio integral y de alta calidad.</p>
     </header>
     <TeamInfo client:load />
 </section>

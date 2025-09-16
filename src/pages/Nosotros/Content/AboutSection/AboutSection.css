@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 50px;
+    gap: 35px;
 }
 .about-section .about-info .about-text {
     display: flex;
@@ -33,20 +33,20 @@
     align-items: flex-start;
     gap: 25px;
 }
-.about-section .about-info h2 {
+.about-section .about-info .about-text h2 {
     font-size: 36px;
     font-weight: 600;
     line-height: 1.05;
     color: #222;
 }
-.about-section .about-info .about-text-content {
+.about-section .about-info .about-text .about-text-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 15px;
 }
-.about-section .about-info .about-text-content p {
+.about-section .about-info .about-text .about-text-content p {
     font-size: 16px;
     line-height: 1.5;
     color: #333;
@@ -98,10 +98,13 @@
     .about-section .about-info {
         gap: 25px;
     }
-    .about-section .about-info h2 {
+    .about-section .about-info .about-text .header-badge {
+        font-size: 12px;
+    }
+    .about-section .about-info .about-text h2 {
         font-size: 30px;
     }
-    .about-section .about-info .about-text-content p {
+    .about-section .about-info .about-text .about-text-content p {
         font-size: 14px;
     }
     .about-section .about-info .about-buttons button {
