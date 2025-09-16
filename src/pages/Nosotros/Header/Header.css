@@ -1,10 +1,29 @@
 .us-header {
+    position: relative;
     padding: 100px 50px;
-    background: #3a38c7;
+    background: linear-gradient(45deg, #3a38c7 50%, #4730c7 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0 0 25% 0;
+    overflow: hidden;
+}
+.us-header img {
+    position: absolute;
+    opacity: .05;
+    object-fit: cover;
+    top: 0;
+    right: -125px;
+    width: 450px;
+    height: 450px;
+    transform: scaleX(-1);
+    animation: boxAnimation 5s infinite;
+}
+
+@keyframes boxAnimation {
+    0% {transform: translateY(0px)}
+    50% {transform: translateY(20px)}
+    100% {transform: translateY(0px)}
 }
 .us-header .header-text {
     max-width: 1250px;

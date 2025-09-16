@@ -1,5 +1,8 @@
 ---
+import { Image } from 'astro:assets'
+
 import Badge from '../../../components/Badge/Badge.astro'
+import boxImage from '../../../assets/images/icons/box.svg'
 
 import './Header.css'
 ---
@@ -10,4 +13,10 @@ import './Header.css'
         <h1>Más de dos décadas de experiencia en la <b>Gestión Documental</b></h1>
         <p>Combinamos experiencia e innovación para ofrecer soluciones seguras y eficientes.</p>
     </div>
+    <Image
+        src={boxImage}
+        alt="Caja de archivos con el logo de Data 3000 S.A.S"
+        fetchpriority="high"
+        loading="eager"
+    />
 </header>
