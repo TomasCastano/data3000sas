@@ -1,5 +1,6 @@
 .resources-section {
-    background: rgba(58, 56, 199, .1);
+    position: relative;
+    background: radial-gradient(circle, #00000000 25%, #eee 100%), conic-gradient(from 90deg at 1px 1px, #eee 90deg, #e4e4e4 0) 0 0 / 50px 50px;
     padding: 75px 50px;
     width: 100%;
     border-radius: 5px;
@@ -8,6 +9,16 @@
     justify-content: flex-start;
     align-items: center;
     gap: 50px;
+    overflow: hidden;
+}
+.resources-section .world-image {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    opacity: .02;
 }
 .resources-section .resources-header {
     display: flex;
@@ -48,6 +59,7 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     padding: 30px;
     width: 400px;
+    z-index: 1;
 }
 .resources-section .resources-content .resources-card .resources-card-info {
     display: flex;
