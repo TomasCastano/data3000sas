@@ -1,0 +1,35 @@
+---
+import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded'
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined'
+import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined'
+
+import './ResourcesSection.css'
+---
+<section class="resources-section">
+    <header class="resources-header">
+        <h2>Mantente Actualizado</h2>
+        <p>Accede a nuestro Portafolio de Servicios y a nuestras Políticas de Privacidad y Protección de Datos en un solo clic</p>
+    </header>
+    <div class="resources-content">
+        <div class="resources-card">
+            <div class="resources-card-info">
+                <div class="icon-container">
+                    <DescriptionOutlinedIcon className="icon" />
+                </div>
+                <h3>Portafolio de Servicios</h3>
+                <p>Conoce en detalle todos nuestros servicios y cómo pueden beneficiar a tu empresa.</p>
+            </div>
+            <button><OpenInNewRoundedIcon className="icon" /></button>
+        </div>
+        <div class="resources-card">
+            <div class="resources-card-info">
+                <div class="icon-container">
+                    <SecurityOutlinedIcon className="icon" />
+                </div>
+                <h3>Políticas de Privacidad</h3>
+                <p>Conoce cómo protegemos tu información y garantizamos un manejo responsable de tus datos.</p>
+            </div>
+            <button><OpenInNewRoundedIcon className="icon" /></button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,134 @@
+.resources-section {
+    background: rgba(58, 56, 199, .1);
+    padding: 75px 50px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+.resources-section .resources-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+.resources-section .resources-header h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.05;
+    color: #222;
+}
+.resources-section .resources-header p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    max-width: 600px;
+    width: 100%;
+}
+.resources-section .resources-content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.resources-section .resources-content .resources-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 30px;
+    width: 400px;
+}
+.resources-section .resources-content .resources-card .resources-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+.resources-section .resources-content .resources-card .resources-card-info .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: rgba(58, 56, 199, .2);
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+.resources-section .resources-content .resources-card .resources-card-info .icon {
+    font-size: 25px;
+    color: #3a38c7;
+}
+.resources-section .resources-content .resources-card .resources-card-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.resources-section .resources-content .resources-card .resources-card-info p {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #666;
+}
+.resources-section .resources-content .resources-card button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease;
+    background: linear-gradient(90deg, #3a38c7 50%, #4730c7 100%);
+    will-change: transform;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+.resources-section .resources-content .resources-card button .icon {
+    transition: all .2s ease;
+    color: #fff;
+    font-size: 18px;
+}
+
+@media (max-width: 885px) {
+    .resources-section .resources-content .resources-card {
+        width: 100%;
+    }
+}
+@media (max-width: 545px) {
+    .resources-section {
+        padding: 50px 25px;
+    }
+    .resources-section .resources-header h2 {
+        font-size: 30px;
+    }
+    .resources-section .resources-header p {
+        font-size: 14px;
+    }
+    .resources-section .resources-content .resources-card {
+        padding: 20px;
+    }
+    .resources-section .resources-content .resources-card .resources-card-info h3 {
+        font-size: 18px;
+    }
+    .resources-section .resources-content .resources-card .resources-card-info p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 400px) {
+    .resources-section .resources-header h2 {
+        font-size: 28px;
+    }
+}
