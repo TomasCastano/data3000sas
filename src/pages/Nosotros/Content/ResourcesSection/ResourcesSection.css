@@ -117,6 +117,9 @@
     .resources-section .resources-header p {
         font-size: 14px;
     }
+    .resources-section .resources-content {
+        gap: 25px;
+    }
     .resources-section .resources-content .resources-card {
         padding: 20px;
     }

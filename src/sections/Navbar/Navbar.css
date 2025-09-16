@@ -94,6 +94,8 @@ nav .hamburger {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 35px;
+    height: 35px;
 }
 
 nav .hamburger input {
