@@ -1,13 +1,23 @@
 .why-us-card {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 25px;
     width: 100%;
-    background: rgba(58, 56, 199, .1);
+    background: linear-gradient(45deg, rgba(58, 56, 199, .1) 50%, rgba(58, 56, 199, .15) 100%);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     border-radius: 5px;
     padding: 20px 25px;
+    overflow: hidden;
+}
+.why-us-card .icon-bg {
+    position: absolute;
+    top: 0;
+    right: -80px;
+    font-size: 150px;
+    color: #000000;
+    opacity: .03;
 }
 .why-us-card .icon-container {
     display: flex;
