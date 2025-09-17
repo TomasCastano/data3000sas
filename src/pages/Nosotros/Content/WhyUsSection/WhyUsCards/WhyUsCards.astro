@@ -1,0 +1,54 @@
+---
+import VerifiedOutlinedIcon from '@mui/icons-material/VerifiedOutlined'
+import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined'
+import MemoryOutlinedIcon from '@mui/icons-material/MemoryOutlined';
+import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined'
+import DoneAllOutlinedIcon from '@mui/icons-material/DoneAllOutlined'
+import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined'
+
+import './WhyUsCards.css'    
+
+const whyUsData = [
+    {
+        icon: VerifiedOutlinedIcon,
+        title: 'Experiencia comprobada',
+        description: 'Más de 26 años protegiendo la información de empresas en todo el país, con un legado de confianza y resultados.',
+    },
+    {
+        icon: SecurityOutlinedIcon,
+        title: 'Seguridad garantizada',
+        description: 'Aplicamos procesos estrictos de custodia y almacenamiento que aseguran la integridad de sus documentos físicos y digitales.',
+    },
+    {
+        icon: MemoryOutlinedIcon,
+        title: 'Innovación tecnológica',
+        description: 'Integramos soluciones digitales avanzadas para optimizar la productividad, eficiencia y precisión en la gestión documental.',
+    },
+    {
+        icon: Diversity3OutlinedIcon,
+        title: 'Equipo especializado',
+        description: 'Contamos con más de 40 profesionales capacitados en diferentes áreas para ofrecer un servicio integral y confiable.',
+    },
+    {
+        icon: DoneAllOutlinedIcon,
+        title: 'Respaldo de clientes',
+        description: 'Más de 500 empresas han depositado su confianza en nosotros, consolidándonos como un aliado estratégico en gestión documental.',
+    },
+    {
+        icon: HandshakeOutlinedIcon,
+        title: 'Compromiso y cercanía',
+        description: 'Acompañamos a cada cliente con soluciones personalizadas, empatía y un servicio transparente que genera tranquilidad.',
+    }
+]
+---
+{whyUsData.map((item) => (
+    <div class="why-us-card">
+        <div class="icon-container">
+            <item.icon className="icon" />
+        </div>
+        <div class="content">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+        </div>
+    </div>
+))}
