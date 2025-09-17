@@ -63,6 +63,10 @@
     }
 }
 @media (max-width: 545px) {
+    .contact-header .header-content .header-badge {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
     .contact-header .header-content h1 {
         font-size: 40px;
     }
