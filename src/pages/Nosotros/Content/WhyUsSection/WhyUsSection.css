@@ -36,3 +36,42 @@
     gap: 35px;
     width: 50%;
 }
+
+@media (max-width: 850px) {
+    .why-us-section {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .why-us-section .why-us-header {
+        width: 100%;
+        position: static;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    .why-us-section .why-us-header .why-us-badge {
+        margin-bottom: 10px;
+    }
+    .why-us-section .why-us-content {
+        width: 100%;
+    }
+}
+@media (max-width: 545px) {
+    .why-us-section .why-us-header .why-us-badge {
+        font-size: 12px;
+    }
+    .why-us-section .why-us-header h2 {
+        font-size: 30px;
+    }
+    .why-us-section .why-us-header .why-us-text {
+        font-size: 14px;
+    }
+    .why-us-section .why-us-content {
+        gap: 25px;
+    }
+}
+@media (max-width: 400px) {
+    .why-us-section .why-us-header h2 {
+        font-size: 28px;
+    }
+}
