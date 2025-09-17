@@ -1,0 +1,77 @@
+.contact-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 170px 50px;
+}
+.contact-header img {
+    position: absolute;
+    opacity: .05;
+    object-fit: cover;
+    top: 0;
+    right: -125px;
+    width: 450px;
+    height: 450px;
+    transform: scaleX(-1);
+    animation: boxAnimation 5s infinite;
+}
+
+@keyframes boxAnimation {
+    0% {transform: translateY(0px)}
+    50% {transform: translateY(20px)}
+    100% {transform: translateY(0px)}
+}
+
+.contact-header .header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000;
+    gap: 15px;
+    z-index: 2;
+    max-width: 1250px;
+    width: 100%;
+}
+.contact-header .header-content .header-badge {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.contact-header .header-content h1 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #222;
+}
+.contact-header .header-content h1 b {
+    color: #3a38c7;
+}
+.contact-header .header-content .header-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+    max-width: 800px;
+    width: 100%;
+}
+
+@media (max-width: 810px) {
+    .contact-header {
+        padding: 130px 25px;
+    }
+}
+@media (max-width: 545px) {
+    .contact-header .header-content h1 {
+        font-size: 40px;
+    }
+    .contact-header .header-content .header-text {
+        font-size: 16px;
+    }
+}
+@media (max-width: 400px) {
+    .contact-header .header-content h1 {
+        font-size: 35px;
+    }
+}
