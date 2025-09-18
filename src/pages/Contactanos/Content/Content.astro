@@ -1,32 +1,15 @@
 ---
 import ContactForm from './ContactForm/ContactForm.astro'
+import ContactInfo from './ContactInfo/ContactInfo.astro'
 
 import './Content.css'
 ---
 <div class="contact-content">
-    <ContactForm />
-    <section class="map-section">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.4391422591466!2d-75.46292322603317!3d5.032308238695708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4765bfa9b3e1d7%3A0xcc7f201ecf9a402b!2sData%203000%20SAS!5e0!3m2!1ses!2sco!4v1758140099975!5m2!1ses!2sco" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="contact-info">
-            <h2>Información de Contacto</h2>
-            <div class="info-section">
-                <h3>Horarios de Atención</h3>
-                <p><b>Lunes a Jueves:</b> 7:00 am a 5:00 pm</p>
-                <p><b>Viernes:</b> 7:00 am a 4:00 pm</p>
-            </div>
-            <div class="info-section">
-                <h3>Teléfonos</h3>
-                <p>+57 320 695 3978</p>
-                <p>+57 320 695 3977</p>
-                <p>+57 301 409 7809</p>
-                <p>(606) 891 85 76</p>
-            </div>
-            <div class="info-section">
-                <h3>Ubicación</h3>
-                <p>Cra 32 Nº 103a-03</p>
-                <p>Barrio La Enea</p>
-                <p>Manizales, Caldas, Colombia</p>
-            </div>
-        </div>
-    </section>
+    <div class="contact-container">
+        <ContactForm />
+        <section class="map-section">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.4391422591466!2d-75.46292322603317!3d5.032308238695708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4765bfa9b3e1d7%3A0xcc7f201ecf9a402b!2sData%203000%20SAS!5e0!3m2!1ses!2sco!4v1758140099975!5m2!1ses!2sco" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </div>
+    <ContactInfo />
 </div>
