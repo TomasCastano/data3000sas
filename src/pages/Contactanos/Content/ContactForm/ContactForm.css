@@ -25,6 +25,10 @@
     font-size: 12px;
     color: rgb(200, 0, 0);
 }
+.contact-section .form-group label span.optional {
+    color: #6b7280;
+    font-weight: 400;
+}
 .contact-section .form-group input,
 .contact-section .form-group textarea {
     width: 100%;
@@ -57,7 +61,6 @@
 .contact-section .services-section {
     margin: 20px 0;
     padding: 20px;
-    background: #f8fafc;
     border-radius: 8px;
     border-left: 4px solid #3b82f6;
 }

@@ -1,18 +1,9 @@
 ---
-import { Image } from 'astro:assets'
-
 import Badge from '../../../components/Badge/Badge.astro'
-import callImage from '../../../assets/images/icons/call.svg'
 
 import './Header.css'
 ---
 <header class="contact-header">
-    <Image
-        src={callImage}
-        alt="Caja de archivos con el logo de Data 3000 S.A.S"
-        fetchpriority="high"
-        loading="eager"
-    />
     <div class="header-content">
         <Badge className="header-badge" title="Contáctanos" />
         <h1>Estamos listos para atender tus necesidades</h1>
