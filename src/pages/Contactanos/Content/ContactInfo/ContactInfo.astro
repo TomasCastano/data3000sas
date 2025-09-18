@@ -1,36 +1,64 @@
 ---
+import EventRoundedIcon from '@mui/icons-material/EventRounded'
+import PermPhoneMsgOutlinedIcon from '@mui/icons-material/PermPhoneMsgOutlined'
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined'
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined'
+
 import './ContactInfo.css'
 ---
 <div class="contact-info">
-    <h2>Información de Contacto</h2>
     <div class="cards-container">
         <div class="info-card">
-            <div class="card-icon">🕒</div>
-            <h3>Horarios de Atención</h3>
-            <p><b>Lunes a Jueves:</b> 7:00 am a 5:00 pm</p>
-            <p><b>Viernes:</b> 7:00 am a 4:00 pm</p>
+            <div class="card-header">
+                <div class="card-icon">
+                    <EventRoundedIcon className='icon' />
+                </div>
+                <h3>Horarios de Atención</h3>
+            </div>
+            <div class="card-text">
+                <p><b>Lunes a Jueves:</b> 7:00 am a 5:00 pm</p>
+                <p><b>Viernes:</b> 7:00 am a 4:00 pm</p>
+            </div>
         </div>
         <div class="info-card">
-            <div class="card-icon">📞</div>
-            <h3>Teléfonos</h3>
-            <p>+57 320 695 3978</p>
-            <p>+57 320 695 3977</p>
-            <p>+57 301 409 7809</p>
-            <p>(606) 891 85 76</p>
+            <div class="card-header">
+                <div class="card-icon">
+                    <PermPhoneMsgOutlinedIcon className='icon' />
+                </div>
+                <h3>Teléfonos</h3>
+            </div>
+            <div class="card-text">
+                <p>+57 320 695 3978</p>
+                <p>+57 320 695 3977</p>
+                <p>+57 301 409 7809</p>
+                <p>(606) 891 85 76</p>
+            </div>
         </div>
         <div class="info-card">
-            <div class="card-icon">📍</div>
-            <h3>Ubicación</h3>
-            <p>Cra 32 Nº 103a-03</p>
-            <p>Barrio La Enea</p>
-            <p>Manizales, Caldas, Colombia</p>
+            <div class="card-header">
+                <div class="card-icon">
+                    <LocationOnOutlinedIcon className='icon' />
+                </div>
+                <h3>Ubicación</h3>
+            </div>
+            <div class="card-text">
+                <p>Cra 32 Nº 103a-03</p>
+                <p>Barrio La Enea</p>
+                <p>Manizales, Caldas, Colombia</p>
+            </div>
         </div>
         <div class="info-card">
-            <div class="card-icon">📧</div>
-            <h3>Correos Electrónicos</h3>
-            <p>data3000sa@gmail.com</p>
-            <p>data3000sa.thumano@gmail.com</p>
-            <p>tecnologia.data3000sa@gmail.com</p>
+            <div class="card-header">
+                <div class="card-icon">
+                    <MailOutlineOutlinedIcon className='icon' />
+                </div>
+                <h3>Correos Electrónicos</h3>
+            </div>
+            <div class="card-text">
+                <p>data3000sa@gmail.com</p>
+                <p>data3000sa.thumano@gmail.com</p>
+                <p>tecnologia.data3000sa@gmail.com</p>
+            </div>
         </div>
     </div>
 </div>
