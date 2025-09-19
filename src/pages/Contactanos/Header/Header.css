@@ -46,6 +46,9 @@
     }
 }
 @media (max-width: 545px) {
+    .contact-header {
+        padding: 120px 25px 100px 25px;
+    }
     .contact-header .header-content .header-badge {
         font-size: 12px;
         margin-bottom: 5px;

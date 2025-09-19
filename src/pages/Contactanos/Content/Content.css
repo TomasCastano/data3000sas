@@ -25,3 +25,18 @@
     height: 100%;
     border-radius: 5px;
 }
+
+@media (max-width: 1000px) {
+    .contact-content .contact-container {
+        gap: 50px;
+    }
+}
+@media (max-width: 810px) {
+    .contact-content {
+        padding: 0 25px 100px 25px;
+    }
+    .contact-content .contact-container {
+        flex-direction: column;
+    }
+}
+    
