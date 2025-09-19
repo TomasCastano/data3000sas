@@ -42,12 +42,12 @@ const Navbar = ({ navTheme = 'light' }) => {
                         <img src={logo.src} alt="Logo de Data 3000 S.A.S" />
                     </a>
                 </div>
-                <ul>
-                    <li><a href="/">INICIO</a></li>
-                    <li><a href="/servicios">SERVICIOS</a></li>
-                    <li><a href="/nosotros">NOSOTROS</a></li>
-                    <li><a href="/contactanos">CONTÁCTANOS</a></li>
-                </ul>
+                <div className="nav-links">
+                    <a href="/">INICIO</a>
+                    <a href="/servicios">SERVICIOS</a>
+                    <a href="/nosotros">NOSOTROS</a>
+                    <a href="/contactanos">CONTÁCTANOS</a>
+                </div>
                 <div className="burger-menu">
                     <label className="hamburger">
                         <input 
