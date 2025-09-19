@@ -38,5 +38,11 @@
     .contact-content .contact-container {
         flex-direction: column;
     }
+    .contact-content .map-section {
+        width: 100%;
+    }
+    .contact-content .map-section iframe {
+        height: 300px;
+    }
 }
     
