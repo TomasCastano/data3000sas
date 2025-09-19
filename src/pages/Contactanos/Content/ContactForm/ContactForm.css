@@ -59,16 +59,22 @@
     color: #aaa;
 }
 .contact-section .services-section {
-    margin: 20px 0;
-    padding: 20px;
+    background-color: #f9fafb;  
+    margin: 25px 0;
+    padding: 15px;
     border-radius: 8px;
-    border-left: 4px solid #3b82f6;
+    border: 2px solid #e5e7eb;
 }
 .contact-section .services-section h3 {
     color: #1f2937;
     margin-bottom: 14px;
     font-size: 16px;
     font-weight: 600;
+}
+.contact-section .services-section h3 span.optional {
+    color: #6b7280;
+    font-weight: 400;
+    font-size: 12px;
 }
 .contact-section .checkbox-group {
     display: grid;
@@ -90,7 +96,7 @@
     width: 18px;
     height: 18px;
     margin-right: 10px;
-    accent-color: #3b82f6;
+    accent-color: #3a38c7;
     cursor: pointer;
     border: 2px solid #d1d5db;
     border-radius: 4px;
@@ -116,6 +122,21 @@
     border: none;
     cursor: pointer;
     margin-top: 10px;
+    font-weight: 500;
+}
+.contact-section .contact-form .privacy-policy {
+    color: #6b7280;
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+.contact-section .contact-form .privacy-policy .icon {
+    font-size: 12px;
+    color: rgba(10, 120, 0, .7);
 }
 
 @media (max-width: 768px) {
