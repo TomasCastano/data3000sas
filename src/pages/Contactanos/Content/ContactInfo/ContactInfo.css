@@ -7,6 +7,8 @@
     gap: 25px;
 }
 .contact-info .cards-container .info-card {
+    position: relative;
+    overflow: hidden;
     background: linear-gradient(45deg, rgba(58, 56, 199, .05), rgba(58, 56, 199, .08));
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     text-align: center;
@@ -24,6 +26,15 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+.contact-info .cards-container .info-card .card-header .icon-bg {
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    transform: translateY(-50%);
+    width: 125px;
+    height: 125px;
+    opacity: .03;
 }
 .contact-info .cards-container .info-card .card-header .card-icon {
     background: rgba(58, 56, 199, .1);
