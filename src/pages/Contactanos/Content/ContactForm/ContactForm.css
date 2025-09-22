@@ -2,6 +2,23 @@
     width: 50%;
     margin: 0 auto;
 }
+.contact-section .form-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+}
+.contact-section .form-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+.contact-section .form-header p {
+    font-size: 14px;
+    color: #666;
+}
 .contact-section .form-group {
     margin-bottom: 25px;
 }
