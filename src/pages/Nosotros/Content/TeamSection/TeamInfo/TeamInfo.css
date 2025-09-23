@@ -18,6 +18,7 @@
 }
 .team-container .team-card .team-card-image {
     width: 380px;
+    height: 100%;
 }
 .team-container .team-card .team-card-image img {
     width: 100%;
