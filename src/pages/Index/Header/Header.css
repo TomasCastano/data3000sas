@@ -6,6 +6,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 header .header-container {
     max-width: 1250px;
@@ -13,6 +14,7 @@ header .header-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 header .header-container .header-content {
     display: flex;
@@ -23,6 +25,7 @@ header .header-container .header-content {
 header .header-container .header-info {
     align-items: flex-start;
     gap: 25px;
+    animation: fadeIn .7s ease-in-out forwards;
 }
 header .header-container .header-info .header-text {
     display: flex;
@@ -63,6 +66,17 @@ header .header-container .header-image {
 header .header-container .header-image img {
     width: 650px;
     height: auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 1300px) {

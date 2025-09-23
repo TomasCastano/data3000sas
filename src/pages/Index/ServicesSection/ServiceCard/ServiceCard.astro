@@ -1,6 +1,7 @@
 ---
-import { Image } from 'astro:assets'
 const { title, description, image } = Astro.props
+
+import { Image } from 'astro:assets'
 
 import CTAButton from '../../../../components/CTAButton/CTAButton.astro'
 
@@ -9,7 +10,7 @@ import arrowRightIcon from '../../../../assets/images/icons/arrow-right.svg'
 import './ServiceCard.css'
 ---
 <div class="service-card">
-    <img
+    <Image
         class="service-card-image"
         src={image}
         alt={'Imagen del servicio ' + title}
