@@ -1,8 +1,12 @@
 import ImagesSlider from './ImagesSlider/ImagesSlider'
 
-import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded'
 import TaskAltRoundedIcon from '@mui/icons-material/TaskAltRounded'
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded'
+
+import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded'
+import AllInboxOutlinedIcon from '@mui/icons-material/AllInboxOutlined'
+import AdfScannerOutlinedIcon from '@mui/icons-material/AdfScannerOutlined'
+import WarehouseOutlinedIcon from '@mui/icons-material/WarehouseOutlined'
 
 import './ServiceCard.css'
 
@@ -13,7 +17,10 @@ const ServiceCard = ({ id, service }) => {
             <div className="service-info">
                 <div className="service-card-header">
                     <div className="icon-container">
-                        <QueryStatsRoundedIcon />
+                        {service.title === 'Diagnóstico' ? <QueryStatsRoundedIcon className='icon' /> : null}
+                        {service.title === 'Organización' ? <AllInboxOutlinedIcon className='icon' /> : null}
+                        {service.title === 'Digitalización' ? <AdfScannerOutlinedIcon className='icon' /> : null}
+                        {service.title === 'Almacenamiento' ? <WarehouseOutlinedIcon className='icon' /> : null}
                     </div>
                     <h3>{service.title}</h3>
                 </div>
