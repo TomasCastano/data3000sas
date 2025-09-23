@@ -15,6 +15,20 @@ import Footer from "../sections/Footer/Footer.astro"
 		<meta name="generator" content={Astro.generator} />
 		<title>{title} | Data 3000 S.A.S</title>
 	</head>
+
+	<script>
+		import Lenis from "lenis"
+	
+		const lenis = new Lenis({ lerp: 0.1 })
+	
+		function raf(time: number) {
+			lenis.raf(time);
+			requestAnimationFrame(raf)
+		}
+	
+		requestAnimationFrame(raf)
+	</script>
+
 	<body>
 		<Navbar client:load navTheme={navTheme} />
 		<slot />
