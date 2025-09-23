@@ -33,7 +33,7 @@ const ServiceCard = ({ id, service }) => {
                         <li><TaskAltRoundedIcon className='icon' /> {service.list[3]}</li>
                         <li><TaskAltRoundedIcon className='icon' /> {service.list[4]}</li>
                     </ul>
-                    <button className="service-card-btn">Cotizar Servicio <KeyboardArrowRightRoundedIcon className="icon" /></button>
+                    <a href="/contactanos" className="service-card-btn">Cotizar Servicio <KeyboardArrowRightRoundedIcon className="icon" /></a>
                 </div>
             </div>
             <div className="service-img">
