@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react'
 
 import logoColor from '../../assets/images/logos/logo2.webp'
 import logoBW from '../../assets/images/logos/logo.webp'
+import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded'
+import AllInboxOutlinedIcon from '@mui/icons-material/AllInboxOutlined'
+import AdfScannerOutlinedIcon from '@mui/icons-material/AdfScannerOutlined'
+import WarehouseOutlinedIcon from '@mui/icons-material/WarehouseOutlined'
 
 import MobileDrawer from './MobileDrawer/MobileDrawer'
 
@@ -44,7 +48,29 @@ const Navbar = ({ navTheme = 'light' }) => {
                 </div>
                 <div className="nav-links">
                     <a href="/">INICIO</a>
-                    <a href="/servicios">SERVICIOS</a>
+
+                    <div className="dropdown">
+                        <a href="/servicios" className="dropbtn">SERVICIOS</a>
+                        <div className="dropdown-content">
+                            <a className='dropdown-link' href="/servicios#diagnostico">
+                                <QueryStatsRoundedIcon className='icon' />
+                                Diagnóstico
+                            </a>
+                            <a className='dropdown-link' href="/servicios#organizacion">
+                                <AllInboxOutlinedIcon className='icon' />
+                                Organización
+                            </a>
+                            <a className='dropdown-link' href="/servicios#digitalizacion">
+                                <AdfScannerOutlinedIcon className='icon' />
+                                Digitalización
+                            </a>
+                            <a className='dropdown-link' href="/servicios#almacenamiento">
+                                <WarehouseOutlinedIcon className='icon' />
+                                Almacenamiento
+                            </a>
+                        </div>
+                    </div>
+
                     <a href="/nosotros">NOSOTROS</a>
                     <a href="/contactanos">CONTÁCTANOS</a>
                 </div>
