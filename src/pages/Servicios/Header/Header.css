@@ -1,6 +1,6 @@
 header {
     position: relative;
-    padding: 230px 50px;
+    padding: 170px 50px 120px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +96,7 @@ header .box-image {
 
 @media (max-width: 810px) {
     header {
-        padding: 150px 25px;
+        padding: 150px 25px 100px 25px;
     }
     header .box-image {
         width: 350px;
@@ -114,11 +114,5 @@ header .box-image {
 @media (max-width: 400px) {
     header .header-content h1 {
         font-size: 45px;
-    }
-}
-
-@media (max-height: 900px) {
-    header {
-        height: 100lvh;
     }
 }
