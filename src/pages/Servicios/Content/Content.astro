@@ -13,7 +13,8 @@ import almacenamiento2Image from '../../../assets/images/almacenamiento2.webp'
 import almacenamiento3Image from '../../../assets/images/almacenamiento3.webp'
 import almacenamiento4Image from '../../../assets/images/almacenamiento4.webp'
 
-import ServiceCard from '../ServiceCard/ServiceCard.jsx'
+import ServiceCard from './ServiceCard/ServiceCard.jsx'
+import BenefitsSection from './BenefitsSection/BenefitsSection.astro'
 
 import './Content.css'
 
@@ -69,10 +70,11 @@ const servicesData = [
 ]
 ---
 <div class="service-content">
-    <div class="service-cards-container">
+    <BenefitsSection />
+    <section class="service-cards-container">
         <ServiceCard client:visible id="diagnostico" service={servicesData[0]} />
         <ServiceCard client:visible id="organizacion" service={servicesData[1]} />
         <ServiceCard client:visible id="digitalizacion" service={servicesData[2]} />
         <ServiceCard client:visible id="almacenamiento" service={servicesData[3]} />
-    </div>
+    </section>
 </div>

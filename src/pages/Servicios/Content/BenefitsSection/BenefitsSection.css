@@ -1,0 +1,74 @@
+.benefits-section {
+    position: relative;
+    max-width: 1250px;
+    width: 100%;
+    background: linear-gradient(45deg, rgba(58, 56, 199, .1) 50%, rgba(58, 56, 199, .15) 100%);
+    padding: 50px 25px;
+    border-radius: 5px;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.benefits-section .benefits-image {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    opacity: .05;
+}
+.benefits-section .benefits-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+.benefits-section .benefits-header h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #222;
+}
+.benefits-section .benefits-header p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+.benefits-section .benefits-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.benefits-section .benefits-list .benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    width: 220px;
+    padding: 10px 0;
+}
+.benefits-section .benefits-list .benefit-item .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #3a38c7;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+.benefits-section .benefits-list .benefit-item p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.3;
+}
