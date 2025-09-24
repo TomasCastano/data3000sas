@@ -14,7 +14,7 @@ header .header-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    animation: fadeIn 1.5s ease-in-out forwards;
+    animation: fadeIn .8s ease-in-out forwards;
 }
 header .header-container .header-content {
     display: flex;

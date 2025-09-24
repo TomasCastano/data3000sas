@@ -16,6 +16,7 @@ header .header-content {
     z-index: 2;
     max-width: 1250px;
     width: 100%;
+    animation: fadeIn .8s ease-in-out forwards;
 }
 header .header-content .header-badge {
     background: rgba(58, 56, 199, .1);
@@ -80,6 +81,17 @@ header .box-image {
     0% {transform: translateY(0px)}
     50% {transform: translateY(20px)}
     100% {transform: translateY(0px)}
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 810px) {
