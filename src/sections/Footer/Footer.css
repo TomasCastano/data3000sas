@@ -116,4 +116,7 @@ footer .footer-bottom p a {
     footer {
         padding: 50px 25px 15px 25px;
     }
+    footer .footer-bottom .developed-by {
+        font-size: 12px;
+    }
 }
