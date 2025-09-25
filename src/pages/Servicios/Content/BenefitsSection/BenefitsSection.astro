@@ -6,15 +6,16 @@ import EmojiObjectsOutlinedIcon from '@mui/icons-material/EmojiObjectsOutlined'
 import LockClockOutlinedIcon from '@mui/icons-material/LockClockOutlined'
 
 import './BenefitsSection.css'
+import Badge from '../../../../components/Badge/Badge.astro'
 
 const benefitsData = [
     {
-        text: 'Eliminamos el riesgo de documentos extraviados',
-        icon: SearchOffIcon
-    },
-    {
         text: 'Evite ocupar espacios innecesarios en su oficina',
         icon: DomainDisabledOutlinedIcon
+    },
+    {
+        text: 'Eliminamos el riesgo de documentos extraviados',
+        icon: SearchOffIcon
     },
     {
         text: 'Recupere el control de su información',
@@ -27,14 +28,15 @@ const benefitsData = [
     {
         text: 'Mantenga sus archivos protegidos y listos para usar',
         icon: LockClockOutlinedIcon
-    }
+    },
 ]
 ---
 
 <section class="benefits-section">
     <div class="benefits-header">
+        <Badge title="Beneficios clave" />
         <h2>Olvídese del desorden documental</h2>
-        <p>Convertimos el caos de archivos en procesos organizados y seguros.</p>
+        <p class="benefits-description">Convertimos el caos de archivos en procesos organizados y seguros.</p>
     </div>
     <div class="benefits-list">
         {benefitsData.map((benefit) => (

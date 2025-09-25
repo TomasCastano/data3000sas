@@ -21,12 +21,15 @@
     text-align: center;
     gap: 10px;
 }
+.benefits-section .benefits-header .badge {
+    margin-bottom: 10px;
+}
 .benefits-section .benefits-header h2 {
     font-size: 36px;
     font-weight: 600;
     color: #222;
 }
-.benefits-section .benefits-header p {
+.benefits-section .benefits-header .benefits-description {
     font-size: 16px;
     font-weight: 400;
     color: #666;
