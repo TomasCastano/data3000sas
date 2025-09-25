@@ -1,13 +1,9 @@
 ---
-import { Image } from 'astro:assets'
-
 import SearchOffIcon from '@mui/icons-material/SearchOff'
 import DomainDisabledOutlinedIcon from '@mui/icons-material/DomainDisabledOutlined'
 import InventoryOutlinedIcon from '@mui/icons-material/InventoryOutlined'
 import EmojiObjectsOutlinedIcon from '@mui/icons-material/EmojiObjectsOutlined'
 import LockClockOutlinedIcon from '@mui/icons-material/LockClockOutlined'
-
-import filesImage from '../../../../assets/images/icons/files.svg'
 
 import './BenefitsSection.css'
 
@@ -36,13 +32,6 @@ const benefitsData = [
 ---
 
 <section class="benefits-section">
-    <Image
-        class="benefits-image"
-        src={filesImage}
-        alt="Icono de archivos"
-        fetchpriority="high"
-        loading="eager"
-    />
     <div class="benefits-header">
         <h2>Olvídese del desorden documental</h2>
         <p>Convertimos el caos de archivos en procesos organizados y seguros.</p>
