@@ -6,7 +6,7 @@
     width: 100%;
     gap: 55px;
     border-bottom: 1px dashed rgb(58, 56, 199, .2);
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
 @keyframes show {
@@ -56,10 +56,12 @@
     border-radius: 50%;
     background: rgba(58, 56, 199, .1);
     color: #3A38C7;
-    font-size: 20px;
+}
+.service-card .service-info .service-card-header .icon-container .icon {
+    font-size: 22px;
 }
 .service-card .service-info .service-card-header h3 {
-    font-size: 34px;
+    font-size: 28px;
     font-weight: 600;
     color: #222;
 }
@@ -72,7 +74,7 @@
     color: #333;
 }
 .service-card .service-info .service-card-body p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
 }
 .service-card .service-info .service-card-body ul {
@@ -162,14 +164,24 @@
     }
 }
 @media (max-width: 545px) {
+    .service-card .service-info .service-card-header {
+        gap: 10px;
+    }
+    .service-card .service-info .service-card-header .icon-container {
+        width: 35px;
+        height: 35px;
+    }
+    .service-card .service-info .service-card-header .icon-container .icon {
+        font-size: 18px;
+    }
     .service-card .service-info .service-card-header h3 {
-        font-size: 28px;
+        font-size: 20px;
     }
     .service-card .service-info .service-card-body p {
         font-size: 16px;
     }
     .service-card .service-info .service-card-body ul li {
-        font-size: 13px;
+        font-size: 14px;
     }
     .service-card .service-info .service-card-body .service-card-btn {
         font-size: 12px;
@@ -182,6 +194,6 @@
 }
 @media (max-width: 400px) {
     .service-card .service-info .service-card-header h3 {
-        font-size: 24px;
+        font-size: 18px;
     }
 }
