@@ -15,6 +15,7 @@ import almacenamiento4Image from '../../../assets/images/almacenamiento4.webp'
 
 import ServiceCard from './ServiceCard/ServiceCard.jsx'
 import BenefitsSection from './BenefitsSection/BenefitsSection.astro'
+import MoreInfoSection from './MoreInfoSection/MoreInfoSection.astro'
 
 import './Content.css'
 
@@ -77,4 +78,5 @@ const servicesData = [
         <ServiceCard client:visible id="digitalizacion" service={servicesData[2]} />
         <ServiceCard client:visible id="almacenamiento" service={servicesData[3]} />
     </section>
+    <MoreInfoSection />
 </div>

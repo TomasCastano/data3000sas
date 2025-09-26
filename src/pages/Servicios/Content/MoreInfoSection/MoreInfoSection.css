@@ -1,0 +1,94 @@
+.more-info-section {
+    position: relative;
+    max-width: 1250px;
+    width: 100%;
+    background: linear-gradient(45deg, #3a38c71a 50%, #3a38c726 100%);
+    padding: 50px 25px;
+    border-radius: 5px;
+    background: radial-gradient(circle, rgba(58, 56, 199, .05) 0%, rgba(58, 56, 199, 0.1) 90%), conic-gradient(from 90deg at 1px 1px, rgba(58, 56, 199, 0.1) 90deg, rgba(58, 56, 199, .15) 0) 0 0 / 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.more-info-section .more-info-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+}
+.more-info-section .more-info-header .badge {
+    margin-bottom: 10px;
+}
+.more-info-section .more-info-header h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #222;
+    max-width: 800px;
+}
+.more-info-section .more-info-header .more-info-description {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    max-width: 700px;
+}
+.more-info-section .more-info-header .more-info-btn {
+    margin-top: 15px;
+    background: linear-gradient(90deg, #3a38c7 50%, #4730c7 100%);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all .2s ease;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &:hover {
+        background: linear-gradient(90deg, #4730c7 50%, #3a38c7 100%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    }
+}
+.more-info-section .more-info-header .more-info-btn .icon {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .more-info-section {
+        padding: 40px 20px;
+    }
+    .more-info-section .more-info-header h2 {
+        font-size: 28px;
+    }
+    .more-info-section .more-info-header .more-info-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 545px) {
+    .more-info-section {
+        padding: 30px 15px;
+    }
+    .more-info-section .more-info-header h2 {
+        font-size: 24px;
+    }
+    .more-info-section .more-info-header .more-info-description {
+        font-size: 15px;
+    }
+    .more-info-section .more-info-header .more-info-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .more-info-section .more-info-header h2 {
+        font-size: 20px;
+    }
+    .more-info-section .more-info-header .more-info-description {
+        font-size: 14px;
+    }
+}
