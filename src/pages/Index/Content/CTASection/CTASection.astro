@@ -1,0 +1,27 @@
+---
+import Badge from '../../../../components/Badge/Badge.astro'
+import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded'
+
+import './CTASection.css'
+---
+
+<section class="cta-section">
+    <div class="cta-container">
+        <div class="cta-header">
+            <Badge title="Transforma tu gestión documental hoy" />
+            <h2>Lleva tu gestión documental al siguiente nivel</h2>
+            <p class="cta-description">
+                Conserva el control de tu información y aumenta la productividad. Te asesoramos con soluciones a la medida de tu empresa.
+            </p>
+        </div>
+        <div class="cta-buttons">
+            <a class="service-btn" href="/servicios" aria-label="Ver servicios">
+                Ver servicios
+            </a>
+            <a class="cta-btn" href="/contactanos" aria-label="Recibir asesoría gratuita">
+                Recibir asesoría gratuita
+                <NavigateNextRoundedIcon className='icon' />
+            </a>
+        </div>
+    </div>
+</section>
