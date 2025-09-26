@@ -10,14 +10,18 @@ import arrowRightIcon from '../../../../assets/images/icons/arrow-right.svg'
 import './ServiceCard.css'
 ---
 <div class="service-card">
-    <Image
-        class="service-card-image"
-        src={image}
-        alt={'Imagen del servicio ' + title}
-        decoding="async"
-        loading="lazy"
-        fetchpriority="auto"
-    />
+    {image ? (
+        <Image
+            class="service-card-image"
+            src={image}
+            alt={'Imagen del servicio ' + title}
+            decoding="async"
+            loading="lazy"
+            fetchpriority="auto"
+        />
+    ) : (
+        <div class="service-card-placeholder">Imagen no disponible</div>
+    )}
     <div class="service-card-overlay"/>
     <div class="service-card-content">
         <div class="service-card-header">
