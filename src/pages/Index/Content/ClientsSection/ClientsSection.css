@@ -7,7 +7,7 @@
 .clients-section .clients-container {
     max-width: 1250px;
     width: 100%;
-    padding: 0 25px 100px 25px;
+    padding: 0 25px 50px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,9 +63,7 @@
 @media (max-width: 450px) {
     .clients-section .clients-container {
         gap: 30px;
-    }
-    .clients-section .clients-container {
-        padding: 0 25px 50px 25px;
+        padding: 0 25px 25px 25px;
     }
 }
 @media (max-width: 400px) {

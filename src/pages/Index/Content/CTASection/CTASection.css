@@ -1,24 +1,23 @@
 .cta-section {
     position: relative;
-    max-width: 1250px;
-    width: 100%;
-    background: linear-gradient(45deg, #3a38c71a 50%, #3a38c726 100%);
-    padding: 50px 25px;
-    border-radius: 5px;
-    background: radial-gradient(circle, rgba(58, 56, 199, .05) 0%, rgba(58, 56, 199, 0.1) 90%), conic-gradient(from 90deg at 1px 1px, rgba(58, 56, 199, 0.1) 90deg, rgba(58, 56, 199, .15) 0) 0 0 / 50px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-bottom: 50px;
+    width: 100%;
+    padding: 0 50px 50px 50px;
 }
 .cta-section .cta-container {
+    border-radius: 5px;
+    padding: 50px 25px;
+    max-width: 1250px;
+    width: 100%;
+    background: radial-gradient(circle, rgba(58, 56, 199, .05) 0%, rgba(58, 56, 199, 0.1) 90%), conic-gradient(from 90deg at 1px 1px, rgba(58, 56, 199, 0.1) 90deg, rgba(58, 56, 199, .15) 0) 0 0 / 50px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
     gap: 20px;
 }
 .cta-section .cta-header {
@@ -51,10 +50,7 @@
     gap: 15px;
     margin-top: 15px;
 }
-.cta-section .cta-buttons .service-btn {
-    background: #fff;
-    color: #333;
-    border: 1px solid #ccc;
+.cta-section .cta-buttons .btn {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -63,7 +59,13 @@
     font-weight: 500;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+}
+.cta-section .cta-buttons .service-btn {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ccc;
     &:hover {
         background: #eee;
         box-shadow: 0 0 10px rgba(0, 0, 0, .1);
@@ -72,15 +74,6 @@
 .cta-section .cta-buttons .cta-btn {
     background: linear-gradient(90deg, #3a38c7 50%, #4730c7 100%);
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all .2s ease;
-    font-size: 16px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 10px;
     &:hover {
         background: linear-gradient(90deg, #4730c7 50%, #3a38c7 100%);
         box-shadow: 0 0 10px rgba(0, 0, 0, .5);
@@ -93,53 +86,56 @@
     transition: all .2s ease;
 }
 
-@media (max-width: 768px) {
+.cta-section .cta-buttons .cta-btn .icon {
+    transition: all .2s ease;
+}
+
+@media (max-width: 1000px) {
     .cta-section {
-        padding: 50px 20px;
+        padding: 0 25px 50px 25px;
     }
+}
+@media (max-width: 768px) {
     .cta-section .cta-header h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
     .cta-section .cta-header .cta-description {
         font-size: 16px;
-    }
-    .cta-section .cta-header .cta-btn {
-        font-size: 16px;
-        padding: 10px 20px;
     }
 }
 
 @media (max-width: 545px) {
     .cta-section {
-        padding: 40px 15px;
+        padding: 0 25px 50px 25px;
     }
-    .cta-section .cta-header {
-        gap: 15px;
-    }
-    .cta-section .cta-header h2 {
-        font-size: 28px;
-    }
-    .cta-section .cta-header .cta-description {
-        font-size: 15px;
-    }
-    .cta-section .cta-header .cta-btn {
+    .cta-section .cta-header .badge {
         font-size: 14px;
-        padding: 10px 18px;
-    }
-}
-
-@media (max-width: 400px) {
-    .cta-section {
-        padding: 35px 12px;
     }
     .cta-section .cta-header h2 {
         font-size: 24px;
     }
     .cta-section .cta-header .cta-description {
+        font-size: 15px;
+    }
+    .cta-section .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta-section .cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .cta-section .cta-buttons .cta-btn,
+    .cta-section .cta-buttons .service-btn {
         font-size: 14px;
     }
-    .cta-section .cta-header .cta-btn {
-        font-size: 13px;
-        padding: 8px 16px;
+}
+
+@media (max-width: 400px) {
+    .cta-section .cta-header h2 {
+        font-size: 20px;
+    }
+    .cta-section .cta-header .cta-description {
+        font-size: 14px;
     }
 }
