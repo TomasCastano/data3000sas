@@ -1,5 +1,5 @@
 ---
-const { title, description, image } = Astro.props
+const { title, description, image, url } = Astro.props
 
 import { Image } from 'astro:assets'
 
@@ -30,7 +30,7 @@ import './ServiceCard.css'
         </div>
         <div class="service-card-body">
             <p>{description}</p>
-            <CTAButton className="service-card-btn" href="/servicios" theme="primary">
+            <CTAButton className="service-card-btn" href={`/servicios#${url}`} theme="primary">
                 Ver más
                 <Image
                     src={arrowRightIcon}
