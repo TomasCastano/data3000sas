@@ -2,6 +2,12 @@
     width: 50%;
     margin: 0 auto;
 }
+.contact-section .success-message .MuiPaper-root {
+    background: white;
+    color: #333;
+    font-weight: 500;
+    border-left: 5px solid #3a38c7;
+}
 .contact-section .form-header {
     display: flex;
     flex-direction: column;
@@ -148,6 +154,7 @@
     text-align: center;
 }
 .contact-section .contact-form .privacy-policy .icon {
+    margin-left: 5px;
     font-size: 12px;
     color: rgba(10, 120, 0, .7);
 }

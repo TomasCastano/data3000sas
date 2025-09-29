@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import { sendMessage } from "../../../../api/contacts/contacts"
+import Snackbar from '@mui/material/Snackbar'
 
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser'
 
 import './ContactForm.css'
 
 const ContactForm = () => {
+
+    const [open, setOpen] = useState(false)
+
     const [formData, setFormData] = useState({
         name: '',
         company: '',
@@ -14,6 +18,14 @@ const ContactForm = () => {
         message: '',
         services: []
     })
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+    
+        setOpen(false);
+    }
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target
@@ -45,6 +57,7 @@ const ContactForm = () => {
                 message: '',
                 services: []
             })
+            setOpen(true)
         } catch (error) {
             console.error('Error al enviar:', error)
             alert('Hubo un error al enviar tu mensaje')
@@ -52,8 +65,14 @@ const ContactForm = () => {
     }
 
     return (
-        // Mensaje enviado correctamente
         <section className="contact-section">
+            <Snackbar
+                open={open}
+                autoHideDuration={5000}
+                onClose={handleClose}
+                message="Gracias por tu mensaje. Nos pondremos en contacto contigo pronto."
+                className='success-message'
+            />
             <div className="form-header">
                 <h2>Queremos escucharte</h2>
                 <p>Déjanos tu mensaje y nuestro equipo se pondrá en contacto contigo.</p>
