@@ -62,6 +62,7 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
+    z-index: 1;
 }
 .contact-info .cards-container .info-card b {
     color: #222;

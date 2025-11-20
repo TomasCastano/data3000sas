@@ -16,6 +16,7 @@ const ContactForm = () => {
         email: '',
         phone: '',
         message: '',
+        website: '',
         services: []
     })
 
@@ -45,6 +46,11 @@ const ContactForm = () => {
         }
     }
 
+    if (formData.website) {
+        alert("Error inesperado. Intenta nuevamente.");
+        return;
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
@@ -55,6 +61,7 @@ const ContactForm = () => {
                 email: '',
                 phone: '',
                 message: '',
+                website: '',
                 services: []
             })
             setOpen(true)
@@ -99,6 +106,15 @@ const ContactForm = () => {
                     <label htmlFor="phone">Teléfono <span className="optional">(opcional)</span></label>
                     <input type="tel" id="phone" name="phone" value={formData.phone} autoComplete="tel" placeholder="Ej: +57-310-123-4567" onChange={handleChange} />
                 </div>
+
+                <input 
+                    type="text"
+                    name="website"
+                    style={{ display: "none" }}
+                    onChange={(e) => setFormData(prev => ({ ...prev, website: e.target.value }))}
+                    tabIndex="-1"
+                    autoComplete="off"
+                />
 
                 <div className="services-section">
                     <h3>Servicios de interés <span className="optional">(opcional)</span></h3>
