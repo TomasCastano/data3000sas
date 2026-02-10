@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets'
+
+import Badge from '../../../components/Badge/Badge.astro'
+import openBoxImage from '../../../assets/images/logos/alfresco-logo.svg'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+
+import './Header.css'
+---
+<header>
+    <div class="header-content">
+        <Badge className="header-badge" title="Alfresco" />
+        <h1>Accede a tus documentos en segundos. Gestión documental con <br><b>Alfresco Community Edition</b></h1>
+        <p>Para que tu empresa consulte, organice y gestione documentos digitales al instante. <br>El futuro de tu archivo es digital y es ahora</p>
+        <a aria-label="Descubre las ventajas de Alfresco" href="#ventajas">
+            Descubre las ventajas de Alfresco
+            <KeyboardArrowDownIcon className="icon" />
+        </a>
+    </div>
+    <Image
+        src={openBoxImage}
+        class="box-image"
+        alt="Logo de Alfresco"
+        fetchpriority="high"
+        loading="eager"
+    />
+</header>
