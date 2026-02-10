@@ -71,6 +71,7 @@ const Navbar = ({ navTheme = 'light' }) => {
                         </div>
                     </div>
 
+                    <a href="/alfresco">ALFRESCO</a>
                     <a href="/nosotros">NOSOTROS</a>
                     <a href="/contactanos">CONTÁCTANOS</a>
                 </div>
