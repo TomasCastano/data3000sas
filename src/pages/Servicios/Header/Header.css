@@ -24,6 +24,7 @@ header .header-content .header-badge {
 header .header-content .header-badge p {
     color: #3a38c7 !important;
     font-size: 16px !important;
+    font-weight: 500 !important;
 }
 header .header-content h1 {
     font-size: 60px;
