@@ -33,6 +33,7 @@ header .header-content h1 {
 }
 header .header-content h1 b {
     color: #3a38c7;
+    font-weight: 600;
 }
 header .header-content a {
     display: flex;
