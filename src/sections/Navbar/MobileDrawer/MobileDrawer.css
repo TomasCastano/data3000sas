@@ -5,6 +5,7 @@
     background: #ffffff;
     overflow: hidden;
     padding: 64px;
+    overflow-y: auto;
 }
 .drawer-container .drawer-close-btn {
     display: flex;

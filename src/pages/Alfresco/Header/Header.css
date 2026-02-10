@@ -78,8 +78,8 @@ header .box-image {
     position: absolute;
     opacity: .05;
     object-fit: cover;
-    top: 0;
-    left: 0px;
+    top: 50px;
+    left: 0;
     width: 500px;
     height: 500px;
     transform: scaleX(-1);
@@ -116,6 +116,9 @@ header .box-image {
     header .header-content h1 {
         font-size: 50px;
     }
+    header .header-content p {
+        font-size: 18px;
+    }
     header .header-content a {
         font-size: 12px;
     }
@@ -123,5 +126,8 @@ header .box-image {
 @media (max-width: 400px) {
     header .header-content h1 {
         font-size: 45px;
+    }
+    header .header-content p {
+        font-size: 16px;
     }
 }

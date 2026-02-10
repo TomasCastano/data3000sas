@@ -52,19 +52,19 @@ const Navbar = ({ navTheme = 'light' }) => {
                     <div className="dropdown">
                         <a href="/servicios" className="dropbtn">SERVICIOS</a>
                         <div className="dropdown-content">
-                            <a className='dropdown-link' href="/servicios#diagnostico">
+                            <a className='dropdown-link' href="/servicios#diagnostico" aria-label="Link de Servicio Diagnóstico">
                                 <QueryStatsRoundedIcon className='icon' />
                                 Diagnóstico
                             </a>
-                            <a className='dropdown-link' href="/servicios#organizacion">
+                            <a className='dropdown-link' href="/servicios#organizacion" aria-label="Link de Servicio Organización">
                                 <AllInboxOutlinedIcon className='icon' />
                                 Organización
                             </a>
-                            <a className='dropdown-link' href="/servicios#digitalizacion">
+                            <a className='dropdown-link' href="/servicios#digitalizacion" aria-label="Link de Servicio Digitalización">
                                 <AdfScannerOutlinedIcon className='icon' />
                                 Digitalización
                             </a>
-                            <a className='dropdown-link' href="/servicios#almacenamiento">
+                            <a className='dropdown-link' href="/servicios#almacenamiento" aria-label="Link de Servicio Almacenamiento">
                                 <WarehouseOutlinedIcon className='icon' />
                                 Almacenamiento
                             </a>
