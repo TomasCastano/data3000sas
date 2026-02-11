@@ -3,13 +3,13 @@
     background: #ffffff;
 }
 
-.container {
+.section.features .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.section h2 {
+.section.features h2 {
     font-size: 32px;
     font-weight: 600;
     text-align: center;
@@ -17,7 +17,7 @@
     color: #151827;
 }
 
-.section-intro {
+.section.features .section-intro {
     text-align: center;
     max-width: 750px;
     margin: 0 auto 35px auto;
@@ -25,13 +25,13 @@
     line-height: 1.5;
 }
 
-.features-grid {
+.section.features .features-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px;
 }
 
-.features-block {
+.section.features .features-block {
     background: #ffffff;
     border-radius: 12px;
     padding: 24px 24px 18px 24px;
@@ -39,39 +39,39 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.features-block h3 {
+.section.features .features-block h3 {
     font-size: 19px;
     margin-bottom: 12px;
     color: #22254a;
 }
 
-.features-block ul {
+.section.features .features-block ul {
     list-style: none;
     padding-left: 0;
     color: #555;
     line-height: 1.5;
 }
 
-.features-block li + li {
+.section.features .features-block li + li {
     margin-top: 6px;
 }
 
-.features-block li strong {
+.section.features .features-block li strong {
     color: #22254a;
 }
 
 @media (max-width: 960px) {
-    .features-grid {
+    .section.features .features-grid {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 640px) {
-    .section h2 {
+    .section.features h2 {
         font-size: 26px;
     }
     
-    .features-block {
+    .section.features .features-block {
         padding: 20px;
     }
 }
