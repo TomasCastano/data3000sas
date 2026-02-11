@@ -42,7 +42,7 @@
 .section.features .features-block h3 {
     font-size: 19px;
     margin-bottom: 12px;
-    color: #222;
+    color: #333;
     font-weight: 600;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .section.features .features-block li + li {
-    margin-top: 6px;
+    margin-top: 10px;
 }
 
 .section.features .features-block li strong {
