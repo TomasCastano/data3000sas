@@ -1,6 +1,6 @@
 header {
     position: relative;
-    padding: 160px 50px 120px 50px;
+    padding: 160px 50px 100px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,6 +151,16 @@ header .box-image {
     height: 500px;
     transform: scaleX(-1);
     animation: boxAnimation 5s infinite;
+}
+.mockup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.mockup-container .mockup-image {
+    width: 700px;
+    height: auto;
 }
 
 @keyframes boxAnimation {

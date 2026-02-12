@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets'
+
+import alfrescoMockupImage from '../../../../assets/images/alfresco-image.png'
+
+import './PersuasiveText.css'
+---
+
+<section class="persuasive-text-section">
+    <div class="container">
+        <div class="text-container">
+            <h2>Transforma la gestion documental de tu empresa</h2>
+            <p>Con Alfresco Community Edition, tu equipo podrá acceder, compartir y gestionar documentos de forma segura y eficiente. Centraliza la información, mejora la colaboración y toma el control de tus archivos digitales.</p>
+        </div>
+        <div class="image-container">
+            <Image
+            src={alfrescoMockupImage}
+            class="box-image"
+            alt="Logo de Alfresco"
+            fetchpriority="auto"
+            loading="lazy"
+        />
+        </div>
+    </div>
+</section>
