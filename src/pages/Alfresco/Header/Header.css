@@ -1,4 +1,4 @@
-header {
+.alfresco-header {
     position: relative;
     padding: 160px 50px 100px 50px;
     display: flex;
@@ -6,7 +6,7 @@ header {
     align-items: center;
     overflow: hidden;
 }
-header .header-content {
+.alfresco-header .header-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,33 +18,33 @@ header .header-content {
     width: 100%;
     animation: fadeIn .8s ease-in-out forwards;
 }
-header .header-content .header-badge {
+.alfresco-header .header-content .header-badge {
     background: rgba(58, 56, 199, .1);
 }
-header .header-content .header-badge p {
+.alfresco-header .header-content .header-badge p {
     color: #3a38c7 !important;
     font-size: 16px !important;
     font-weight: 500 !important;
 }
-header .header-content h1 {
+.alfresco-header .header-content h1 {
     font-size: 50px;
     font-weight: 500;
     line-height: 1.2;
     color: #000;
     text-align: center;
 }
-header .header-content h1 b {
+.alfresco-header .header-content h1 b {
     color: #3a38c7;
     font-weight: 600;
 }
-header .header-content p {
+.alfresco-header .header-content p {
     font-size: 20px;
     font-weight: 400;
     color: #666;
     line-height: 1.3;
     text-align: center;
 }
-header .header-content a {
+.alfresco-header .header-content a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,12 +59,12 @@ header .header-content a {
     cursor: pointer;
     justify-content: center;
 }
-header .header-content .buttons-container {
+.alfresco-header .header-content .buttons-container {
     display: flex;
     gap: 10px;  
     margin-top: 25px;
 }
-header .header-content .buttons-container .cta-button {
+.alfresco-header .header-content .buttons-container .cta-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,7 +80,7 @@ header .header-content .buttons-container .cta-button {
     overflow: hidden;
     min-width: 140px;
 }
-header .header-content .buttons-container .cta-button.primary {
+.alfresco-header .header-content .buttons-container .cta-button.primary {
     color: #fff;
     background: linear-gradient(135deg, #3a38c7 0%, #5a58e7 100%);
     box-shadow: 0 4px 15px rgba(58, 56, 199, 0.3);
@@ -93,7 +93,7 @@ header .header-content .buttons-container .cta-button.primary {
         transform: translateY(0);
     }
 }
-header .header-content .buttons-container .cta-button.secondary {
+.alfresco-header .header-content .buttons-container .cta-button.secondary {
     color: #3a38c7;
     background: rgba(58, 56, 199, 0.2);
     &:hover {
@@ -106,11 +106,11 @@ header .header-content .buttons-container .cta-button.secondary {
         transform: translateY(0);
     }
 }
-header .header-content .buttons-container .cta-button .cta-text {
+.alfresco-header .header-content .buttons-container .cta-button .cta-text {
     font-size: 16px;
     text-align: center;
 }
-header .header-content a:not(.cta-button) {
+.alfresco-header .header-content a:not(.cta-button) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,7 +130,7 @@ header .header-content a:not(.cta-button) {
         background: #d1d1d1;
     }
 }
-header .header-content a:not(.cta-button) .icon {
+.alfresco-header .header-content a:not(.cta-button) .icon {
     font-size: 24px;
     color: #999;
     animation: iconAnimation 3s infinite;
@@ -141,7 +141,7 @@ header .header-content a:not(.cta-button) .icon {
     100% {transform: translateY(-2px)}
 }
 
-header .box-image {
+.alfresco-header .box-image {
     position: absolute;
     opacity: .05;
     object-fit: cover;
@@ -181,39 +181,39 @@ header .box-image {
 }
 
 @media (max-width: 810px) {
-    header {
+    .alfresco-header {
         padding: 120px 25px 100px 25px;
     }
-    header .box-image {
+    .alfresco-header .box-image {
         width: 350px;
         height: 350px;
     }
 }
 @media (max-width: 545px) {
-    header .header-content h1 {
+    .alfresco-header .header-content h1 {
         font-size: 35px;
     }
-    header .header-content p {
+    .alfresco-header .header-content p {
         font-size: 18px;
     }
-    header .header-content a {
+    .alfresco-header .header-content a {
         font-size: 12px;
     }
-    header .header-content .buttons-container {
+    .alfresco-header .header-content .buttons-container {
         flex-direction: column;
         width: 100%;
         max-width: 280px;
     }
-    header .header-content .buttons-container .cta-button {
+    .alfresco-header .header-content .buttons-container .cta-button {
         width: 100%;
         font-size: 14px;
     }
 }
 @media (max-width: 400px) {
-    header .header-content h1 {
+    .alfresco-header .header-content h1 {
         font-size: 28px;
     }
-    header .header-content p {
+    .alfresco-header .header-content p {
         font-size: 16px;
     }
 }
