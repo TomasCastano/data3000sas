@@ -1,4 +1,4 @@
-header {
+.services-header {
     position: relative;
     padding: 170px 50px 120px 50px;
     display: flex;
@@ -6,7 +6,7 @@ header {
     align-items: center;
     overflow: hidden;
 }
-header .header-content {
+.services-header .header-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,25 +18,25 @@ header .header-content {
     width: 100%;
     animation: fadeIn .8s ease-in-out forwards;
 }
-header .header-content .header-badge {
+.services-header .header-content .header-badge {
     background: rgba(58, 56, 199, .1);
 }
-header .header-content .header-badge p {
+.services-header .header-content .header-badge p {
     color: #3a38c7 !important;
     font-size: 16px !important;
     font-weight: 500 !important;
 }
-header .header-content h1 {
+.services-header .header-content h1 {
     font-size: 60px;
     font-weight: 500;
     line-height: 1.05;
     color: #000;
 }
-header .header-content h1 b {
+.services-header .header-content h1 b {
     color: #3a38c7;
     font-weight: 600;
 }
-header .header-content a {
+.services-header .header-content a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,7 +56,7 @@ header .header-content a {
         background: #d1d1d1;
     }
 }
-header .header-content a .icon {
+.services-header .header-content a .icon {
     font-size: 24px;
     color: #999;
     animation: iconAnimation 3s infinite;
@@ -67,7 +67,7 @@ header .header-content a .icon {
     100% {transform: translateY(-2px)}
 }
 
-header .box-image {
+.services-header .box-image {
     position: absolute;
     opacity: .05;
     object-fit: cover;
@@ -97,24 +97,24 @@ header .box-image {
 }
 
 @media (max-width: 810px) {
-    header {
+    .services-header {
         padding: 150px 25px 100px 25px;
     }
-    header .box-image {
+    .services-header .box-image {
         width: 350px;
         height: 350px;
     }
 }
 @media (max-width: 545px) {
-    header .header-content h1 {
+    .services-header .header-content h1 {
         font-size: 50px;
     }
-    header .header-content a {
+    .services-header .header-content a {
         font-size: 12px;
     }
 }
 @media (max-width: 400px) {
-    header .header-content h1 {
+    .services-header .header-content h1 {
         font-size: 45px;
     }
 }
