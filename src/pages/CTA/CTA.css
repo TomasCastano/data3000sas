@@ -1,0 +1,191 @@
+.final-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #3a38c7 0%, #5a58e7 100%);
+    color: #ffffff;
+}
+
+.final-cta .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.final-cta .container .cta-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.final-cta .container .cta-text h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.final-cta .container .cta-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.final-cta .container .cta-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.final-cta .container .cta-benefits li {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+}
+
+.final-cta .container .cta-benefits li:last-child {
+    margin-bottom: 0;
+}
+
+.final-cta .container .cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.final-cta .container .cta-primary,
+.final-cta .container .cta-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.final-cta .container .cta-primary h3,
+.final-cta .container .cta-secondary h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.final-cta .container .cta-primary p,
+.final-cta .container .cta-secondary p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.final-cta .container .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.final-cta .container .cta-button.primary {
+    background: #ffffff;
+    color: #3a38c7;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.final-cta .container .cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.final-cta .container .cta-button.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.final-cta .container .cta-button.secondary:hover {
+    background: #ffffff;
+    color: #3a38c7;
+    transform: translateY(-2px);
+}
+
+/* Responsive global */
+@media (max-width: 960px) {
+    
+    .final-cta .container.cta-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .final-cta .container .cta-text h2 {
+        font-size: 36px;
+    }
+    
+    .final-cta .container .cta-text p {
+        font-size: 16px;
+    }
+    
+    .final-cta .container .cta-actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .final-cta .container .cta-primary,
+    .final-cta .container .cta-secondary {
+        padding: 25px 20px;
+        flex: 1;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 640px) {    
+    .final-cta {
+        padding: 80px 0;
+    }
+    
+    .final-cta .container .cta-content {
+        gap: 30px;
+    }
+    
+    .final-cta .container .cta-text h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    
+    .final-cta .container .cta-text p {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .final-cta .container .cta-benefits li {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .final-cta .container .cta-actions {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .final-cta .container .cta-primary,
+    .cta-secondary {
+        padding: 20px 15px;
+        max-width: 100%;
+    }
+    
+    .final-cta .container .cta-button {
+        min-width: 180px;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
