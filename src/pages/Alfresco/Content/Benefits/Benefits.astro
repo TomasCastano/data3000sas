@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets'
+
+import alfrescoMockupImage from '../../../../assets/images/almacenamiento1.webp'
+
 import './Benefits.css'
 ---
 
@@ -11,40 +15,44 @@ import './Benefits.css'
         </p>
 
         <div class="benefits-grid">
-            <article class="benefit-item">
+            <article class="benefit-item grid-item-1">
                 <h3>Acceso inmediato a la información</h3>
                 <ul>
                     <li>Consulta tus documentos 24/7 desde cualquier lugar.</li>
                     <li>Reduce al mínimo los tiempos de espera para obtener un archivo.</li>
                     <li>Centraliza la documentación en un único repositorio seguro.</li>
                 </ul>
+                <!-- <Image class="image" src={alfrescoMockupImage} alt="" /> -->
             </article>
 
-            <article class="benefit-item">
+            <article class="benefit-item grid-item-2">
                 <h3>Control, seguridad y trazabilidad</h3>
                 <ul>
                     <li>Gestión de roles y permisos por usuario y grupo.</li>
                     <li>Auditoría e historial de acciones sobre cada documento.</li>
                     <li>Cumplimiento de políticas internas y normativas de información.</li>
                 </ul>
+                <!-- <Image class="image" src={alfrescoMockupImage} alt="" /> -->
             </article>
 
-            <article class="benefit-item">
+            <article class="benefit-item grid-item-3">
                 <h3>Búsqueda avanzada y metadatos</h3>
                 <ul>
                     <li>Búsqueda por nombre, contenido y metadatos de los documentos.</li>
                     <li>Uso de Solr para indexación y búsquedas rápidas.</li>
                     <li>OCR para extraer texto de documentos escaneados y mejorar la búsqueda.</li>
                 </ul>
+                <!-- <Image class="image" src={alfrescoMockupImage} alt="" /> -->
             </article>
 
-            <article class="benefit-item">
+            <article class="benefit-item grid-item-4">
                 <h3>Flexibilidad y crecimiento</h3>
                 <ul>
                     <li>Escala en espacio y usuarios según lo necesite tu empresa.</li>
                     <li>Integra Alfresco con otros sistemas y aplicaciones.</li>
                     <li>Adáptalo a diferentes áreas: contabilidad, talento humano, jurídica, etc.</li>
                 </ul>
+                <!-- <Image class="image" src={alfrescoMockupImage} alt="" /> -->
             </article>
         </div>
     </div>
