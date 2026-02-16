@@ -1,4 +1,3 @@
-/* Variables CSS para consistencia */
 .final-cta {
     --primary-color: #3a38c7;
     --accent-color: #5a58e7;
@@ -9,13 +8,12 @@
     --glass-border: rgba(255, 255, 255, 0.2);
     
     padding: 100px 0;
-    background: linear-gradient(135deg, #3a38c7 0%, #5a58e7 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
     color: var(--text-primary);
     position: relative;
     overflow: hidden;
 }
 
-/* Elementos decorativos de fondo */
 .final-cta::before {
     content: '';
     position: absolute;
@@ -82,6 +80,7 @@
     line-height: 1.2;
     color: var(--text-primary);
     letter-spacing: -0.02em;
+    text-align: left;
 }
 
 .final-cta .container .cta-text p {
@@ -243,7 +242,6 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive optimizado con breakpoints consistentes */
 @media (max-width: 1100px) {
     .final-cta .container {
         max-width: 960px;
@@ -280,12 +278,13 @@
     .final-cta .container .cta-text h2 {
         font-size: 32px;
         margin-bottom: 15px;
+        text-align: center;
     }
     
     .final-cta .container .cta-text p {
         font-size: 16px;
         margin-bottom: 25px;
-        max-width: 400px;
+        max-width: 700px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -298,6 +297,8 @@
     .final-cta .container .cta-benefits li {
         font-size: 15px;
         padding: 6px 0;
+        align-items: center;
+        justify-content: center;
     }
     
     .final-cta .container .cta-actions {
@@ -409,7 +410,7 @@
     .final-cta .container .cta-secondary {
         padding: 25px 20px;
         width: 100%;
-        max-width: 320px;
+        max-width: 400px;
     }
     
     .final-cta .container .cta-button {

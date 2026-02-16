@@ -1,55 +1,43 @@
+/* ==========================================
+   FEATURES SECTION - ESTILOS ESPECÍFICOS
+   ========================================== */
+
 .section.features {
-    padding: 80px 0;
-    background: #ffffff;
+    background: var(--bg-white);
 }
 
 .section.features .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section.features h2 {
-    font-size: 32px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 15px;
-    color: #222;
-}
-
-.section.features .section-intro {
-    text-align: center;
-    max-width: 750px;
-    margin: 0 auto 35px auto;
-    color: #666;
-    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section.features .features-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
+    gap: var(--spacing-lg);
+    width: 100%;
 }
 
 .section.features .features-block {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 24px 24px 18px 24px;
-    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--bg-white);
+    border-radius: var(--border-radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
 }
 
-.section.features .features-block h3 {
-    font-size: 19px;
-    margin-bottom: 12px;
-    color: #333;
-    font-weight: 600;
+.section.features .features-block:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--border-primary);
 }
 
 .section.features .features-block ul {
     list-style: none;
     padding-left: 0;
-    color: #666;
+    color: var(--text-secondary);
     line-height: 1.5;
 }
 
@@ -58,22 +46,27 @@
 }
 
 .section.features .features-block li strong {
-    color: #444;
-    font-weight: 500;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
 }
 
 @media (max-width: 960px) {
     .section.features .features-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 640px) {
-    .section.features h2 {
-        font-size: 26px;
+        gap: var(--spacing-md);
     }
     
     .section.features .features-block {
         padding: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .section.features .features-block {
+        padding: 18px;
+    }
+    
+    .section.features .features-block li + li {
+        margin-top: 8px;
     }
 }

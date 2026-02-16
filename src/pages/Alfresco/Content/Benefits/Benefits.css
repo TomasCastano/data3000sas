@@ -1,20 +1,9 @@
-/* Variables CSS para consistencia con el proyecto */
+/* ==========================================
+   BENEFITS SECTION - ESTILOS ESPECÍFICOS
+   ========================================== */
+
 .section.benefits {
-    --primary-color: #3a38c7;
-    --secondary-color: #666;
-    --accent-color: #5a58e7;
-    --background-light: #f7f7fb;
-    --card-background: #ffffff;
-    --text-primary: #222;
-    --text-secondary: #666;
-    --border-color: rgba(0, 0, 0, 0.05);
-    --shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.05);
-    --shadow-md: 0 10px 30px rgba(16, 24, 40, 0.06);
-    --shadow-lg: 0 10px 15px rgba(16, 24, 40, 0.1);
-    --shadow-xl: 0 20px 25px rgba(16, 24, 40, 0.15);
-    
-    padding: 80px 0;
-    background: #f7f7fb;
+    background: var(--bg-light);
     position: relative;
     overflow: hidden;
 }
@@ -32,9 +21,6 @@
 }
 
 .section.benefits .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
     position: relative;
     z-index: 1;
 }
@@ -47,18 +33,10 @@
     animation: fadeInUp 0.8s ease forwards;
 }
 
-.section.benefits h2 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #222;
-    line-height: 1.2;
-}
-
 .section.benefits .section-intro {
     max-width: 750px;
     margin: 0 auto 35px auto;
-    color: #666;
+    color: var(--text-secondary);
     line-height: 1.5;
     font-size: 18px;
 }
@@ -66,7 +44,7 @@
 .section.benefits .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: var(--spacing-md);
     align-items: stretch;
     justify-content: center;
     max-width: 1000px;
@@ -275,17 +253,13 @@
 }
 
 @media (max-width: 640px) {
-    .section.benefits h2 {
-        font-size: 26px;
-    }
-    
     .section.benefits .header-content {
         margin-bottom: 40px;
     }
     
     .section.benefits .benefits-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: var(--spacing-sm);
     }
     
     .section.benefits .benefit-content {
@@ -323,10 +297,6 @@
 }
 
 @media (max-width: 480px) {
-    .section.benefits .container {
-        padding: 0 15px;
-    }
-    
     .section.benefits .benefits-grid {
         gap: 14px;
     }
