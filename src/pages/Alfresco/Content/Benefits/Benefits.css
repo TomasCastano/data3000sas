@@ -1,7 +1,3 @@
-/* ==========================================
-   BENEFITS SECTION - ESTILOS ESPECÍFICOS
-   ========================================== */
-
 .section.benefits {
     background: var(--bg-light);
     position: relative;
@@ -31,6 +27,12 @@
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.8s ease forwards;
+}
+
+.section.benefits .header-content .header-badge {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .section.benefits .section-intro {
@@ -293,6 +295,12 @@
     
     .section.benefits .benefit-item {
         min-height: 280px;
+    }
+}
+
+@media (max-width: 545px) {
+    .section.benefits .header-content .header-badge p {
+        font-size: 12px;
     }
 }
 

@@ -1,7 +1,3 @@
-/* ==========================================
-   FEATURES SECTION - ESTILOS ESPECÍFICOS
-   ========================================== */
-
 .section.features {
     background: var(--bg-white);
 }
@@ -10,6 +6,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.section.features .container .header-badge {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .section.features .features-grid {
@@ -68,5 +70,11 @@
     
     .section.features .features-block li + li {
         margin-top: 8px;
+    }
+}
+
+@media (max-width: 545px) {
+    .section.features .container .header-badge p {
+        font-size: 12px;
     }
 }

@@ -1,7 +1,3 @@
-/* ==========================================
-   PROBLEM SOLUTION SECTION - ESTILOS ESPECÍFICOS
-   ========================================== */
-
 .section.problem-solution {
     background: var(--bg-white);
 }
@@ -10,6 +6,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.problem-solution .container .header-badge {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .problem-solution .container .problem-solution-grid {
@@ -82,5 +84,11 @@
     
     .problem-solution .container .problem-solution-grid .col {
         padding: 18px;
+    }
+}
+
+@media (max-width: 545px) {
+    .problem-solution .container .header-badge p {
+        font-size: 12px;
     }
 }
