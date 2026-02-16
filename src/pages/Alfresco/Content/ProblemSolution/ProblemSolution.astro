@@ -1,11 +1,13 @@
 ---
 import './ProblemSolution.css'
+import Badge from '../../../../components/Badge/Badge.astro'
 ---
 
-<section class="section problem-solution" id="problema-solucion">
+<section class="section problem-solution fade-in" id="problema-solucion">
     <div class="container">
-        <h2>De la consulta por correo al acceso inmediato a tus documentos</h2>
-        <p class="section-intro">
+        <Badge className="header-badge slide-in-right" title="Solución" />
+        <h2 class="slide-in-left">De la consulta por correo al acceso inmediato a tus documentos</h2>
+        <p class="section-intro slide-in-right">
             En Data 3000 S.A.S prestamos un servicio de gestión documental muy completo:
             recepción, organización, digitalización, custodia y atención de consultas de archivo.
             Nuestro equipo de consultas es ágil y eficiente, pero siempre existe un paso
@@ -14,7 +16,7 @@ import './ProblemSolution.css'
         </p>
 
         <div class="problem-solution-grid">
-            <div class="col col-problem">
+            <div class="col col-problem card-hover">
                 <h3>La situación habitual</h3>
                 <ul>
                     <li>La empresa escribe al equipo de consultas para pedir un documento.</li>
@@ -23,7 +25,7 @@ import './ProblemSolution.css'
                     <li>Si ya está digitalizado, se busca en el repositorio y se remite por correo.</li>
                 </ul>
             </div>
-            <div class="col col-solution">
+            <div class="col col-solution card-hover">
                 <h3>La solución con Alfresco Community Edition</h3>
                 <ul>
                     <li>La empresa accede directamente a su sitio en Alfresco.</li>
@@ -33,7 +35,7 @@ import './ProblemSolution.css'
                 </ul>
             </div>
         </div>
-        <p class="highlight">
+        <p class="highlight glow-hover">
             El equipo de consultas sigue siendo un apoyo clave, pero ahora
             tus usuarios internos pueden acceder a su información de forma
             inmediata, segura y controlada.
