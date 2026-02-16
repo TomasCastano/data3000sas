@@ -1,58 +1,82 @@
 ---
 import { Image } from 'astro:assets'
 
-import alfrescoMockupImage from '../../../../assets/images/almacenamiento1.webp'
+import accesoImage from '../../../../assets/images/flexibility-alfresco.webp'
+import seguridadImage from '../../../../assets/images/movements-alfresco.webp'
+import busquedaImage from '../../../../assets/images/search-alfresco.webp'
 
 import './Benefits.css'
 ---
 
 <section class="section benefits" id="beneficios">
     <div class="container">
-        <h2>Beneficios de implementar Alfresco con Data 3000 S.A.S</h2>
-        <p class="section-intro">
-            Nuestro servicio de Alfresco Community Edition está pensado para que tu empresa
-            tenga control total sobre su información, con acceso inmediato y alta seguridad.
-        </p>
+        <div class="header-content">
+            <h2>Beneficios de implementar Alfresco con Data 3000 S.A.S</h2>
+            <p class="section-intro">
+                Nuestro servicio de Alfresco Community Edition está pensado para que tu empresa
+                tenga control total sobre su información, con acceso inmediato y alta seguridad.
+            </p>
+        </div>
 
         <div class="benefits-grid">
-            <article class="benefit-item grid-item-1">
-                <h3>Acceso inmediato a la información</h3>
-                <ul>
-                    <li>Consulta tus documentos 24/7 desde cualquier lugar.</li>
-                    <li>Reduce al mínimo los tiempos de espera para obtener un archivo.</li>
-                    <li>Centraliza la documentación en un único repositorio seguro.</li>
-                </ul>
-                <!-- <Image class="image" src={alfrescoMockupImage} alt="" /> -->
+            <article class="benefit-item" data-benefit="acceso">
+                <div class="benefit-content">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </div>
+                    <h3>Acceso inmediato a la información</h3>
+                    <ul>
+                        <li>Consulta tus documentos 24/7 desde cualquier lugar.</li>
+                        <li>Reduce al mínimo los tiempos de espera para obtener un archivo.</li>
+                        <li>Centraliza la documentación en un único repositorio seguro.</li>
+                    </ul>
+                </div>
+                <div class="benefit-image">
+                    <Image src={accesoImage} alt="Acceso inmediato a la información" />
+                </div>
             </article>
 
-            <article class="benefit-item grid-item-2">
-                <h3>Control, seguridad y trazabilidad</h3>
-                <ul>
-                    <li>Gestión de roles y permisos por usuario y grupo.</li>
-                    <li>Auditoría e historial de acciones sobre cada documento.</li>
-                    <li>Cumplimiento de políticas internas y normativas de información.</li>
-                </ul>
-                <!-- <Image class="image" src={alfrescoMockupImage} alt="" /> -->
+            <article class="benefit-item" data-benefit="seguridad">
+                <div class="benefit-content">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Control, seguridad y trazabilidad</h3>
+                    <ul>
+                        <li>Gestión de roles y permisos por usuario y grupo.</li>
+                        <li>Auditoría e historial de acciones sobre cada documento.</li>
+                        <li>Cumplimiento de políticas internas y normativas de información.</li>
+                    </ul>
+                </div>
+                <div class="benefit-image">
+                    <Image src={seguridadImage} alt="Control y seguridad" />
+                </div>
             </article>
 
-            <article class="benefit-item grid-item-3">
-                <h3>Búsqueda avanzada y metadatos</h3>
-                <ul>
-                    <li>Búsqueda por nombre, contenido y metadatos de los documentos.</li>
-                    <li>Uso de Solr para indexación y búsquedas rápidas.</li>
-                    <li>OCR para extraer texto de documentos escaneados y mejorar la búsqueda.</li>
-                </ul>
-                <!-- <Image class="image" src={alfrescoMockupImage} alt="" /> -->
-            </article>
-
-            <article class="benefit-item grid-item-4">
-                <h3>Flexibilidad y crecimiento</h3>
-                <ul>
-                    <li>Escala en espacio y usuarios según lo necesite tu empresa.</li>
-                    <li>Integra Alfresco con otros sistemas y aplicaciones.</li>
-                    <li>Adáptalo a diferentes áreas: contabilidad, talento humano, jurídica, etc.</li>
-                </ul>
-                <!-- <Image class="image" src={alfrescoMockupImage} alt="" /> -->
+            <article class="benefit-item" data-benefit="busqueda">
+                <div class="benefit-content">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </div>
+                    <h3>Búsqueda avanzada y metadatos</h3>
+                    <ul>
+                        <li>Búsqueda por nombre, contenido y metadatos de los documentos.</li>
+                        <li>Uso de Solr para indexación y búsquedas rápidas.</li>
+                        <li>OCR para extraer texto de documentos escaneados y mejorar la búsqueda.</li>
+                    </ul>
+                </div>
+                <div class="benefit-image">
+                    <Image src={busquedaImage} alt="Búsqueda avanzada" />
+                </div>
             </article>
         </div>
     </div>
