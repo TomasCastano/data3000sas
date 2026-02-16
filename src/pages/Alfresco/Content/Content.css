@@ -224,29 +224,6 @@
     box-shadow: var(--shadow-xl);
 }
 
-.glow-hover {
-    transition: all var(--transition-normal);
-    position: relative;
-}
-
-.glow-hover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: inherit;
-    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
-    opacity: 0;
-    transition: opacity var(--transition-normal);
-    z-index: -1;
-}
-
-.glow-hover:hover::before {
-    opacity: 0.1;
-}
-
 .scale-hover {
     transition: transform var(--transition-fast);
 }

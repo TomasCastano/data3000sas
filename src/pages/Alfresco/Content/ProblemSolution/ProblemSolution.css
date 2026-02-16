@@ -22,17 +22,7 @@
 }
 
 .problem-solution .container .problem-solution-grid .col {
-    background: var(--bg-white);
-    border-radius: var(--border-radius-md);
     padding: 25px;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--border-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.problem-solution .container .problem-solution-grid .col:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-xl);
 }
 
 .problem-solution .container .problem-solution-grid ul {
@@ -57,12 +47,6 @@
     max-width: 600px;
     width: 100%;
     text-align: center;
-    transition: all 0.3s ease;
-}
-
-.problem-solution .container .highlight:hover {
-    background: rgba(58, 56, 199, 0.08);
-    transform: translateY(-1px);
 }
 
 @media (max-width: 960px) {

@@ -101,13 +101,6 @@
     transform: scale(1.05);
 }
 
-.section.benefits .benefit-item:hover .benefit-icon {
-    background: linear-gradient(135deg, #3a38c7, #5a58e7);
-    color: white;
-    transform: rotate(6deg) scale(1.1);
-    box-shadow: 0 8px 25px rgba(58, 56, 199, 0.25);
-}
-
 .section.benefits .benefit-content {
     padding: 24px;
     flex: 1;
@@ -212,28 +205,6 @@
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
-    }
-}
-
-.section.benefits .benefit-icon {
-    animation: iconBounce 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-@keyframes iconBounce {
-    0% {
-        opacity: 0;
-        transform: scale(0.3) rotate(-10deg);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.1) rotate(5deg);
-    }
-    70% {
-        transform: scale(0.95) rotate(-2deg);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) rotate(0deg);
     }
 }
 
