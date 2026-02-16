@@ -4,6 +4,42 @@ const { title, navTheme } = Astro.props
 
 import Navbar from "../sections/Navbar/Navbar.jsx"
 import Footer from "../sections/Footer/Footer.astro"
+
+const canonicalUrl = Astro.url.href;
+const siteUrl = Astro.site ? Astro.site.href : Astro.url.origin;
+const ogImageUrl = new URL("/og-image.webp", siteUrl).href;
+
+const ldJson = {
+	"@context": "https://schema.org",
+	"@type": "LocalBusiness",
+	"name": "Data 3000 S.A.S",
+	"url": canonicalUrl,
+	"logo": ogImageUrl,
+	"image": ogImageUrl,
+	"description": "Empresa especializada en gestión documental, digitalización, custodia y organización de archivos empresariales en Colombia.",
+	"foundingDate": "1998",
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": "Manizales",
+		"addressRegion": "Caldas",
+		"addressCountry": "CO"
+	},
+	"areaServed": {
+		"@type": "Country",
+		"name": "Colombia"
+	},
+	"sameAs": [
+		"https://www.instagram.com/data3000sas"
+	],
+	"knowsAbout": [
+		"Gestión Documental",
+		"Digitalización de Archivos",
+		"Custodia de Documentos",
+		"Archivo Empresarial",
+		"Organización de Archivos",
+		"Data 3000"
+	]
+};
 ---
 
 <!doctype html>
@@ -13,53 +49,28 @@ import Footer from "../sections/Footer/Footer.astro"
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Básico y Título -->
 		<title>{title} | Data 3000 S.A.S</title>
 		<meta name="description" content="Data 3000 SAS, expertos en gestión documental. Desde 1998 ofrecemos organización, custodia, digitalización y almacenamiento de archivos con seguridad, eficiencia y más de 26 años de experiencia.">
 		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={canonicalUrl} />
 		
-		<meta property="og:title" content="Data 3000 S.A.S | Expertos en Gestión Documental" />
+		<!-- Open Graph (para redes como Facebook) -->
+		<meta property="og:title" content={`${title} | Data 3000 S.A.S`} />
 		<meta property="og:description" content="Data 3000 SAS, expertos en gestión documental. Desde 1998 ofrecemos organización, custodia, digitalización y almacenamiento de archivos con seguridad, eficiencia y más de 26 años de experiencia." />
-		<meta property="og:image" content="/og-image.webp">
-		<meta property="og:url" content="https://data3000.co">
+		<meta property="og:image" content={ogImageUrl}>
+		<meta property="og:url" content={canonicalUrl}>
 		<meta property="og:type" content="website">
 
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="Data 3000 S.A.S | Expertos en Gestión Documental">
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={`${title} | Data 3000 S.A.S`} />
 		<meta name="twitter:description" content="Data 3000 SAS, expertos en gestión documental. Desde 1998 ofrecemos organización, custodia, digitalización y almacenamiento de archivos con seguridad, eficiencia y más de 26 años de experiencia.">
-		<meta name="twitter:image" content="/og-image.webp">
+		<meta name="twitter:image" content={ogImageUrl} />
 
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "LocalBusiness",
-				"name": "Data 3000 S.A.S",
-				"url": "https://data3000.co",
-				"logo": "https://data3000.co/og-image.webp",
-				"image": "https://data3000.co/og-image.webp",
-				"description": "Empresa especializada en gestión documental, digitalización, custodia y organización de archivos empresariales en Colombia.",
-				"foundingDate": "1998",
-				"address": {
-					"@type": "PostalAddress",
-					"addressLocality": "Manizales",
-					"addressRegion": "Caldas",
-					"addressCountry": "CO"
-				},
-				"areaServed": {
-					"@type": "Country",
-					"name": "Colombia"
-				},
-				"sameAs": [
-					"https://www.instagram.com/data3000sas"
-				],
-				"knowsAbout": [
-					"Gestión Documental",
-					"Digitalización de Archivos",
-					"Custodia de Documentos",
-					"Archivo Empresarial",
-					"Organización de Archivos"
-				]
-			}
-		</script>
+		<!-- Datos Estructurados (JSON-LD) -->
+		<script type="application/ld+json" set:html={JSON.stringify(ldJson)} />
 	</head>
 
 	<script>
