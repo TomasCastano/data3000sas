@@ -1,6 +1,8 @@
 ---
-import './ProblemSolution.css'
 import Badge from '../../../../components/Badge/Badge.astro'
+import HighlightOffRoundedIcon from '@mui/icons-material/HighlightOffRounded'
+import CheckCircleOutlineRoundedIcon from '@mui/icons-material/CheckCircleOutlineRounded';
+import './ProblemSolution.css'
 ---
 
 <section class="section problem-solution fade-in" id="problema-solucion">
@@ -16,19 +18,19 @@ import Badge from '../../../../components/Badge/Badge.astro'
             <div class="col col-problem">
                 <h3>La situación habitual</h3>
                 <ul>
-                    <li>La empresa escribe al equipo de consultas para pedir un documento.</li>
-                    <li>Si el documento es físico, se busca en bodega y se envía.</li>
-                    <li>Si es digital y no está escaneado, se localiza, se digitaliza y luego se envía.</li>
-                    <li>Si ya está digitalizado, se busca en el repositorio y se remite por correo.</li>
+                    <li><HighlightOffRoundedIcon className="icon" />La empresa escribe al equipo de consultas para pedir un documento.</li>
+                    <li><HighlightOffRoundedIcon className="icon" />Si el documento es físico, se busca en bodega y se envía.</li>
+                    <li><HighlightOffRoundedIcon className="icon" />Si es digital y no está escaneado, se localiza, se digitaliza y luego se envía.</li>
+                    <li><HighlightOffRoundedIcon className="icon" />Si ya está digitalizado, se busca en el repositorio y se remite por correo.</li>
                 </ul>
             </div>
             <div class="col col-solution">
-                <h3>La solución con Alfresco Community Edition</h3>
+                <h3>La solución con <b>Alfresco Community Edition</b></h3>
                 <ul>
-                    <li>La empresa accede directamente a su sitio en Alfresco.</li>
-                    <li>Consulta, busca y descarga documentos al instante, sin intermediarios.</li>
-                    <li>Define quién puede ver, editar o cargar nuevos documentos.</li>
-                    <li>Se integra con los procesos internos y reduce tiempos de respuesta.</li>
+                    <li><CheckCircleOutlineRoundedIcon className="icon" />La empresa accede directamente a su sitio en Alfresco.</li>
+                    <li><CheckCircleOutlineRoundedIcon className="icon" />Consulta, busca y descarga documentos al instante, sin intermediarios.</li>
+                    <li><CheckCircleOutlineRoundedIcon className="icon" />Define quién puede ver, editar o cargar nuevos documentos.</li>
+                    <li><CheckCircleOutlineRoundedIcon className="icon" />Se integra con los procesos internos y reduce tiempos de respuesta.</li>
                 </ul>
             </div>
         </div>

@@ -1,7 +1,3 @@
-/* ==========================================
-   PERSUASIVE TEXT SECTION - ESTILOS ESPECÍFICOS
-   ========================================== */
-
 .persuasive-text-section {
     background: var(--bg-white);
     padding: 0 var(--container-padding) var(--section-padding) var(--container-padding);
@@ -20,12 +16,6 @@
     gap: var(--spacing-lg);
     background: linear-gradient(70deg, var(--bg-light) 0%, #eee 70%, var(--primary-color) 0%);
     border-radius: var(--border-radius-sm);
-    transition: all 0.3s ease;
-}
-
-.persuasive-text-section .container:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
 }
 
 .persuasive-text-section .container .text-container {
