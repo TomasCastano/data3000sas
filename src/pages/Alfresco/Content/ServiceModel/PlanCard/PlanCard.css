@@ -150,11 +150,7 @@
     opacity: 0.9;
 }
 
-@media (max-width: 640px) {
-    .section.service-model .service-card {
-        padding: 20px 18px;
-    }
-    
+@media (max-width: 640px) {    
     .section.service-model .card-cta {
         padding: 12px 18px;
         font-size: 14px;
