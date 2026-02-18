@@ -1,14 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { sendMessage } from "../../../../api/contacts/contacts"
 import Snackbar from '@mui/material/Snackbar'
-
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser'
-
 import './ContactForm.css'
 
 const ContactForm = () => {
-
     const [open, setOpen] = useState(false)
+    const [showAlfrescoSelect, setShowAlfrescoSelect] = useState(false)
 
     const [formData, setFormData] = useState({
         name: '',
@@ -17,14 +15,23 @@ const ContactForm = () => {
         phone: '',
         message: '',
         website: '',
-        services: []
+        services: [],
+        alfrescoPlan: ''
     })
 
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-          return;
+    useEffect(() => {
+        if (formData.services.includes('alfresco')) {
+            const timer = setTimeout(() => {
+                setShowAlfrescoSelect(true)
+            }, 50)
+            return () => clearTimeout(timer)
+        } else {
+            setShowAlfrescoSelect(false)
         }
-    
+    }, [formData.services])
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') return;
         setOpen(false);
     }
 
@@ -32,12 +39,17 @@ const ContactForm = () => {
         const { name, value, type, checked } = e.target
 
         if (name === "services") {
-            setFormData((prev) => ({
-                ...prev,
-                services: checked
+            setFormData((prev) => {
+                const updatedServices = checked
                     ? [...prev.services, value]
-                    : prev.services.filter((service) => service !== value)
-            }))
+                    : prev.services.filter((service) => service !== value);
+                
+                return {
+                    ...prev,
+                    services: updatedServices,
+                    alfrescoPlan: updatedServices.includes('alfresco') ? prev.alfrescoPlan : ''
+                };
+            })
         } else {
             setFormData((prev) => ({
                 ...prev,
@@ -46,23 +58,19 @@ const ContactForm = () => {
         }
     }
 
-    if (formData.website) {
-        alert("Error inesperado. Intenta nuevamente.");
-        return;
-    }
-
     const handleSubmit = async (e) => {
         e.preventDefault()
+
+        if (formData.website) {
+            console.warn("Bot detectado.");
+            return;
+        }
+
         try {
             await sendMessage(formData)
             setFormData({
-                name: '',
-                company: '',
-                email: '',
-                phone: '',
-                message: '',
-                website: '',
-                services: []
+                name: '', company: '', email: '', phone: '',
+                message: '', website: '', services: [], alfrescoPlan: ''
             })
             setOpen(true)
         } catch (error) {
@@ -80,17 +88,19 @@ const ContactForm = () => {
                 message="Gracias por tu mensaje. Nos pondremos en contacto contigo pronto."
                 className='success-message'
             />
+            
             <div className="form-header">
                 <h2>Queremos escucharte</h2>
                 <p>Déjanos tu mensaje y nuestro equipo se pondrá en contacto contigo.</p>
             </div>
+
             <form className="contact-form" onSubmit={handleSubmit}>
+                
                 <div className="form-row">
                     <div className="form-group">
                         <label htmlFor="name">Nombre <span>*</span></label>
                         <input type="text" id="name" name="name" value={formData.name} autoComplete="name" required placeholder="Ingresa tu nombre" onChange={handleChange} />
                     </div>
-
                     <div className="form-group">
                         <label htmlFor="company">Empresa <span className="optional">(opcional)</span></label>
                         <input type="text" id="company" name="company" value={formData.company} autoComplete="company" placeholder="Nombre de tu empresa" onChange={handleChange} />
@@ -107,30 +117,29 @@ const ContactForm = () => {
                     <input type="tel" id="phone" name="phone" value={formData.phone} autoComplete="tel" placeholder="Ej: +57-310-123-4567" onChange={handleChange} />
                 </div>
 
-                <input 
-                    type="text"
-                    name="website"
-                    style={{ display: "none" }}
-                    onChange={(e) => setFormData(prev => ({ ...prev, website: e.target.value }))}
-                    tabIndex="-1"
-                    autoComplete="off"
-                />
+                <input type="text" name="website" style={{ display: "none" }} onChange={handleChange} tabIndex="-1" autoComplete="off" />
 
                 <div className="services-section">
                     <h3>Servicios de interés <span className="optional">(opcional)</span></h3>
                     <div className="checkbox-group">
+
+                        <div className="checkbox-item">
+                            <input type="checkbox" name="services" value="diagnostico" id="diagnostico" checked={formData.services.includes("diagnostico")} onChange={handleChange} />
+                            <label htmlFor="diagnostico">Diagnóstico</label>
+                        </div>
+                        
                         <div className="checkbox-item">
                             <input
                                 type="checkbox"
                                 name="services"
-                                value="diagnostico"
-                                id="diagnostico"
-                                checked={formData.services.includes("diagnostico")}
+                                value="digitalizacion"
+                                id="digitalizacion"
+                                checked={formData.services.includes("digitalizacion")}
                                 onChange={handleChange}
                             />
-                            <label htmlFor="diagnostico">Diagnóstico</label>
+                            <label htmlFor="digitalizacion">Digitalización</label>
                         </div>
-
+                        
                         <div className="checkbox-item">
                             <input
                                 type="checkbox"
@@ -147,18 +156,6 @@ const ContactForm = () => {
                             <input
                                 type="checkbox"
                                 name="services"
-                                value="digitalizacion"
-                                id="digitalizacion"
-                                checked={formData.services.includes("digitalizacion")}
-                                onChange={handleChange}
-                            />
-                            <label htmlFor="digitalizacion">Digitalización</label>
-                        </div>
-
-                        <div className="checkbox-item">
-                            <input
-                                type="checkbox"
-                                name="services"
                                 value="almacenamiento"
                                 id="almacenamiento"
                                 checked={formData.services.includes("almacenamiento")}
@@ -166,19 +163,41 @@ const ContactForm = () => {
                             />
                             <label htmlFor="almacenamiento">Almacenamiento</label>
                         </div>
+                        
+                        <div className="checkbox-item">
+                            <input type="checkbox" name="services" value="alfresco" id="alfresco" checked={formData.services.includes("alfresco")} onChange={handleChange} />
+                            <label htmlFor="alfresco">Alfresco</label>
+                        </div>
                     </div>
+
+                    {formData.services.includes('alfresco') && (
+                        <div className={`form-group alfresco-select-container ${showAlfrescoSelect ? 'show' : ''}`}>
+                            <label htmlFor="alfrescoPlan">¿En qué plan estás interesado? <span>*</span></label>
+                            <select 
+                                id="alfrescoPlan" 
+                                name="alfrescoPlan" 
+                                value={formData.alfrescoPlan} 
+                                onChange={handleChange}
+                                required
+                                className="styled-select"
+                            >
+                                <option value="">Selecciona una opción</option>
+                                <option value="cloud">Alfresco en la nube de Data 3000 S.A.S</option>
+                                <option value="managed">Alfresco en tu servidor, administrado por Data 3000 S.A.S</option>
+                                <option value="self-managed">Alfresco en tu servidor, autoadministrado</option>
+                            </select>
+                        </div>
+                    )}
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="message">Mensaje <span>*</span></label>
-                    <textarea id="message" name="message" value={formData.message} required placeholder="Cuéntanos qué necesitas o en qué podemos ayudarte..." rows="5" onChange={handleChange} />
+                    <textarea id="message" name="message" value={formData.message} required placeholder="Cuéntanos qué necesitas..." rows="5" onChange={handleChange} />
                 </div>
 
-
-                <button type="submit" className="submit-btn" id="submitBtn">Enviar mi consulta</button>
+                <button type="submit" className="submit-btn">Enviar mi consulta</button>
                 <p className="privacy-policy">
-                    Tus datos están seguros con nosotros. Solo los usaremos para responder tu consulta.
-                    <VerifiedUserIcon className='icon' />
+                    Tus datos están seguros con nosotros. <VerifiedUserIcon className='icon' />
                 </p>
             </form>
         </section>

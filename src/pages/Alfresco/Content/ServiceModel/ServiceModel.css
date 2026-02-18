@@ -28,13 +28,4 @@
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
-
-    .section.service-model .service-card {
-        padding: 20px 18px;
-    }
-    
-    .section.service-model .card-cta {
-        padding: 12px 18px;
-        font-size: 14px;
-    }
 }
