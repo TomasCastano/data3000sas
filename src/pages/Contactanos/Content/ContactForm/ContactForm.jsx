@@ -124,7 +124,14 @@ const ContactForm = () => {
                     <div className="checkbox-group">
 
                         <div className="checkbox-item">
-                            <input type="checkbox" name="services" value="diagnostico" id="diagnostico" checked={formData.services.includes("diagnostico")} onChange={handleChange} />
+                            <input
+                                type="checkbox"
+                                name="services"
+                                value="diagnostico"
+                                id="diagnostico"
+                                checked={formData.services.includes("diagnostico")}
+                                onChange={handleChange}
+                            />
                             <label htmlFor="diagnostico">Diagnóstico</label>
                         </div>
                         

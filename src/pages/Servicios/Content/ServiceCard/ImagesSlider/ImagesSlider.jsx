@@ -9,7 +9,7 @@ import { Pagination } from 'swiper/modules'
 
 import './ImagesSlider.css'
 
-const ImagesSlider = ({ images }) => {
+const ImagesSlider = ({ images, alt }) => {
 
     const [windowWidth, setWindowWidth] = useState(0);
 
@@ -39,7 +39,7 @@ const ImagesSlider = ({ images }) => {
         >
             {images.map((image, index) => (
                 <SwiperSlide key={index}>
-                    <img src={image} alt="Imagen del servicio" loading="lazy" />
+                    <img src={image} alt={"Imagen del servicio" + alt} loading="lazy" />
                 </SwiperSlide>
             ))}
         </Swiper>

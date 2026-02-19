@@ -46,11 +46,6 @@
 
 .persuasive-text-section .container .image-container {
     width: 50%;
-    transition: transform 0.3s ease;
-}
-
-.persuasive-text-section .container .image-container:hover {
-    transform: scale(1.02);
 }
 
 .persuasive-text-section .container .image-container img {

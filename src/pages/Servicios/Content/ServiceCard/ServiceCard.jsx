@@ -37,7 +37,7 @@ const ServiceCard = ({ id, service }) => {
                 </div>
             </div>
             <div className="service-img">
-                <ImagesSlider client:visible images={service.images} />
+                <ImagesSlider client:visible images={service.images} alt={service.title} />
             </div>
         </div>
     )
