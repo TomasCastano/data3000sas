@@ -24,17 +24,22 @@ import "./StatsSection.css"
 			<div class="stats-content">
 				<StatsCard
 					id="experience-stat"
-					title="0"
+					title="28" 
+					data-target="28"
 					description="Años de experiencia"
 				/>
 				<StatsCard
 					id="customers-stat"
 					title="+500"
+					data-target="500"
+					data-prefix="+"
 					description="Clientes satisfechos"
 				/>
 				<StatsCard
 					id="professionals-stat"
 					title="+40"
+					data-target="40"
+					data-prefix="+"
 					description="Profesionales en todas las áreas"
 				/>
 			</div>
@@ -84,7 +89,7 @@ import "./StatsSection.css"
 	}
 
 	const counters = [
-		{ selector: "#experience-stat", target: 26, prefix: "" },
+		{ selector: "#experience-stat", target: 28, prefix: "" },
 		{ selector: "#customers-stat", target: 500, prefix: "+" },
 		{ selector: "#professionals-stat", target: 40, prefix: "+" },
 	]
