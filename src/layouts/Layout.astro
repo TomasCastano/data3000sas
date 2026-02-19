@@ -4,6 +4,7 @@ const { title, navTheme } = Astro.props
 
 import Navbar from "../sections/Navbar/Navbar.jsx"
 import Footer from "../sections/Footer/Footer.astro"
+import WhatsAppButton from '../components/WhatsAppButton/WhatsAppButton.astro'
 
 const canonicalUrl = Astro.url.href;
 const siteUrl = Astro.site ? Astro.site.href : Astro.url.origin;
@@ -91,5 +92,6 @@ const ldJson = {
 		<Navbar client:load navTheme={navTheme} />
 		<slot />
 		<Footer />
+        <WhatsAppButton />
 	</body>
 </html>
