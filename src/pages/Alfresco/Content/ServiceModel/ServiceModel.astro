@@ -1,59 +1,71 @@
 ---
-import PlanCard from './PlanCard/PlanCard.astro'
-import './ServiceModel.css'
+import PlanCard from "./PlanCard/PlanCard.astro";
+import "./ServiceModel.css";
 ---
 
 <section class="section service-model" id="modelos-servicio">
-    <div class="container">
-        <h2>Modelos de servicio Alfresco que ofrecemos</h2>
-        <p class="section-intro">
-            En Data 3000 S.A.S puedes elegir cómo quieres operar Alfresco Community Edition,
-            según el nivel de acompañamiento y el tipo de infraestructura que tenga tu empresa.
-        </p>
+  <div class="container">
+    <h2>Modelos de servicio Alfresco que ofrecemos</h2>
+    <p class="section-intro">
+      En Data 3000 S.A.S puedes elegir cómo quieres operar Alfresco Community
+      Edition, según el nivel de acompañamiento y el tipo de infraestructura que
+      tenga tu empresa.
+    </p>
 
-        <div class="cards-grid">
-            <!-- Card 1: Alfresco en la nube de Data 3000 -->
-            <PlanCard 
-                title="Alfresco en la nube de Data 3000 S.A.S"
-                subtitle="Sitio personalizado para tu empresa en nuestro servidor"
-                svg="site"
-                cta="Quiero mi sitio en la nube"
-            >
-                <ul class="card-list">
-                    <li>Creación de un sitio dedicado para tu empresa en Alfresco.</li>
-                    <li>Infraestructura en la nube administrada por Data 3000 S.A.S.</li>
-                    <li>Pago según espacio utilizado y cantidad de usuarios.</li>
-                </ul>
-            </PlanCard>
+    <div class="cards-grid">
+      <!-- Card 1: Alfresco en la nube de Data 3000 -->
+      <PlanCard
+        title="Alfresco en la nube de Data 3000 S.A.S"
+        subtitle="Sitio personalizado para tu empresa en nuestro servidor"
+        plan="cloud"
+        cta="Quiero mi sitio en la nube"
+      >
+        <ul class="card-list">
+          <li>Creación de un sitio dedicado para tu empresa en Alfresco.</li>
+          <li>Infraestructura en la nube administrada por Data 3000 S.A.S.</li>
+          <li>Pago según espacio utilizado y cantidad de usuarios.</li>
+        </ul>
+      </PlanCard>
 
-            <!-- Card 2: Alfresco en servidor del cliente (administrado por Data 3000) -->
-            <PlanCard 
-                title="Alfresco en tu servidor, administrado por Data 3000 S.A.S"
-                subtitle="Tu infraestructura, con nuestro acompañamiento experto"
-                svg="administrated"
-                cta="Quiero que lo administren"
-            >
-                <ul class="card-list">
-                    <li>Instalación, configuración y parametrización en el servidor del cliente.</li>
-                    <li>Administración, monitoreo y soporte por nuestro equipo de TI.</li>
-                    <li>Pago único por instalación y pago mensual o anual por administración.</li>
-                </ul>
-            </PlanCard>
+      <!-- Card 2: Alfresco en servidor del cliente (administrado por Data 3000) -->
+      <PlanCard
+        title="Alfresco en tu servidor, administrado por Data 3000 S.A.S"
+        subtitle="Tu infraestructura, con nuestro acompañamiento experto"
+        plan="managed"
+        cta="Quiero que lo administren"
+      >
+        <ul class="card-list">
+          <li>
+            Instalación, configuración y parametrización en el servidor del
+            cliente.
+          </li>
+          <li>Administración, monitoreo y soporte por nuestro equipo de TI.</li>
+          <li>
+            Pago único por instalación y pago mensual o anual por
+            administración.
+          </li>
+        </ul>
+      </PlanCard>
 
-            <!-- Card 3: Alfresco en servidor del cliente (autoadministrado) -->
-            <PlanCard 
-                title="Alfresco en tu servidor, autoadministrado"
-                subtitle="Ideal para equipos de TI que quieren control total"
-                svg="autoadministrated"
-                cta="Quiero administrarlo internamente"
-            >
-                <ul class="card-list">
-                    <li>Instalación, configuración y parametrización inicial por Data 3000 S.A.S.</li>
-                    <li>La administración diaria queda a cargo del equipo de la empresa cliente.</li>
-                    <li>Pago único por instalación, configuración y parametrización.</li>
-                </ul>
-            </PlanCard>
-        </div>
+      <!-- Card 3: Alfresco en servidor del cliente (autoadministrado) -->
+      <PlanCard
+        title="Alfresco en tu servidor, autoadministrado"
+        subtitle="Ideal para equipos de TI que quieren control total"
+        plan="self-managed"
+        cta="Quiero administrarlo internamente"
+      >
+        <ul class="card-list">
+          <li>
+            Instalación, configuración y parametrización inicial por Data 3000
+            S.A.S.
+          </li>
+          <li>
+            La administración diaria queda a cargo del equipo de la empresa
+            cliente.
+          </li>
+          <li>Pago único por instalación, configuración y parametrización.</li>
+        </ul>
+      </PlanCard>
     </div>
+  </div>
 </section>
-
