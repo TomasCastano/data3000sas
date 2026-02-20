@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
 import { sendMessage } from "../../../../api/contacts/contacts"
+
 import Snackbar from '@mui/material/Snackbar'
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser'
+
 import './ContactForm.css'
 
 const ContactForm = () => {
+
     const [open, setOpen] = useState(false)
     const [showAlfrescoSelect, setShowAlfrescoSelect] = useState(false)
 
@@ -31,8 +34,8 @@ const ContactForm = () => {
     }, [formData.services])
 
     const handleClose = (event, reason) => {
-        if (reason === 'clickaway') return;
-        setOpen(false);
+        if (reason === 'clickaway') return
+        setOpen(false)
     }
 
     const handleChange = (e) => {
@@ -42,13 +45,13 @@ const ContactForm = () => {
             setFormData((prev) => {
                 const updatedServices = checked
                     ? [...prev.services, value]
-                    : prev.services.filter((service) => service !== value);
-                
+                    : prev.services.filter((service) => service !== value)
+
                 return {
                     ...prev,
                     services: updatedServices,
                     alfrescoPlan: updatedServices.includes('alfresco') ? prev.alfrescoPlan : ''
-                };
+                }
             })
         } else {
             setFormData((prev) => ({
@@ -62,8 +65,8 @@ const ContactForm = () => {
         e.preventDefault()
 
         if (formData.website) {
-            console.warn("Bot detectado.");
-            return;
+            console.warn("Bot detectado.")
+            return
         }
 
         try {
@@ -79,8 +82,39 @@ const ContactForm = () => {
         }
     }
 
+    useEffect(() => {
+        const updateForm = (service, plan = '') => {
+            if (!service) return
+
+            setFormData(prev => {
+                const newServices = prev.services.includes(service)
+                    ? prev.services
+                    : [...prev.services, service]
+
+                return {
+                    ...prev,
+                    services: newServices,
+                    alfrescoPlan: service === 'alfresco' && plan ? plan : prev.alfrescoPlan
+                }
+            })
+
+            const formElement = document.querySelector('.services-section')
+            if (formElement) formElement.scrollIntoView({ behavior: 'smooth' })
+        }
+
+        const params = new URLSearchParams(window.location.search)
+        const serviceFromURL = params.get('servicio')
+        const planFromURL = params.get('plan')
+        updateForm(serviceFromURL, planFromURL)
+
+        const handleEvent = (e) => updateForm(e.detail)
+        window.addEventListener('updateService', handleEvent)
+
+        return () => window.removeEventListener('updateService', handleEvent)
+    }, [])
+
     return (
-        <section className="contact-section">
+        <section className="contact-section" id="contacto">
             <Snackbar
                 open={open}
                 autoHideDuration={5000}
@@ -88,14 +122,14 @@ const ContactForm = () => {
                 message="Gracias por tu mensaje. Nos pondremos en contacto contigo pronto."
                 className='success-message'
             />
-            
+
             <div className="form-header">
                 <h2>Queremos escucharte</h2>
                 <p>Déjanos tu mensaje y nuestro equipo se pondrá en contacto contigo.</p>
             </div>
 
             <form className="contact-form" onSubmit={handleSubmit}>
-                
+
                 <div className="form-row">
                     <div className="form-group">
                         <label htmlFor="name">Nombre <span>*</span></label>
@@ -134,7 +168,7 @@ const ContactForm = () => {
                             />
                             <label htmlFor="diagnostico">Diagnóstico</label>
                         </div>
-                        
+
                         <div className="checkbox-item">
                             <input
                                 type="checkbox"
@@ -146,7 +180,7 @@ const ContactForm = () => {
                             />
                             <label htmlFor="digitalizacion">Digitalización</label>
                         </div>
-                        
+
                         <div className="checkbox-item">
                             <input
                                 type="checkbox"
@@ -170,7 +204,7 @@ const ContactForm = () => {
                             />
                             <label htmlFor="almacenamiento">Almacenamiento</label>
                         </div>
-                        
+
                         <div className="checkbox-item">
                             <input type="checkbox" name="services" value="alfresco" id="alfresco" checked={formData.services.includes("alfresco")} onChange={handleChange} />
                             <label htmlFor="alfresco">Alfresco</label>
@@ -180,10 +214,10 @@ const ContactForm = () => {
                     {formData.services.includes('alfresco') && (
                         <div className={`form-group alfresco-select-container ${showAlfrescoSelect ? 'show' : ''}`}>
                             <label htmlFor="alfrescoPlan">¿En qué plan estás interesado? <span>*</span></label>
-                            <select 
-                                id="alfrescoPlan" 
-                                name="alfrescoPlan" 
-                                value={formData.alfrescoPlan} 
+                            <select
+                                id="alfrescoPlan"
+                                name="alfrescoPlan"
+                                value={formData.alfrescoPlan}
                                 onChange={handleChange}
                                 required
                                 className="styled-select"

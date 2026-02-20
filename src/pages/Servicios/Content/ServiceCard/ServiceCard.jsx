@@ -12,6 +12,10 @@ import './ServiceCard.css'
 
 const ServiceCard = ({ id, service }) => {
 
+    const removeAccents = (str) => {
+        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
     return (
         <div id={id} className={"service-card"}>
             <div className="service-info">
@@ -33,7 +37,7 @@ const ServiceCard = ({ id, service }) => {
                         <li><TaskAltRoundedIcon className='icon' /> {service.list[3]}</li>
                         <li><TaskAltRoundedIcon className='icon' /> {service.list[4]}</li>
                     </ul>
-                    <a href="/contactanos" className="service-card-btn">Cotizar Servicio <KeyboardArrowRightRoundedIcon className="icon" /></a>
+                    <a href={`/contactanos?servicio=${removeAccents(service.title.toLowerCase())}`} className="service-card-btn">Cotizar Servicio <KeyboardArrowRightRoundedIcon className="icon" /></a>
                 </div>
             </div>
             <div className="service-img">
