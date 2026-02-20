@@ -24,6 +24,7 @@ const Navbar = ({ navTheme = 'light' }) => {
     }
 
     useEffect(() => {
+        changeBackground()
         window.addEventListener('scroll', changeBackground)
         return () => {
             window.removeEventListener('scroll', changeBackground)
