@@ -1,0 +1,54 @@
+---
+import Badge from "../../../../components/Badge/Badge.astro";
+import "./Workflow.css";
+---
+<section class="section workflow fade-in">
+    <Badge className="header-badge" title="Flujos de Trabajo" />
+    <header>
+        <h2>Automatiza tus procesos documentales con Alfresco</h2>
+        <p class="section-intro">Menos correos, menos retrasos y total trazabilidad en cada aprobación.</p>
+    </header>
+    <div class="steps-container">
+        <div class="steps-line"></div>
+    
+        <div class="step-item">
+            <div class="step-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-plus-corner-icon lucide-file-plus-corner"><path d="M11.35 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v5.35"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M14 19h6"/><path d="M17 16v6"/></svg>
+            </div>
+            <h3 class="step-title">Inicio del Proceso</h3>
+            <p class="step-description">
+                Se carga documento y asignan responsables.
+            </p>
+        </div>
+    
+        <div class="step-item">
+            <div class="step-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-search-corner-icon lucide-file-search-corner"><path d="M11.1 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.589 3.588A2.4 2.4 0 0 1 20 8v3.25"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m21 22-2.88-2.88"/><circle cx="16" cy="17" r="3"/></svg>
+            </div>
+            <h3 class="step-title">Revisión</h3>
+            <p class="step-description">
+                El responsable evalúa y comenta el documento.
+            </p>
+        </div>
+    
+        <div class="step-item">
+            <div class="step-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-pull-request-create-arrow-icon lucide-git-pull-request-create-arrow"><circle cx="5" cy="6" r="3"/><path d="M5 9v12"/><path d="m15 9-3-3 3-3"/><path d="M12 6h5a2 2 0 0 1 2 2v3"/><path d="M19 15v6"/><path d="M22 18h-6"/></svg>
+            </div>
+            <h3 class="step-title">Decisión</h3>
+            <p class="step-description">
+                Aprueba, rechaza o solicita cambios.
+            </p>
+        </div>
+    
+        <div class="step-item">
+            <div class="step-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-check-icon lucide-book-check"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/><path d="m9 9.5 2 2 4-4"/></svg>
+            </div>
+            <h3 class="step-title">Finalización</h3>
+            <p class="step-description">
+                Se registra resultado y actualiza estado.
+            </p>
+        </div>
+    </div>
+</section>
