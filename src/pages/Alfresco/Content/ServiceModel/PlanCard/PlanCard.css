@@ -62,11 +62,6 @@
     opacity: .08;
 }
 
-.section.service-model .service-card:hover header .card-icon {
-    transform: scale(1.1);
-    opacity: 1;
-}
-
 .section.service-model .service-card header .card-title {
     display: flex;
     align-items: center;
@@ -89,6 +84,7 @@
     width: 20px;
     height: 20px;
     color: var(--bg-white);
+    transition: all .3s ease;
 }
 
 .section.service-model .service-card header .card-title h3 {
@@ -111,6 +107,8 @@
     flex-direction: column;
     gap: var(--spacing-sm);
     padding: 20px 25px;
+    justify-content: space-between;
+    flex: 1;
 }
 
 .section.service-model .card-content .card-list {
