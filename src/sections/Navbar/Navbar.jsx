@@ -11,7 +11,7 @@ import MobileDrawer from './MobileDrawer/MobileDrawer'
 
 import './Navbar.css'
 
-const Navbar = ({ navTheme = 'light' }) => {
+const Navbar = ({ navTheme = 'light', currentPath = '' }) => {
     const [open, setOpen] = useState(false)
     const [scrollNav, setScrollNav] = useState(false)
 
@@ -26,10 +26,14 @@ const Navbar = ({ navTheme = 'light' }) => {
     useEffect(() => {
         changeBackground()
         window.addEventListener('scroll', changeBackground)
+
         return () => {
             window.removeEventListener('scroll', changeBackground)
         }
     }, [])
+
+    const isActive = (path) => currentPath === path ? 'active' : ''
+    const isActiveSection = (path) => currentPath.startsWith(path) ? 'active' : ''
 
     const toggleDrawer = (newOpen) => () => {
         setOpen(newOpen)
@@ -40,7 +44,7 @@ const Navbar = ({ navTheme = 'light' }) => {
 
     return (
         <header>
-            <nav className={navTheme}>
+            <nav className={`${navTheme} fade-in`}>
                 <div className={scrollNav ? "nav-container scroll" : "nav-container"}>
                     <div className="logo-container">
                         <a href="/">
@@ -48,10 +52,10 @@ const Navbar = ({ navTheme = 'light' }) => {
                         </a>
                     </div>
                     <div className="nav-links">
-                        <a href="/">INICIO</a>
+                        <a href="/" className={isActive('/')}>INICIO</a>
 
                         <div className="dropdown">
-                            <a href="/servicios" className="dropbtn">SERVICIOS</a>
+                            <a href="/servicios" className={`dropbtn ${isActiveSection('/servicios')}`}>SERVICIOS</a>
                             <div className="dropdown-content">
                                 <a className='dropdown-link' href="/servicios#diagnostico" aria-label="Link de Servicio Diagnóstico">
                                     <QueryStatsRoundedIcon className='icon' />
@@ -72,14 +76,14 @@ const Navbar = ({ navTheme = 'light' }) => {
                             </div>
                         </div>
 
-                        <a href="/alfresco">ALFRESCO</a>
-                        <a href="/nosotros">NOSOTROS</a>
-                        <a href="/contactanos">CONTÁCTANOS</a>
+                        <a href="/alfresco" className={isActive('/alfresco')}>ALFRESCO</a>
+                        <a href="/nosotros" className={isActive('/nosotros')}>NOSOTROS</a>
+                        <a href="/contactanos" className={isActive('/contactanos')}>CONTÁCTANOS</a>
                     </div>
                     <div className="burger-menu">
                         <label className="hamburger">
-                            <input 
-                                type="checkbox" 
+                            <input
+                                type="checkbox"
                                 checked={open}
                                 onClick={toggleDrawer(true)}
                                 onChange={() => console.log('checked')}

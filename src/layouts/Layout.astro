@@ -89,7 +89,7 @@ const ldJson = {
 	</script>
 
 	<body>
-		<Navbar client:load navTheme={navTheme} />
+		<Navbar client:only="react" navTheme={navTheme} currentPath={Astro.url.pathname} />
 		<slot />
 		<Footer />
         <WhatsAppButton />

@@ -8,6 +8,7 @@ nav {
     padding: 25px;
     z-index: 100;
 }
+
 nav .nav-container {
     width: 100%;
     max-width: 1350px;
@@ -60,7 +61,7 @@ nav .nav-container .nav-links {
     transform: translateY(5px);
     transition: all .2s ease-in-out;
     position: absolute;
-    top: 150%;
+    top: 155%;
     right: calc(50% - 90px);
     background: #fff;
     border-radius: 5px;
@@ -91,7 +92,7 @@ nav .nav-container .nav-links {
     }
 }
 .nav-links .dropdown-content .dropdown-link:hover {
-    background: rgba(0,0,0,0.05);
+    background: rgba(0, 0, 0, .05);
 }
 .nav-links .dropdown-content .dropdown-link .icon {
     font-size: 16px;
@@ -150,6 +151,27 @@ nav.dark .nav-container .nav-links a {
 nav .nav-container.scroll .nav-links a {
     color: #333;
 }
+
+nav .nav-container .nav-links a.active,
+nav.dark .nav-container .nav-links a.active,
+nav .nav-container.scroll .nav-links a.active {
+    color: var(--primary-color);
+    font-weight: 700;
+    background: var(--primary-transparent);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+nav .nav-container .nav-links a.active {
+    color: #fff;
+    border-bottom: 2px solid var(--primary-dark);
+    background: var(--primary-extralight);
+}
+
+nav .nav-container .nav-links .dropbtn.active {
+    color: var(--primary-color) !important;
+    font-weight: 700 !important;
+}
+
 nav .nav-container .burger-menu {
     display: none;
     justify-content: flex-end;

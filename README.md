@@ -1,6 +1,6 @@
 # Landing Data 3000 S.A.S
 
-Landing page profesional para **Data 3000 S.A.S**, una empresa experta en **gestión documental**.  
+Web Corporativa Profesional Orientada a la Conversión para **Data 3000 S.A.S**, una empresa experta en **gestión documental**.  
 El sitio está construido con **Astro** y **React**, usando componentes de **Material UI (MUI)**, animaciones suaves y un diseño optimizado para rendimiento y SEO.
 
 La landing presenta los servicios, experiencia y canales de contacto de la empresa de forma clara, moderna y orientada a conversión.
