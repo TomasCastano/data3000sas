@@ -1,6 +1,6 @@
 .persuasive-text-section {
     background: var(--bg-white);
-    padding: 0 var(--container-padding) var(--section-padding) var(--container-padding);
+    padding: var(--container-padding);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,6 @@
     flex-direction: row;
     align-items: center;
     gap: var(--spacing-lg);
-    background: linear-gradient(70deg, var(--bg-light) 0%, #eee 70%, var(--primary-color) 0%);
     border-radius: var(--border-radius-sm);
 }
 
