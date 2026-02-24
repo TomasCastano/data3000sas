@@ -158,12 +158,10 @@ nav .nav-container.scroll .nav-links a.active {
     color: var(--primary-color);
     font-weight: 700;
     background: var(--primary-transparent);
-    border-bottom: 2px solid var(--primary-color);
 }
 
 nav .nav-container .nav-links a.active {
     color: #fff;
-    border-bottom: 2px solid var(--primary-dark);
     background: var(--primary-extralight);
 }
 
