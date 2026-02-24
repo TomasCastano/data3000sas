@@ -35,14 +35,6 @@
     margin-bottom: 20px;
 }
 
-.section.benefits .section-intro {
-    max-width: 750px;
-    margin: 0 auto 35px auto;
-    color: var(--text-secondary);
-    line-height: 1.5;
-    font-size: 18px;
-}
-
 .section.benefits .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
