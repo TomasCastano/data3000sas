@@ -1,0 +1,96 @@
+---
+import Badge from '../../../../components/Badge/Badge.astro'
+import './FolderRules.css'
+---
+
+<section class="section folder-rules fade-in" id="reglas-de-carpeta">
+    <div class="container">
+        <header class="header-content">
+            <Badge className="header-badge" title="Automatización" />
+            <h2>Automatización Inteligente: Reglas de Carpeta</h2>
+            <p class="section-intro">
+                Acciones automáticas como mover archivos, transformarlos a PDF o renombrarlos, que se ejecutan cuando un
+                documento entra, se modifica o sale de una carpeta.
+            </p>
+        </header>
+
+        <div class="rules-layout">
+            <article class="rules-left" aria-label="Beneficios de las reglas de carpeta">
+                <div class="rules-benefits">
+                    <h3>Beneficios para el cliente</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rules-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2a10 10 0 1 0 10 10" />
+                                    <path d="M12 6v6l4 2" />
+                                    <path d="M22 4 12 14.01l-3-3" />
+                                </svg>
+                            </span>
+                            <div>
+                                <b>Ahorro de tiempo</b>
+                                <p>Menos pasos repetidos: el sistema ejecuta el trabajo en el momento correcto.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rules-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    <path d="M9 12l2 2 4-4" />
+                                </svg>
+                            </span>
+                            <div>
+                                <b>Reducción de errores manuales</b>
+                                <p>Evitas renombres inconsistentes y documentos mal ubicados por tareas “a mano”.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rules-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <path d="M7 10l5 5 5-5" />
+                                    <path d="M12 15V3" />
+                                </svg>
+                            </span>
+                            <div>
+                                <b>Organización estandarizada</b>
+                                <p>Reglas claras = estructura consistente para todo el equipo y auditorías más simples.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <p class="rules-microcopy">
+                        Cada carpeta puede comportarse como un “mini-proceso” que ordena y acelera tu operación documental.
+                    </p>
+                </div>
+            </article>
+
+            <div class="rules-right">
+                <div class="rules-flow" aria-label="Flujo conceptual de una regla de carpeta: Evento, Condición y Acción">
+                    <div class="flow-node flow-node--event" style="--d: 1">
+                        <div class="flow-chip">Evento</div>
+                        <p class="flow-text">Un documento entra, se modifica o sale.</p>
+                    </div>
+                    <div class="flow-arrow" aria-hidden="true">→</div>
+                    <div class="flow-node flow-node--condition" style="--d: 2">
+                        <div class="flow-chip">Condición</div>
+                        <p class="flow-text">Si cumple criterios (tipo, nombre, metadatos).</p>
+                    </div>
+                    <div class="flow-arrow" aria-hidden="true">→</div>
+                    <div class="flow-node flow-node--action" style="--d: 3">
+                        <div class="flow-chip">Acción</div>
+                        <p class="flow-text">Se mueve, renombra o convierte a PDF.</p>
+                    </div>
+                </div>
+
+                <aside class="rules-note">
+                    <p class="rules-example">
+                        Ejemplo: “Al cargar en <b>Contratos</b>, renombrar + convertir a <b>PDF</b> + mover a <b>Para aprobación</b>”.
+                    </p>
+                </aside>
+            </div>
+
+            
+        </div>
+    </div>
+</section>
