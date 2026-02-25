@@ -1,0 +1,232 @@
+.folder-rules {
+    position: relative;
+    overflow: hidden;
+}
+
+.folder-rules::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg-white);
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.folder-rules .container {
+    position: relative;
+}
+
+.folder-rules .header-content .header-badge {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.folder-rules .section-intro {
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.folder-rules .rules-layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 28px;
+    margin-top: 32px;
+    align-items: start;
+}
+
+.folder-rules .rules-right {
+    position: relative;
+    border-radius: 18px;
+    order: 2;
+}
+
+.folder-rules .rules-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.folder-rules .flow-node {
+    border-radius: 16px;
+    padding: 16px 14px;
+    background: rgba(255, 255, 255, 0.70);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+}
+
+.folder-rules .flow-chip {
+    width: fit-content;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.folder-rules .flow-text {
+    margin: 10px 0 0;
+    color: rgba(15, 23, 42, 0.82);
+    line-height: 1.45;
+}
+
+.folder-rules .flow-arrow {
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    color: rgba(15, 23, 42, 0.45);
+    font-size: 1.1rem;
+    padding: 0 2px;
+}
+
+.folder-rules .flow-node--event .flow-chip {
+    color: var(--primary-color);
+}
+
+.folder-rules .flow-node--condition .flow-chip {
+    color: rgba(2, 132, 199, 1);
+}
+
+.folder-rules .flow-node--action .flow-chip {
+    color: rgba(16, 185, 129, 1);
+}
+
+.folder-rules .rules-note {
+    margin-top: 14px;
+    border-radius: 14px;
+    padding: 14px 14px;
+    background: rgba(15, 23, 42, 0.04);
+    border: 1px dashed rgba(15, 23, 42, 0.14);
+}
+
+.folder-rules .rules-example {
+    margin: 0;
+    line-height: 1.6;
+    color: rgba(15, 23, 42, 0.82);
+}
+
+.folder-rules .rules-left {
+    position: relative;
+    order: 1;
+}
+
+.folder-rules .rules-benefits {
+    position: relative;
+    border-radius: 18px;
+    padding: 24px;
+    background: var(--primary-color);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    overflow: hidden;
+}
+
+.folder-rules .rules-benefits h3 {
+    margin: 0 0 14px;
+    color: white;
+}
+
+.folder-rules .rules-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.folder-rules .rules-list li {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 10px 10px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.folder-rules .rules-list li:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.folder-rules .rules-icon {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 0.90);
+}
+
+.folder-rules .rules-list p {
+    margin: 6px 0 0;
+    opacity: 0.9;
+}
+
+.folder-rules .rules-microcopy {
+    margin: 14px 0 0;
+    opacity: 0.85;
+    line-height: 1.55;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    padding-top: 14px;
+}
+
+@media (max-width: 900px) {
+    .folder-rules .rules-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .folder-rules .rules-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .folder-rules .flow-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 545px) {
+    .folder-rules .header-content .header-badge p {
+        font-size: 12px;
+    }
+
+    .folder-rules .rules-benefits {
+        padding: 18px;
+    }
+}
+
+.folder-rules .flow-node,
+.folder-rules .rules-note,
+.folder-rules .rules-benefits,
+.folder-rules .rules-list li {
+    transform: translateY(8px);
+    opacity: 0;
+    animation: folderRulesIn 520ms cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+    animation-delay: calc(var(--d, 1) * 90ms);
+}
+
+@keyframes folderRulesIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .folder-rules .flow-node,
+    .folder-rules .rules-note,
+    .folder-rules .rules-benefits,
+    .folder-rules .rules-list li {
+        animation: none;
+        transform: none;
+        opacity: 1;
+    }
+}
