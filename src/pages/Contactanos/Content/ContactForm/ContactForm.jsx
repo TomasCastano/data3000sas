@@ -213,13 +213,12 @@ const ContactForm = () => {
 
                     {formData.services.includes('alfresco') && (
                         <div className={`form-group alfresco-select-container ${showAlfrescoSelect ? 'show' : ''}`}>
-                            <label htmlFor="alfrescoPlan">¿En qué plan estás interesado? <span>*</span></label>
+                            <label htmlFor="alfrescoPlan">¿En qué plan estás interesado?</label>
                             <select
                                 id="alfrescoPlan"
                                 name="alfrescoPlan"
                                 value={formData.alfrescoPlan}
                                 onChange={handleChange}
-                                required
                                 className="styled-select"
                             >
                                 <option value="">Selecciona una opción</option>
