@@ -3,7 +3,11 @@ import { Image } from 'astro:assets'
 
 import stackIcon from '../../../../assets/images/icons/stack.svg'
 
+import { getYearsOfExperience } from '../../../../utils/company'
+
 import './ExperienceSection.css'
+
+const yearsOfExperience = getYearsOfExperience()
 ---
 
 <div class="experience-section">
@@ -13,15 +17,15 @@ import './ExperienceSection.css'
     </div>
     <div class="stats-container">
         <div class="stat">
-            <h3 data-target="28" >0</h3>
+            <h3 data-target={yearsOfExperience}>{yearsOfExperience}</h3>
             <p>Años de experiencia</p>
         </div>
         <div class="stat">
-            <h3 data-target="500" data-prefix="+">0</h3>
+            <h3 data-target="500" data-prefix="+">+500</h3>
             <p>Clientes satisfechos</p>
         </div>
         <div class="stat">
-            <h3 data-target="40" data-prefix="+">0</h3>
+            <h3 data-target="40" data-prefix="+">+40</h3>
             <p>Profesionales en todas la áreas</p>
         </div>
     </div>

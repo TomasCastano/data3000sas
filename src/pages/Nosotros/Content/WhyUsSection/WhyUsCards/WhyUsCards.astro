@@ -8,11 +8,15 @@ import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined'
 
 import './WhyUsCards.css'    
 
+import { getYearsOfExperience } from '../../../../../utils/company'
+
+const yearsOfExperience = getYearsOfExperience()
+
 const whyUsData = [
     {
         icon: VerifiedOutlinedIcon,
         title: 'Experiencia comprobada',
-        description: 'Más de 26 años protegiendo la información de empresas en todo el país, con un legado de confianza y resultados.',
+        description: `Más de ${yearsOfExperience} años protegiendo la información de empresas en todo el país, con un legado de confianza y resultados.`,
     },
     {
         icon: SecurityOutlinedIcon,

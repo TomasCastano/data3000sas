@@ -6,9 +6,14 @@ import Navbar from "../sections/Navbar/Navbar.jsx"
 import Footer from "../sections/Footer/Footer.astro"
 import WhatsAppButton from '../components/WhatsAppButton/WhatsAppButton.astro'
 
+import { getYearsOfExperience } from "../utils/company"
+
 const canonicalUrl = Astro.url.href;
 const siteUrl = Astro.site ? Astro.site.href : Astro.url.origin;
 const ogImageUrl = new URL("/og-image.webp", siteUrl).href;
+
+const yearsOfExperience = getYearsOfExperience()
+const seoDescription = `Data 3000 SAS, expertos en gestión documental. Desde 1998 ofrecemos organización, custodia, digitalización y almacenamiento de archivos con seguridad, eficiencia y más de ${yearsOfExperience} años de experiencia.`
 
 const ldJson = {
 	"@context": "https://schema.org",
@@ -54,13 +59,13 @@ const ldJson = {
 		
 		<!-- SEO Básico y Título -->
 		<title>{title} | Data 3000 S.A.S</title>
-		<meta name="description" content="Data 3000 SAS, expertos en gestión documental. Desde 1998 ofrecemos organización, custodia, digitalización y almacenamiento de archivos con seguridad, eficiencia y más de 26 años de experiencia.">
+		<meta name="description" content={seoDescription}>
 		<meta name="robots" content="index, follow" />
 		<link rel="canonical" href={canonicalUrl} />
 		
 		<!-- Open Graph (para redes como Facebook) -->
 		<meta property="og:title" content={`${title} | Data 3000 S.A.S`} />
-		<meta property="og:description" content="Data 3000 SAS, expertos en gestión documental. Desde 1998 ofrecemos organización, custodia, digitalización y almacenamiento de archivos con seguridad, eficiencia y más de 26 años de experiencia." />
+		<meta property="og:description" content={seoDescription} />
 		<meta property="og:image" content={ogImageUrl}>
 		<meta property="og:url" content={canonicalUrl}>
 		<meta property="og:type" content="website">
@@ -68,7 +73,7 @@ const ldJson = {
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={`${title} | Data 3000 S.A.S`} />
-		<meta name="twitter:description" content="Data 3000 SAS, expertos en gestión documental. Desde 1998 ofrecemos organización, custodia, digitalización y almacenamiento de archivos con seguridad, eficiencia y más de 26 años de experiencia.">
+		<meta name="twitter:description" content={seoDescription}>
 		<meta name="twitter:image" content={ogImageUrl} />
 
 		<!-- Datos Estructurados (JSON-LD) -->

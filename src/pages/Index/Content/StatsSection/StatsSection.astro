@@ -6,7 +6,11 @@ import StatsCard from "./StatsCard/StatsCard.astro"
 
 import archiveImage from "../../../../assets/images/almacenamiento2.webp"
 
+import { getYearsOfExperience } from "../../../../utils/company"
+
 import "./StatsSection.css"
+
+const yearsOfExperience = getYearsOfExperience()
 ---
 
 <section class="stats-section">
@@ -24,8 +28,8 @@ import "./StatsSection.css"
 			<div class="stats-content">
 				<StatsCard
 					id="experience-stat"
-					title="28" 
-					data-target="28"
+					title={String(yearsOfExperience)}
+					data-target={yearsOfExperience}
 					description="Años de experiencia"
 				/>
 				<StatsCard
@@ -88,11 +92,11 @@ import "./StatsSection.css"
 		return 1 - Math.pow(1 - t, 3)
 	}
 
-	const counters = [
-		{ selector: "#experience-stat", target: 28, prefix: "" },
-		{ selector: "#customers-stat", target: 500, prefix: "+" },
-		{ selector: "#professionals-stat", target: 40, prefix: "+" },
-	]
+	const counters = Array.from(document.querySelectorAll(".experience-number")).map((el) => ({
+		selector: `#${el.id}`,
+		target: parseInt(el.dataset.target, 10),
+		prefix: el.dataset.prefix || "",
+	}))
 
 	const observer = new IntersectionObserver(
 		(entries, obs) => {

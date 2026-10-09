@@ -7,7 +7,11 @@ import CTAButton from '../../../components/CTAButton/CTAButton.astro'
 import boxImage from '../../../assets/images/image-title.webp'
 import arrowRightIcon from '../../../assets/images/icons/arrow-right.svg'
 
+import { getYearsOfExperience } from '../../../utils/company'
+
 import './Header.css'
+
+const yearsOfExperience = getYearsOfExperience()
 ---
 
 <header class="index-header">
@@ -16,7 +20,7 @@ import './Header.css'
             <ClientRating />
             <div class="header-text">
                 <h1>Su información en las mejores manos</h1>
-                <p>Más de 26 años ofreciendo soluciones seguras y eficientes para la gestión de documentos físicos y digitales.</p>
+                <p>Más de {yearsOfExperience} años ofreciendo soluciones seguras y eficientes para la gestión de documentos físicos y digitales.</p>
             </div>
           <div class="header-cta">
                 <CTAButton href="/servicios" className="services-button" theme="primary">

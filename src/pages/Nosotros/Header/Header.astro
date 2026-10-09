@@ -4,13 +4,17 @@ import { Image } from 'astro:assets'
 import Badge from '../../../components/Badge/Badge.astro'
 import boxImage from '../../../assets/images/icons/box.svg'
 
+import { getDecadesWord } from '../../../utils/company'
+
 import './Header.css'
+
+const decadesWord = getDecadesWord()
 ---
 
 <header class="us-header">
     <div class="header-text">
         <Badge className="header-badge" title="Nosotros" />
-        <h1>Más de dos décadas de experiencia en la <b>Gestión Documental</b></h1>
+        <h1>Más de {decadesWord} décadas de experiencia en la <b>Gestión Documental</b></h1>
         <p>Combinamos experiencia e innovación para ofrecer soluciones seguras y eficientes.</p>
     </div>
     <Image
