@@ -4,6 +4,8 @@ import PermPhoneMsgOutlinedIcon from '@mui/icons-material/PermPhoneMsgOutlined'
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined'
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined'
 
+import { CONTACT } from '../../../../utils/company'
+
 import './ContactInfo.css'
 ---
 <div class="contact-info">
@@ -31,9 +33,9 @@ import './ContactInfo.css'
                 <h3>Teléfonos</h3>
             </div>
             <div class="card-text">
-                <p>+57 320 695 3978</p>
-                <p>+57 320 695 3977</p>
-                <p>+57 301 409 7809</p>
+                <p><a href={CONTACT.whatsapp1Link} target="_blank" rel="noopener noreferrer">{CONTACT.whatsapp1Display}</a></p>
+                <p><a href={CONTACT.whatsapp2Link} target="_blank" rel="noopener noreferrer">{CONTACT.whatsapp2Display}</a></p>
+                <p><a href={CONTACT.phoneHref}>{CONTACT.phoneDisplay}</a></p>
             </div>
         </div>
         <div class="info-card">
@@ -45,9 +47,9 @@ import './ContactInfo.css'
                 <h3>Ubicación</h3>
             </div>
             <div class="card-text">
-                <p>Cra 32 Nº 103A-03</p>
+                <p>{CONTACT.addressStreet}</p>
                 <p>Barrio La Enea</p>
-                <p>Manizales, Caldas, Colombia</p>
+                <p>{CONTACT.addressLocality}, {CONTACT.addressRegion}, Colombia</p>
             </div>
         </div>
         <div class="info-card">

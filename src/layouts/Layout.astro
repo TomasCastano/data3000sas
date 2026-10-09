@@ -1,95 +1,173 @@
 ---
 import "../assets/css/reset.css"
-const { title, navTheme } = Astro.props
+const { title, description, keywords, ogImage, includeFaq = false, navTheme } = Astro.props
 
 import Navbar from "../sections/Navbar/Navbar.jsx"
 import Footer from "../sections/Footer/Footer.astro"
 import WhatsAppButton from '../components/WhatsAppButton/WhatsAppButton.astro'
 
-import { getYearsOfExperience } from "../utils/company"
+import { getYearsOfExperience, CONTACT, SITE_URL, FAQS } from "../utils/company"
 
-const canonicalUrl = Astro.url.href;
-const siteUrl = Astro.site ? Astro.site.href : Astro.url.origin;
-const ogImageUrl = new URL("/og-image.webp", siteUrl).href;
+const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
+const siteUrl = SITE_URL;
+const ogImageUrl = ogImage ? new URL(ogImage, SITE_URL).href : new URL("/og-image.webp", siteUrl).href;
 
 const yearsOfExperience = getYearsOfExperience()
-const seoDescription = `Data 3000 SAS, expertos en gestión documental. Desde 1998 ofrecemos organización, custodia, digitalización y almacenamiento de archivos con seguridad, eficiencia y más de ${yearsOfExperience} años de experiencia.`
+const defaultDescription = `Data 3000 S.A.S, empresa de archivo y gestión documental en Colombia. Organización de archivos, digitalización, almacenamiento y custodia con más de ${yearsOfExperience} años de experiencia. Sede en Manizales, servicio nacional.`
+const seoDescription: string = description ?? defaultDescription
+const seoKeywords: string = keywords ?? "gestión documental Colombia, organización de archivos, digitalización de documentos, empresa de archivo, almacenamiento de archivos, custodia de documentos, Alfresco Colombia, Data 3000"
+const fullTitle = `${title} | Data 3000 S.A.S`
 
-const ldJson = {
-	"@context": "https://schema.org",
-	"@type": "LocalBusiness",
+const organizationSchema = {
+	"@type": ["Organization", "ProfessionalService"],
+	"@id": `${SITE_URL}/#organizacion`,
 	"name": "Data 3000 S.A.S",
-	"url": canonicalUrl,
-	"logo": ogImageUrl,
+	"url": SITE_URL,
+	"logo": new URL("/og-image.webp", siteUrl).href,
 	"image": ogImageUrl,
-	"description": "Empresa especializada en gestión documental, digitalización, custodia y organización de archivos empresariales en Manizales y Colombia.",
-	"foundingDate": "1998",
+	"description": "Empresa colombiana de gestión documental: organización de archivos, digitalización, almacenamiento y custodia. Sede en Manizales, servicio en toda Colombia.",
+	"foundingDate": "1998-09-01",
+	"telephone": CONTACT.phoneHref.replace("tel:", "+"),
+	"email": CONTACT.email,
 	"address": {
 		"@type": "PostalAddress",
-		"addressLocality": "Manizales",
-		"addressRegion": "Caldas",
-		"addressCountry": "CO"
+		"streetAddress": CONTACT.addressStreet,
+		"addressLocality": CONTACT.addressLocality,
+		"addressRegion": CONTACT.addressRegion,
+		"postalCode": "170001",
+		"addressCountry": CONTACT.addressCountry
 	},
-	"areaServed": {
-		"@type": "Country",
-		"name": "Colombia"
-	},
+	"areaServed": [
+		{ "@type": "Country", "name": "Colombia" },
+		{ "@type": "City", "name": "Manizales" },
+		{ "@type": "City", "name": "Bogotá" },
+		{ "@type": "City", "name": "Medellín" },
+		{ "@type": "City", "name": "Cali" },
+		{ "@type": "City", "name": "Pereira" },
+		{ "@type": "City", "name": "Armenia" }
+	],
 	"sameAs": [
-		"https://www.instagram.com/data3000sas"
+		"https://www.instagram.com/data3000sas",
+		"https://www.facebook.com/profile.php?id=100063638196947&locale=es_LA"
 	],
 	"knowsAbout": [
 		"Gestión Documental",
-		"Digitalización de Archivos",
-		"Custodia de Documentos",
-		"Archivo Empresarial",
 		"Organización de Archivos",
-		"Data 3000",
-		"Data 3000 SAS"
+		"Digitalización de Documentos",
+		"Custodia de Documentos",
+		"Almacenamiento de Archivos",
+		"Empresa de Archivo en Colombia",
+		"Alfresco"
+	]
+};
+
+const websiteSchema = {
+	"@type": "WebSite",
+	"@id": `${SITE_URL}/#sitio`,
+	"url": SITE_URL,
+	"name": "Data 3000 S.A.S",
+	"inLanguage": "es-CO",
+	"publisher": { "@id": `${SITE_URL}/#organizacion` }
+};
+
+const webpageSchema = {
+	"@type": "WebPage",
+	"@id": `${canonicalUrl}#pagina`,
+	"url": canonicalUrl,
+	"name": fullTitle,
+	"description": seoDescription,
+	"inLanguage": "es-CO",
+	"isPartOf": { "@id": `${SITE_URL}/#sitio` },
+	"about": { "@id": `${SITE_URL}/#organizacion` },
+	"datePublished": "2024-01-01",
+	"dateModified": new Date().toISOString().slice(0, 10)
+};
+
+const breadcrumbSchema = {
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{ "@type": "ListItem", "position": 1, "name": "Inicio", "item": `${SITE_URL}/` },
+		{ "@type": "ListItem", "position": 2, "name": title, "item": canonicalUrl }
+	]
+};
+
+const faqSchema = includeFaq ? {
+	"@type": "FAQPage",
+	"mainEntity": FAQS.map((f) => ({
+		"@type": "Question",
+		"name": f.question,
+		"acceptedAnswer": { "@type": "Answer", "text": f.answer }
+	}))
+} : null;
+
+const graph = {
+	"@context": "https://schema.org",
+	"@graph": [
+		organizationSchema,
+		websiteSchema,
+		webpageSchema,
+		breadcrumbSchema,
+		...(faqSchema ? [faqSchema] : [])
 	]
 };
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es-CO">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		
-		<!-- SEO Básico y Título -->
-		<title>{title} | Data 3000 S.A.S</title>
+		<meta name="theme-color" content="#040349" />
+		<meta name="author" content="Data 3000 S.A.S" />
+
+		<!-- SEO por página -->
+		<title>{fullTitle}</title>
 		<meta name="description" content={seoDescription}>
-		<meta name="robots" content="index, follow" />
+		<meta name="keywords" content={seoKeywords}>
+		<meta name="robots" content="index, follow, max-image-preview:large" />
 		<link rel="canonical" href={canonicalUrl} />
-		
-		<!-- Open Graph (para redes como Facebook) -->
-		<meta property="og:title" content={`${title} | Data 3000 S.A.S`} />
+
+		<!-- Geo: sede Manizales + servicio nacional -->
+		<meta name="geo.region" content="CO" />
+		<meta name="geo.placename" content="Manizales, Caldas, Colombia" />
+		<meta name="ICBM" content="5.0703, -75.5138" />
+
+		<!-- Idioma -->
+		<link rel="alternate" hreflang="es-co" href={canonicalUrl} />
+		<link rel="alternate" hreflang="es" href={canonicalUrl} />
+		<link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={fullTitle} />
 		<meta property="og:description" content={seoDescription} />
 		<meta property="og:image" content={ogImageUrl}>
 		<meta property="og:url" content={canonicalUrl}>
 		<meta property="og:type" content="website">
+		<meta property="og:locale" content="es_CO">
+		<meta property="og:site_name" content="Data 3000 S.A.S">
 
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={`${title} | Data 3000 S.A.S`} />
+		<meta name="twitter:title" content={fullTitle} />
 		<meta name="twitter:description" content={seoDescription}>
 		<meta name="twitter:image" content={ogImageUrl} />
 
 		<!-- Datos Estructurados (JSON-LD) -->
-		<script type="application/ld+json" set:html={JSON.stringify(ldJson)} />
+		<script type="application/ld+json" set:html={JSON.stringify(graph)} />
 	</head>
 
 	<script>
 		import Lenis from "lenis"
-	
+
 		const lenis = new Lenis({ lerp: 0.1 })
-	
+
 		function raf(time: number) {
 			lenis.raf(time);
 			requestAnimationFrame(raf)
 		}
-	
+
 		requestAnimationFrame(raf)
 	</script>
 

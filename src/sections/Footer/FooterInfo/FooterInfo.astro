@@ -1,19 +1,22 @@
 ---
+import { CONTACT } from '../../../utils/company'
+
 import './FooterInfo.css'
 ---
 
 <div class="footer-info-content">
     <div class="footer-content-item">
-        <h3>Información</h3>
+        <p class="footer-heading">Información</p>
         <ul>
             <li><a href="/">Inicio</a></li>
             <li><a href="/servicios">Servicios</a></li>
+            <li><a href="/alfresco">Alfresco</a></li>
             <li><a href="/nosotros">Nosotros</a></li>
             <li><a href="/contactanos">Contáctanos</a></li>
         </ul>
     </div>
     <div class="footer-content-item">
-        <h3>Horarios de Atención</h3>
+        <p class="footer-heading">Horarios de Atención</p>
         <ul>
             <li><span>Lunes a Jueves</span></li>
             <li>7:00 am a 4:30 pm</li>
@@ -22,20 +25,19 @@ import './FooterInfo.css'
         </ul>
     </div>
     <div class="footer-content-item">
-        <h3>Teléfonos</h3>
+        <p class="footer-heading">Teléfonos</p>
         <ul>
-            <li>+57 320 695 3978</li>
-            <li>+57 300 876 3060</li>
-            <li>+57 301 409 7809</li>
-            <li>(606) 891 85 76</li>
+            <li><a href={CONTACT.whatsapp1Link} target="_blank" rel="noopener noreferrer">{CONTACT.whatsapp1Display}</a></li>
+            <li><a href={CONTACT.whatsapp2Link} target="_blank" rel="noopener noreferrer">{CONTACT.whatsapp2Display}</a></li>
+            <li><a href={CONTACT.phoneHref}>{CONTACT.phoneDisplay}</a></li>
         </ul>
     </div>
     <div class="footer-content-item">
-        <h3>Ubicación</h3>
+        <p class="footer-heading">Ubicación</p>
         <ul>
-            <li>Cra 32 Nº 103a-03</li>
+            <li>{CONTACT.addressStreet}</li>
             <li>Barrio La Enea</li>
-            <li>Manizales, Caldas, Colombia</li>
+            <li>{CONTACT.addressLocality}, {CONTACT.addressRegion}, Colombia</li>
         </ul>
     </div>
 </div>

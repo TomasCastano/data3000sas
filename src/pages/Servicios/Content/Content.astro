@@ -16,6 +16,7 @@ import almacenamiento4Image from '../../../assets/images/almacenamiento4.webp'
 import ServiceCard from './ServiceCard/ServiceCard.jsx'
 import BenefitsSection from './BenefitsSection/BenefitsSection.astro'
 import MoreInfoSection from './MoreInfoSection/MoreInfoSection.astro'
+import FaqSection from '../../../components/FaqSection/FaqSection.astro'
 
 import './Content.css'
 
@@ -79,4 +80,5 @@ const servicesData = [
         <ServiceCard client:visible id="almacenamiento" service={servicesData[3]} />
     </section>
     <MoreInfoSection />
+    <FaqSection title="Preguntas frecuentes sobre nuestros servicios de archivo en Colombia" id="faq-servicios" />
 </div>

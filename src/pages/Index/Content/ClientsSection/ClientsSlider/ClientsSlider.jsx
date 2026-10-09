@@ -32,29 +32,29 @@ import "./ClientsSlider.css"
 const ClientsSlider = () => {
     
     const clients = [
-        gensaLogo,
-        gobernacionLogo,
-        pacifico3Logo,
-        camaraManizales,
-        contraloriaCaldasLogo,
-        fundacionLukerLogo,
-        emasLogo,
-        assbasaludLogo,
-        cairoLogo,
-        camaraChinchinaLogo,
-        cootrachecLogo,
-        diagnostimedLogo,
-        edsaLogo,
-        empresaAraucaLogo,
-        gaxoLogo,
-        lastraLogo,
-        marcelaMarquezLogo,
-        multilac,
-        peoplecontactLogo,
-        santaSofiaLogo,
-        sesLogo,
-        sjLogo,
-        smilingtekLogo,
+        { src: gensaLogo, name: 'Gensa' },
+        { src: gobernacionLogo, name: 'Gobernación de Caldas' },
+        { src: pacifico3Logo, name: 'Pacífico 3' },
+        { src: camaraManizales, name: 'Cámara de Comercio de Manizales' },
+        { src: contraloriaCaldasLogo, name: 'Contraloría de Caldas' },
+        { src: fundacionLukerLogo, name: 'Fundación Luker' },
+        { src: emasLogo, name: 'EMAS' },
+        { src: assbasaludLogo, name: 'Assbasalud' },
+        { src: cairoLogo, name: 'Cairo' },
+        { src: camaraChinchinaLogo, name: 'Cámara de Comercio de Chinchiná' },
+        { src: cootrachecLogo, name: 'Cootrachec' },
+        { src: diagnostimedLogo, name: 'Diagnostimed' },
+        { src: edsaLogo, name: 'EDSA' },
+        { src: empresaAraucaLogo, name: 'Empresa de Arauca' },
+        { src: gaxoLogo, name: 'Gaxo' },
+        { src: lastraLogo, name: 'Lastra' },
+        { src: marcelaMarquezLogo, name: 'Marcela Márquez' },
+        { src: multilac, name: 'Multilac' },
+        { src: peoplecontactLogo, name: 'PeopleContact' },
+        { src: santaSofiaLogo, name: 'Hospital Santa Sofía' },
+        { src: sesLogo, name: 'SES' },
+        { src: sjLogo, name: 'SJ' },
+        { src: smilingtekLogo, name: 'Smilingtek' },
     ]
 
     const [windowWidth, setWindowWidth] = useState(0);
@@ -87,7 +87,7 @@ const ClientsSlider = () => {
             >
                 {clients.map((client, index) => (
                     <SwiperSlide key={index}>
-                        <img src={client.src} alt={client} decoding="async" loading="lazy" fetchPriority="auto" />
+                        <img src={client.src.src} alt={`Cliente de Data 3000 S.A.S: ${client.name}`} decoding="async" loading="lazy" fetchPriority="auto" />
                     </SwiperSlide>
                 ))}
             </Swiper>

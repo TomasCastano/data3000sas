@@ -67,3 +67,72 @@ export function getDecadesOfExperience(referenceDate: Date = new Date()): number
 export function getDecadesWord(referenceDate: Date = new Date()): string {
   return numberToSpanishWord(getDecadesOfExperience(referenceDate));
 }
+
+/* ------------------------------------------------------------------ */
+/* Datos canónicos de contacto y SEO (única fuente de verdad)          */
+/* ------------------------------------------------------------------ */
+
+export const SITE_URL = "https://data3000.co";
+
+export const CONTACT = {
+  whatsapp1Display: "+57 320 695 3978",
+  whatsapp1Link: "https://wa.me/573206953978?text=Hola!%20Quiero%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios",
+  whatsapp2Display: "+57 320 695 3977",
+  whatsapp2Link: "https://wa.me/573206953977?text=Hola!%20Quiero%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios",
+  phoneDisplay: "(606) 891 85 76",
+  phoneHref: "tel:+576068918576",
+  addressStreet: "Cra 32 Nº 103A-03, Barrio La Enea",
+  addressLocality: "Manizales",
+  addressRegion: "Caldas",
+  addressCountry: "CO",
+  email: "data3000sas@gmail.com",
+} as const;
+
+export const SERVICE_AREA_CITIES = [
+  "Bogotá",
+  "Medellín",
+  "Cali",
+  "Barranquilla",
+  "Pereira",
+  "Armenia",
+  "Bucaramanga",
+  "Cartagena",
+] as const;
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export const FAQS: FaqItem[] = [
+  {
+    question: "¿Qué es la gestión documental y por qué la necesita mi empresa en Colombia?",
+    answer:
+      "La gestión documental es el conjunto de procesos para organizar, clasificar, digitalizar, custodiar y consultar los archivos físicos y digitales de una empresa. En Data 3000 S.A.S, con sede en Manizales y servicio en toda Colombia, ayudamos a las empresas a cumplir la normativa de archivo, reducir costos de almacenamiento y encontrar cualquier documento en segundos.",
+  },
+  {
+    question: "¿Qué servicios ofrece Data 3000 S.A.S como empresa de archivo en Colombia?",
+    answer:
+      "Ofrecemos diagnóstico documental, organización de archivos, digitalización de documentos, almacenamiento y custodia de archivos físicos y digitales, además de implementación de Alfresco para la gestión documental electrónica. Atendemos empresas en Manizales, el Eje Cafetero y toda Colombia.",
+  },
+  {
+    question: "¿Cómo funciona la digitalización de documentos con Data 3000 S.A.S?",
+    answer:
+      "Recogemos, preparamos, escaneamos con estándares de calidad, indexamos con metadatos y entregamos los archivos digitales organizados para consulta rápida, con opción de custodia física posterior. Más de 28 años de experiencia respaldan nuestros procesos de digitalización en Colombia.",
+  },
+  {
+    question: "¿Ofrecen almacenamiento y custodia de archivos a nivel nacional?",
+    answer:
+      "Sí. Custodiamos archivos físicos en instalaciones seguras con control de acceso, inventario y tiempos de respuesta para consulta y desarchivo. Nuestra sede está en Manizales, Caldas, y prestamos servicio de almacenamiento y custodia a empresas en toda Colombia.",
+  },
+  {
+    question: "¿Trabajan con empresas fuera de Manizales?",
+    answer:
+      "Sí. Nuestra sede está en Manizales, Caldas, pero atendemos empresas en Bogotá, Medellín, Cali, Barranquilla, Pereira, Armenia y el resto de Colombia con logística de recolección, digitalización y consulta remota.",
+  },
+  {
+    question: "¿Cómo empiezo un proyecto de organización de archivos con Data 3000 S.A.S?",
+    answer:
+      "Escríbenos por WhatsApp al +57 320 695 3978 o +57 320 695 3977, o llámanos al (606) 891 85 76. Hacemos un diagnóstico de tu archivo, te proponemos un plan de organización, digitalización o custodia y ejecutamos con cronograma y garantías de seguridad.",
+  },
+];

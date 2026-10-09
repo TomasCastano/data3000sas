@@ -1,0 +1,23 @@
+---
+import Badge from '../Badge/Badge.astro'
+import { FAQS } from '../../utils/company'
+
+import './FaqSection.css'
+
+const { title = "Preguntas frecuentes sobre gestión documental en Colombia", id = "faq" } = Astro.props
+---
+<section class="faq-section" id={id} aria-labelledby={`${id}-heading`}>
+    <div class="faq-container">
+        <Badge className="faq-badge" title="Preguntas frecuentes" />
+        <h2 id={`${id}-heading`}>{title}</h2>
+        <p class="faq-intro">Respuestas directas sobre gestión documental, organización de archivos, digitalización y custodia con Data 3000 S.A.S, sede en Manizales y servicio en toda Colombia.</p>
+        <div class="faq-list">
+            {FAQS.map((faq) => (
+                <details class="faq-item">
+                    <summary>{faq.question}</summary>
+                    <p>{faq.answer}</p>
+                </details>
+            ))}
+        </div>
+    </div>
+</section>
