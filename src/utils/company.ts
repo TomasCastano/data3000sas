@@ -106,19 +106,19 @@ export interface FaqItem {
 
 export const FAQS: FaqItem[] = [
   {
-    question: "¿Qué es la gestión documental y por qué la necesita mi empresa en Colombia?",
+    question: "¿Qué es la gestión documental y por qué la necesita mi empresa?",
     answer:
       "La gestión documental es el conjunto de procesos para organizar, clasificar, digitalizar, custodiar y consultar los archivos físicos y digitales de una empresa. En Data 3000 S.A.S, con sede en Manizales y servicio en toda Colombia, ayudamos a las empresas a cumplir la normativa de archivo, reducir costos de almacenamiento y encontrar cualquier documento en segundos.",
   },
   {
-    question: "¿Qué servicios ofrece Data 3000 S.A.S como empresa de archivo en Colombia?",
+    question: "¿Qué servicios ofrece Data 3000 S.A.S como empresa de archivo?", 
     answer:
       "Ofrecemos diagnóstico documental, organización de archivos, digitalización de documentos, almacenamiento y custodia de archivos físicos y digitales, además de implementación de Alfresco para la gestión documental electrónica. Atendemos empresas en Manizales, el Eje Cafetero y toda Colombia.",
   },
   {
     question: "¿Cómo funciona la digitalización de documentos con Data 3000 S.A.S?",
     answer:
-      "Recogemos, preparamos, escaneamos con estándares de calidad, indexamos con metadatos y entregamos los archivos digitales organizados para consulta rápida, con opción de custodia física posterior. Más de 28 años de experiencia respaldan nuestros procesos de digitalización en Colombia.",
+      "Recogemos, preparamos, escaneamos con estándares de calidad, indexamos con metadatos y entregamos los archivos digitales organizados para consulta rápida, con opción de custodia física posterior. Más de 28 años de experiencia respaldan nuestros procesos de digitalización.",
   },
   {
     question: "¿Ofrecen almacenamiento y custodia de archivos a nivel nacional?",
